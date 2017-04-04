@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/GENdsl/src" modelPluginID="GENdsl" modelName="GENdsl"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>gENdsl.ecore</foreignModel>
+  <genPackages prefix="GENdsl" disposableProviderFactory="true" ecorePackage="gENdsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gENdsl.ecore#//TypeOfPerson">
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfPerson/BIOLOGICAL"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfPerson/ADOPTED"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfPerson/SEMIADOPTED"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfPerson/MARRIED"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfPerson/DISOWNED"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfPerson/ILLEGITIMATE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gENdsl.ecore#//Gender">
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//Gender/MALE"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//Gender/FEMALE"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//Gender/BIGENDER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gENdsl.ecore#//TypeOfIntimateRelationship">
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfIntimateRelationship/MONOGAMY"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfIntimateRelationship/POLYGAMY"/>
+      <genEnumLiterals ecoreEnumLiteral="gENdsl.ecore#//TypeOfIntimateRelationship/POLYFIDELITY"/>
+    </genEnums>
+    <genClasses ecoreClass="gENdsl.ecore#//GenealogyTree">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//GenealogyTree/familyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//GenealogyTree/established"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//GenealogyTree/person"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//GenealogyTree/cohabitation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//GenealogyTree/marriage"/>
+    </genClasses>
+    <genClasses ecoreClass="gENdsl.ecore#//Marriage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Marriage/fromDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Marriage/toDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Marriage/spouses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Marriage/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Marriage/children"/>
+    </genClasses>
+    <genClasses ecoreClass="gENdsl.ecore#//Cohabitation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Cohabitation/fromDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Cohabitation/toDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Cohabitation/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Cohabitation/partners"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Cohabitation/children"/>
+    </genClasses>
+    <genClasses ecoreClass="gENdsl.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/givenName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/birthDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/deathDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/birthPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/deathPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/restingPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/otherNames"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/nickname"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/marriages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/cohabitations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/parents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/coparents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/deathCause"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/personhistory"/>
+    </genClasses>
+    <genClasses ecoreClass="gENdsl.ecore#//PersonHistory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//PersonHistory/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//PersonHistory/givenName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//PersonHistory/changed"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
