@@ -7,50 +7,40 @@
     xsi:schemaLocation="http://www.example.org/gENdsl gENdsl.ecore"
     familyName="Nemanjici">
   <person givenName="Stefan Nemanja"
-      birthDate="1111-01-01T00:00:00.000+0100"
-      marriages="//@marriage.0"/>
+      birthDate="1111-01-01T00:00:00.000+0100">
+    <marriage
+        spouses="//@person.1">
+      <children
+          givenName="Rastko"/>
+      <children
+          givenName="Stefan">
+        <marriage
+            spouses="//@person.2">
+          <children
+              givenName="Radoslav"/>
+          <children
+              givenName="Vladislav"/>
+          <children
+              givenName="Predislav"/>
+        </marriage>
+        <marriage
+            spouses="//@person.3">
+          <children
+              givenName="Uros"/>
+        </marriage>
+      </children>
+    </marriage>
+  </person>
   <person givenName="Ana"
       birthDate="1120-01-01T00:00:00.000+0100"
       type="MARRIED"
-      marriages="//@marriage.0"/>
-  <person givenName="Rastko"
-      birthDate="1165-01-01T00:00:00.000+0100"
-      parents="//@marriage.0"/>
-  <person givenName="Stefan"
-      birthDate="1164-01-01T00:00:00.000+0100"
-      marriages="//@marriage.1 //@marriage.2"
-      parents="//@marriage.0"/>
-  <person givenName="Vukan"
-      birthDate="1163-01-01T00:00:00.000+0100"
-      parents="//@marriage.0"/>
-  <person givenName="Radoslav"
-      birthDate="1191-01-01T00:00:00.000+0100"
-      parents="//@marriage.1"/>
-  <person givenName="Vladislav"
-      birthDate="1196-01-01T00:00:00.000+0100"
-      parents="//@marriage.1"/>
-  <person givenName="Predislav"
-      birthDate="1206-01-01T00:00:00.000+0100"
-      parents="//@marriage.1"/>
-  <person givenName="Uros"
-      birthDate="1219-01-01T00:00:00.000+0100"
-      parents="//@marriage.2"/>
+      marriages="//@person.0/@marriage.0"/>
   <person givenName="Evdokija Andjel"
       birthDate="1180-01-01T00:00:00.000+0100"
-      restingPlace=""
       type="MARRIED"
-      marriages="//@marriage.1"/>
+      marriages="//@person.0/@marriage.0/@children.1/@marriage.0"/>
   <person givenName="Ana Danolo"
       birthDate="1188-01-01T00:00:00.000+0100"
       type="MARRIED"
-      marriages="//@marriage.2"/>
-  <marriage
-      spouses="//@person.0 //@person.1"
-      children="//@person.2 //@person.3 //@person.4"/>
-  <marriage
-      spouses="//@person.3 //@person.9"
-      children="//@person.5 //@person.6 //@person.7"/>
-  <marriage
-      spouses="//@person.3 //@person.10"
-      children="//@person.8"/>
+      marriages="//@person.0/@marriage.0/@children.1/@marriage.1"/>
 </gENdsl:GenealogyTree>

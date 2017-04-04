@@ -35,14 +35,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Marriage/toDate"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Marriage/spouses"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Marriage/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Marriage/children"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Marriage/children"/>
     </genClasses>
     <genClasses ecoreClass="gENdsl.ecore#//Cohabitation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Cohabitation/fromDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Cohabitation/toDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Cohabitation/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Cohabitation/partners"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Cohabitation/children"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Cohabitation/children"/>
     </genClasses>
     <genClasses ecoreClass="gENdsl.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/givenName"/>
@@ -57,10 +57,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/nickname"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/marriages"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/cohabitations"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/parents"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/coparents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//Person/deathCause"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/personhistory"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/cohabitation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Person/marriage"/>
     </genClasses>
     <genClasses ecoreClass="gENdsl.ecore#//PersonHistory">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//PersonHistory/gender"/>
