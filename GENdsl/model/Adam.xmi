@@ -6,30 +6,47 @@
     xmlns:gENdsl="http://www.example.org/gENdsl"
     xsi:schemaLocation="http://www.example.org/gENdsl gENdsl.ecore"
     familyName="Biblical Genealogy">
-  <person givenName="Adam">
+  <person givenName="Adam"
+      birthDate="0991-10-10T00:00:00.000+0100"
+      deathDate="2000-10-10T00:00:00.000+0200"
+      marriages="//@person.0/@marriage.0 //@person.0/@marriage.1 //@person.0/@marriage.2">
     <marriage
-        spouses="//@person.1">
+        spouses="//@person.1 //@person.0"
+        fromDate="1000-10-10T00:00:00.000+0100"
+        toDate="1200-10-10T00:00:00.000+0100">
       <children
           givenName="Abel"/>
       <children
-          givenName="Cain">
+          givenName="Cain"
+          marriages="//@person.0/@marriage.0/@children.1/@marriage.0">
         <marriage
-            spouses="//@person.0/@marriage.0/@children.3"/>
+            spouses="//@person.0/@marriage.0/@children.3 //@person.0/@marriage.0/@children.1"
+            fromDate="1300-10-10T00:00:00.000+0100"
+            toDate="1400-10-10T00:00:00.000+0100"/>
       </children>
       <children
-          givenName="Seth">
+          givenName="Seth"
+          marriages="//@person.0/@marriage.0/@children.2/@marriage.0">
         <marriage
-            spouses="//@person.0/@marriage.0/@children.4"/>
+            spouses="//@person.0/@marriage.0/@children.4 //@person.0/@marriage.0/@children.2"
+            fromDate="1300-10-10T00:00:00.000+0100"
+            toDate="1350-10-10T00:00:00.000+0100"/>
       </children>
       <children
           givenName="d1"
           gender="FEMALE"
-          marriages="//@person.0/@marriage.0/@children.1/@marriage.0"/>
+          marriages="//@person.0/@marriage.0/@children.1/@marriage.0 //@person.0/@marriage.1"/>
       <children
           givenName="d2"
           gender="FEMALE"
-          marriages="//@person.0/@marriage.0/@children.2/@marriage.0"/>
+          marriages="//@person.0/@marriage.0/@children.2/@marriage.0 //@person.0/@marriage.2"/>
     </marriage>
+    <marriage
+        spouses="//@person.0/@marriage.0/@children.3 //@person.0"
+        fromDate="1200-11-10T00:00:00.000+0100"
+        toDate="1300-09-10T00:00:00.000+0100"/>
+    <marriage
+        spouses="//@person.0 //@person.0/@marriage.0/@children.4"/>
   </person>
   <person givenName="Eve"
       type="MARRIED"
