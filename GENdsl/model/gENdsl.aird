@@ -4,6 +4,7 @@
     <semanticResources>gENdsl.ecore</semanticResources>
     <semanticResources>gENdsl.genmodel</semanticResources>
     <semanticResources>Nemanjici.xmi</semanticResources>
+    <semanticResources>Adam.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_EU9uwBRaEeeQysx6YmpCUg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_EaH7kBRaEeeQysx6YmpCUg" name="gENdsl" representation="_EaIioBRaEeeQysx6YmpCUg">

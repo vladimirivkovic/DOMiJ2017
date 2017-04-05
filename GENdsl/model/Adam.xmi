@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gENdsl:GenealogyTree
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gENdsl="http://www.example.org/gENdsl"
+    xsi:schemaLocation="http://www.example.org/gENdsl gENdsl.ecore"
+    familyName="Biblical Genealogy">
+  <person givenName="Adam">
+    <marriage
+        spouses="//@person.1">
+      <children
+          givenName="Abel"/>
+      <children
+          givenName="Cain">
+        <marriage
+            spouses="//@person.0/@marriage.0/@children.3"/>
+      </children>
+      <children
+          givenName="Seth">
+        <marriage
+            spouses="//@person.0/@marriage.0/@children.4"/>
+      </children>
+      <children
+          givenName="d1"
+          gender="FEMALE"
+          marriages="//@person.0/@marriage.0/@children.1/@marriage.0"/>
+      <children
+          givenName="d2"
+          gender="FEMALE"
+          marriages="//@person.0/@marriage.0/@children.2/@marriage.0"/>
+    </marriage>
+  </person>
+  <person givenName="Eve"
+      type="MARRIED"
+      gender="FEMALE"
+      marriages="//@person.0/@marriage.0"/>
+</gENdsl:GenealogyTree>

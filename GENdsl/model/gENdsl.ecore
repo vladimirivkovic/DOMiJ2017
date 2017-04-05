@@ -26,7 +26,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="min2Spouses" value="spouses->size() >= 1"/>
-      <details key="parentsOlder" value="spouses->forAll(s | children->forAll(c | &#xA;&#x9;&#x9;&#x9;&#x9;(not c.oclIsUndefined() and not s.oclIsUndefined()) &#xA;&#x9;&#x9;&#x9;&#x9;implies (c.birthDate > s.birthDate)&#xA;&#x9;&#x9;))"/>
+      <details key="parentsOlder" value="spouses->forAll(s | children->forAll(c | &#xA;&#x9;&#x9;&#x9;&#x9;(c.birthDate->notEmpty() and s.birthDate->notEmpty()) implies (c.birthDate > s.birthDate)&#xA;&#x9;&#x9;))"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -42,7 +42,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="min2Partners" value="partners->size() >= 1"/>
-      <details key="parentsOlder" value="partners->forAll(s | children->forAll(c | &#xA;&#x9;&#x9;&#x9;&#x9;(not c.oclIsUndefined() and not s.oclIsUndefined()) &#xA;&#x9;&#x9;&#x9;&#x9;implies (c.birthDate > s.birthDate)&#xA;&#x9;&#x9;))"/>
+      <details key="parentsOlder" value="partners->forAll(s | children->forAll(c | &#xA;&#x9;&#x9;&#x9;&#x9;(c.birthDate->notEmpty() and s.birthDate->notEmpty()) implies (c.birthDate > s.birthDate)&#xA;&#x9;&#x9;))"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -57,7 +57,7 @@
       <details key="constraints" value="leastOneMarriageOrCohabitation"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="leastOneMarriageOrCohabitation" value="(type = TypeOfPerson::MARRIED) implies (marriages->size() + cohabitations->size() >= 1)"/>
+      <details key="leastOneMarriageOrCohabitation" value="(type = TypeOfPerson::MARRIED) implies (marriages->notEmpty() or cohabitations->notEmpty())"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="givenName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
