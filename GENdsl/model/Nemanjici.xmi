@@ -7,15 +7,17 @@
     xsi:schemaLocation="http://www.example.org/gENdsl gENdsl.ecore"
     familyName="Nemanjici">
   <person givenName="Stefan Nemanja"
-      birthDate="1111-01-01T00:00:00.000+0100">
+      birthDate="1111-01-01T00:00:00.000+0100"
+      marriages="//@person.0/@marriage.0">
     <marriage
-        spouses="//@person.1">
+        spouses="//@person.1 //@person.0">
       <children
           givenName="Rastko"/>
       <children
-          givenName="Stefan">
+          givenName="Stefan"
+          marriages="//@person.0/@marriage.0/@children.1/@marriage.0 //@person.0/@marriage.0/@children.1/@marriage.1">
         <marriage
-            spouses="//@person.2">
+            spouses="//@person.2 //@person.0/@marriage.0/@children.1">
           <children
               givenName="Radoslav"/>
           <children
@@ -24,7 +26,7 @@
               givenName="Predislav"/>
         </marriage>
         <marriage
-            spouses="//@person.3">
+            spouses="//@person.3 //@person.0/@marriage.0/@children.1">
           <children
               givenName="Uros"/>
         </marriage>

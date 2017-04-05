@@ -15,23 +15,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="established" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="person" upperBound="-1"
         eType="#//Person" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cohabitation" upperBound="-1"
-        eType="#//Cohabitation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="marriage" upperBound="-1"
-        eType="#//Marriage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Marriage">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="min2Spouses parentsOlder noOverlap"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="min2Spouses" value="spouses->size() >= 1"/>
-      <details key="parentsOlder" value="spouses->forAll(s | children->forAll(c |&#xA;&#x9;&#x9;&#x9;&#x9;(c.birthDate->notEmpty() and s.birthDate->notEmpty()) implies (c.birthDate > s.birthDate)))"/>
-      <details key="noOverlap" value="(self.fromDate->notEmpty() and self.toDate->notEmpty()) implies (spouses->forAll(s1 |&#xA;&#x9;&#x9;&#x9;s1.marriages->forAll(m |&#xA;&#x9;&#x9;&#x9;&#x9;(m &lt;> self and m.fromDate->notEmpty() and m.toDate->notEmpty()) implies (m.fromDate > self.toDate or m.toDate &lt; self.fromDate))))"/>
+      <details key="min2Spouses" value="spouses->size() >= 2"/>
+      <details key="parentsOlder" value="spouses->forAll(s | children->forAll(c |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(c.birthDate->notEmpty() and s.birthDate->notEmpty()) implies (c.birthDate > s.birthDate)))"/>
+      <details key="noOverlap" value="(self.fromDate->notEmpty() and self.toDate->notEmpty()) implies (spouses->forAll(s1 |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;s1.marriages->forAll(m |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(m &lt;> self and m.fromDate->notEmpty() and m.toDate->notEmpty()) implies (m.fromDate > self.toDate or m.toDate &lt; self.fromDate))))"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="spouses" upperBound="-1"
         eType="#//Person" eOpposite="#//Person/marriages"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="{&#xA;initial: OrderedSet{}->append(Person.allInstances()->select(p : Person | p.marriage->count(self) > 0)->asSequence()->first());&#xA;}*"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Person" containment="true"/>
@@ -46,8 +46,8 @@
       <details key="constraints" value="min2Partners parentsOlder"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="min2Partners" value="partners->size() >= 1"/>
-      <details key="parentsOlder" value="partners->forAll(s | children->forAll(c |&#xA;&#x9;&#x9;&#x9;&#x9;(c.birthDate->notEmpty() and s.birthDate->notEmpty()) implies (c.birthDate > s.birthDate)))"/>
+      <details key="min2Partners" value="partners->size() >= 2"/>
+      <details key="parentsOlder" value="partners->forAll(s | children->forAll(c |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(c.birthDate->notEmpty() and s.birthDate->notEmpty()) implies (c.birthDate > s.birthDate)))"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="partners" upperBound="-1"
         eType="#//Person" eOpposite="#//Person/cohabitations"/>
@@ -58,14 +58,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="noName leastOneMarriageOrCohabitation inMyMarriages inMyCohabitations marrigesInLifetime"/>
+      <details key="constraints" value="noName leastOneMarriageOrCohabitation oneRoot inMyMarriages inMyCohabitations marrigesInLifetime"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="noName" value="givenName &lt;> ''"/>
       <details key="leastOneMarriageOrCohabitation" value="(type = TypeOfPerson::MARRIED) implies (marriages->notEmpty() or cohabitations->notEmpty())"/>
+      <details key="oneRoot" value="Person.allInstances()->select(p : Person |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;((p.type &lt;> TypeOfPerson::MARRIED) and &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;((Marriage.allInstances()->select(m : Marriage | m.children->includes(p))->isEmpty()) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and (Cohabitation.allInstances()->select(c : Cohabitation | c.children->includes(p))->isEmpty()))))->size() = 1"/>
       <details key="inMyMarriages" value="marriage->forAll(spouses->count(self) = 1)"/>
       <details key="inMyCohabitations" value="cohabitation->forAll(partners->count(self) = 1)"/>
-      <details key="marrigesInLifetime" value="(self.birthDate->notEmpty() and self.deathDate->notEmpty()) implies (marriages->forAll(m |&#xA;&#x9;&#x9;&#x9;(m.fromDate->notEmpty() and m.toDate->notEmpty()) implies (self.birthDate &lt; m.fromDate and m.toDate &lt;= self.deathDate)))"/>
+      <details key="marrigesInLifetime" value="(self.birthDate->notEmpty() and self.deathDate->notEmpty()) implies (marriages->forAll(m |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(m.fromDate->notEmpty() and m.toDate->notEmpty()) implies (self.birthDate &lt; m.fromDate and m.toDate &lt;= self.deathDate)))"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="givenName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>

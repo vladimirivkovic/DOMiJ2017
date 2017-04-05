@@ -27,8 +27,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//GenealogyTree/familyName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gENdsl.ecore#//GenealogyTree/established"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//GenealogyTree/person"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//GenealogyTree/cohabitation"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gENdsl.ecore#//GenealogyTree/marriage"/>
     </genClasses>
     <genClasses ecoreClass="gENdsl.ecore#//Marriage">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gENdsl.ecore#//Marriage/spouses"/>

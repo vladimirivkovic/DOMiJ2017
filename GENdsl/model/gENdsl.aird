@@ -5,6 +5,7 @@
     <semanticResources>gENdsl.genmodel</semanticResources>
     <semanticResources>Nemanjici.xmi</semanticResources>
     <semanticResources>Adam.xmi</semanticResources>
+    <semanticResources>GenealogyTree.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_EU9uwBRaEeeQysx6YmpCUg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_EaH7kBRaEeeQysx6YmpCUg" name="gENdsl" representation="_EaIioBRaEeeQysx6YmpCUg">
@@ -50,7 +51,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_LR5EohRaEeeQysx6YmpCUg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_LRy-ABRaEeeQysx6YmpCUg" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LRy-ARRaEeeQysx6YmpCUg" x="420" y="312" width="185" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LRy-ARRaEeeQysx6YmpCUg" x="593" y="312" width="185" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_NLDlsBRaEeeQysx6YmpCUg" type="2003" element="_NK84ABRaEeeQysx6YmpCUg">
           <children xmi:type="notation:Node" xmi:id="_NLEMwBRaEeeQysx6YmpCUg" type="5007"/>
@@ -242,17 +243,17 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_Eaw0whRaEeeQysx6YmpCUg"/>
         <edges xmi:type="notation:Edge" xmi:id="_JkbOgBRgEeeQysx6YmpCUg" type="4001" element="_JkITkBRgEeeQysx6YmpCUg" source="_LRyW8BRaEeeQysx6YmpCUg" target="_PUf-cBRaEeeQysx6YmpCUg">
           <children xmi:type="notation:Node" xmi:id="_JkdDsBRgEeeQysx6YmpCUg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkdDsRRgEeeQysx6YmpCUg" x="-6" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkdDsRRgEeeQysx6YmpCUg" x="80" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_JkdqwBRgEeeQysx6YmpCUg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkdqwRRgEeeQysx6YmpCUg" x="-11" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkdqwRRgEeeQysx6YmpCUg" x="136" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_JkeR0BRgEeeQysx6YmpCUg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkeR0RRgEeeQysx6YmpCUg" x="-1" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JkeR0RRgEeeQysx6YmpCUg" x="25" y="-10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_JkbOgRRgEeeQysx6YmpCUg" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_JkbOghRgEeeQysx6YmpCUg" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JkbOgxRgEeeQysx6YmpCUg" points="[-96, -50, 194, 120]$[-180, -50, 110, 120]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JkbOgxRgEeeQysx6YmpCUg" points="[-96, -50, 367, 120]$[-353, -50, 110, 120]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JkgHABRgEeeQysx6YmpCUg" id="(0.5245901639344263,1.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JkguEBRgEeeQysx6YmpCUg" id="(0.5175438596491229,0.0)"/>
         </edges>
@@ -287,38 +288,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xQsS8xRhEeeQysx6YmpCUg" points="[0, 25, 266, -35]$[-302, 25, -36, -35]$[-302, 49, -36, -11]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xQuIIBRhEeeQysx6YmpCUg" id="(0.0,0.09090909090909091)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xQuIIRRhEeeQysx6YmpCUg" id="(1.0,0.04150943396226415)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_kMC3MBUtEee8T7qwDhylOg" type="4001" element="_kLwjUBUtEee8T7qwDhylOg" source="_LRyW8BRaEeeQysx6YmpCUg" target="_Ols-wBRaEeeQysx6YmpCUg">
-          <children xmi:type="notation:Node" xmi:id="_kMF6gBUtEee8T7qwDhylOg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kMF6gRUtEee8T7qwDhylOg" x="19" y="-7"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_kMHIoBUtEee8T7qwDhylOg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kMHIoRUtEee8T7qwDhylOg" x="25" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_kMIWwBUtEee8T7qwDhylOg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kMIWwRUtEee8T7qwDhylOg" x="-10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_kMC3MRUtEee8T7qwDhylOg" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_kMDeQBUtEee8T7qwDhylOg" fontColor="7490599" fontName="Ubuntu" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kMDeQRUtEee8T7qwDhylOg" points="[0, 38, -71, 182]$[107, 38, 36, 182]$[107, -23, 36, 121]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kMJk4BUtEee8T7qwDhylOg" id="(1.0,0.12244897959183673)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kMJk4RUtEee8T7qwDhylOg" id="(0.3317972350230415,0.0)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_41ckIBUtEee8T7qwDhylOg" type="4001" element="_41JpMBUtEee8T7qwDhylOg" source="_LRyW8BRaEeeQysx6YmpCUg" target="_NLDlsBRaEeeQysx6YmpCUg">
-          <children xmi:type="notation:Node" xmi:id="_41dLMBUtEee8T7qwDhylOg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41dLMRUtEee8T7qwDhylOg" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_41dLMhUtEee8T7qwDhylOg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41dLMxUtEee8T7qwDhylOg" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_41dLNBUtEee8T7qwDhylOg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41dLNRUtEee8T7qwDhylOg" x="-125" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_41ckIRUtEee8T7qwDhylOg" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_41ckIhUtEee8T7qwDhylOg" fontColor="7490599" fontName="Ubuntu" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_41ckIxUtEee8T7qwDhylOg" points="[-75, 85, -132, -46]$[-75, 107, -132, -24]$[82, 107, 25, -24]$[82, 131, 25, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_41dyQBUtEee8T7qwDhylOg" id="(1.0,0.1326530612244898)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_41dyQRUtEee8T7qwDhylOg" id="(0.3870967741935484,0.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_ieH1cBUwEee8T7qwDhylOg" type="4001" element="_id82UBUwEee8T7qwDhylOg" source="_PUf-cBRaEeeQysx6YmpCUg" target="_UYOuUBRrEeei4Zy0L6k64Q">
           <children xmi:type="notation:Node" xmi:id="_ieIcgBUwEee8T7qwDhylOg" type="6001">
@@ -402,7 +371,7 @@
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_LRKE0BRaEeeQysx6YmpCUg" name="GenealogyTree" tooltipText="" outgoingEdges="_JkITkBRgEeeQysx6YmpCUg _kLwjUBUtEee8T7qwDhylOg _41JpMBUtEee8T7qwDhylOg" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_LRKE0BRaEeeQysx6YmpCUg" name="GenealogyTree" tooltipText="" outgoingEdges="_JkITkBRgEeeQysx6YmpCUg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="gENdsl.ecore#//GenealogyTree"/>
       <semanticElements xmi:type="ecore:EClass" href="gENdsl.ecore#//GenealogyTree"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -429,7 +398,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_NK84ABRaEeeQysx6YmpCUg" name="Marriage" tooltipText="" outgoingEdges="_PN70sBRgEeeQysx6YmpCUg _nYU-EBnwEeekwqGtmfTF8Q" incomingEdges="_41JpMBUtEee8T7qwDhylOg _lBN8wBnwEeekwqGtmfTF8Q" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_NK84ABRaEeeQysx6YmpCUg" name="Marriage" tooltipText="" outgoingEdges="_PN70sBRgEeeQysx6YmpCUg _nYU-EBnwEeekwqGtmfTF8Q" incomingEdges="_lBN8wBnwEeekwqGtmfTF8Q" width="12" height="10">
       <target xmi:type="ecore:EClass" href="gENdsl.ecore#//Marriage"/>
       <semanticElements xmi:type="ecore:EClass" href="gENdsl.ecore#//Marriage"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -464,7 +433,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Olm4IBRaEeeQysx6YmpCUg" name="Cohabitation" tooltipText="" outgoingEdges="_xQeQgBRhEeeQysx6YmpCUg _SkwmwBlnEees0-xNDz8S5A" incomingEdges="_kLwjUBUtEee8T7qwDhylOg _pb46EBloEees0-xNDz8S5A" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Olm4IBRaEeeQysx6YmpCUg" name="Cohabitation" tooltipText="" outgoingEdges="_xQeQgBRhEeeQysx6YmpCUg _SkwmwBlnEees0-xNDz8S5A" incomingEdges="_pb46EBloEees0-xNDz8S5A" width="12" height="10">
       <target xmi:type="ecore:EClass" href="gENdsl.ecore#//Cohabitation"/>
       <semanticElements xmi:type="ecore:EClass" href="gENdsl.ecore#//Cohabitation"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -788,32 +757,6 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_kLwjUBUtEee8T7qwDhylOg" name="[0..*] cohabitation" sourceNode="_LRKE0BRaEeeQysx6YmpCUg" targetNode="_Olm4IBRaEeeQysx6YmpCUg">
-      <target xmi:type="ecore:EReference" href="gENdsl.ecore#//GenealogyTree/cohabitation"/>
-      <semanticElements xmi:type="ecore:EReference" href="gENdsl.ecore#//GenealogyTree/cohabitation"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_kLxxcBUtEee8T7qwDhylOg" description="_JkJhsBRgEeeQysx6YmpCUg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_kLxxcRUtEee8T7qwDhylOg" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_kLxxchUtEee8T7qwDhylOg" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_41JpMBUtEee8T7qwDhylOg" name="[0..*] marriage" sourceNode="_LRKE0BRaEeeQysx6YmpCUg" targetNode="_NK84ABRaEeeQysx6YmpCUg">
-      <target xmi:type="ecore:EReference" href="gENdsl.ecore#//GenealogyTree/marriage"/>
-      <semanticElements xmi:type="ecore:EReference" href="gENdsl.ecore#//GenealogyTree/marriage"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_41K3UBUtEee8T7qwDhylOg" description="_JkJhsBRgEeeQysx6YmpCUg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_41K3URUtEee8T7qwDhylOg" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_41K3UhUtEee8T7qwDhylOg" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_id82UBUwEee8T7qwDhylOg" name="[0..*] personhistory" sourceNode="_PUZ30BRaEeeQysx6YmpCUg" targetNode="_UXqtoBRrEeei4Zy0L6k64Q">
       <target xmi:type="ecore:EReference" href="gENdsl.ecore#//Person/personhistory"/>
