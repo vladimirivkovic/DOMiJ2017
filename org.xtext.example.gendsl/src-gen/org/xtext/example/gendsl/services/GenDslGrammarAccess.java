@@ -19,6 +19,7 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
+import org.eclipse.xtext.UnorderedGroup;
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractEnumRuleElementFinder;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
@@ -40,7 +41,7 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cEstablishedAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cEstablishedDateXParserRuleCall_4_1_0 = (RuleCall)cEstablishedAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cPersonKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cPersonsKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
 		private final Assignment cPersonAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
 		private final RuleCall cPersonPersonParserRuleCall_5_2_0 = (RuleCall)cPersonAssignment_5_2.eContents().get(0);
@@ -54,13 +55,13 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 		//GenealogyTree:
 		//	'GenealogyTree'
 		//	'{'
-		//	'familyName' familyName=EString ('established' established=DateX)? ('person' '{' person+=Person ("," person+=Person)*
+		//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person ("," person+=Person)*
 		//	'}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GenealogyTree' '{' 'familyName' familyName=EString ('established' established=DateX)? ('person' '{' person+=Person (","
-		//person+=Person)* '}')? '}'
+		//'GenealogyTree' '{' 'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person
+		//("," person+=Person)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'GenealogyTree'
@@ -90,11 +91,11 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 		//DateX
 		public RuleCall getEstablishedDateXParserRuleCall_4_1_0() { return cEstablishedDateXParserRuleCall_4_1_0; }
 		
-		//('person' '{' person+=Person ("," person+=Person)* '}')?
+		//('persons' '{' person+=Person ("," person+=Person)* '}')?
 		public Group getGroup_5() { return cGroup_5; }
 		
-		//'person'
-		public Keyword getPersonKeyword_5_0() { return cPersonKeyword_5_0; }
+		//'persons'
+		public Keyword getPersonsKeyword_5_0() { return cPersonsKeyword_5_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
@@ -146,550 +147,536 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gendsl.GenDsl.DateX");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cDateXAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cDateXKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cYearKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cYearAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cYearEIntegerObjectParserRuleCall_2_1_0 = (RuleCall)cYearAssignment_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cYearKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cYearAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cYearEIntegerObjectParserRuleCall_3_1_0 = (RuleCall)cYearAssignment_3_1.eContents().get(0);
+		private final Keyword cMonthKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cMonthAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cMonthEIntegerObjectParserRuleCall_3_1_0 = (RuleCall)cMonthAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cMonthKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cMonthAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cMonthEIntegerObjectParserRuleCall_4_1_0 = (RuleCall)cMonthAssignment_4_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cDayKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cDayAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cDayEIntegerObjectParserRuleCall_5_1_0 = (RuleCall)cDayAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cDayKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cDayAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cDayEIntegerObjectParserRuleCall_4_1_0 = (RuleCall)cDayAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//DateX:
 		//	{DateX}
-		//	'DateX'
 		//	'{' ('year' year=EIntegerObject)? ('month' month=EIntegerObject)? ('day' day=EIntegerObject)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{DateX} 'DateX' '{' ('year' year=EIntegerObject)? ('month' month=EIntegerObject)? ('day' day=EIntegerObject)? '}'
+		//{DateX} '{' ('year' year=EIntegerObject)? ('month' month=EIntegerObject)? ('day' day=EIntegerObject)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{DateX}
 		public Action getDateXAction_0() { return cDateXAction_0; }
 		
-		//'DateX'
-		public Keyword getDateXKeyword_1() { return cDateXKeyword_1; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-		
-		//('year' year=EIntegerObject)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'year'
-		public Keyword getYearKeyword_3_0() { return cYearKeyword_3_0; }
-		
-		//year=EIntegerObject
-		public Assignment getYearAssignment_3_1() { return cYearAssignment_3_1; }
-		
-		//EIntegerObject
-		public RuleCall getYearEIntegerObjectParserRuleCall_3_1_0() { return cYearEIntegerObjectParserRuleCall_3_1_0; }
-		
-		//('month' month=EIntegerObject)?
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'month'
-		public Keyword getMonthKeyword_4_0() { return cMonthKeyword_4_0; }
-		
-		//month=EIntegerObject
-		public Assignment getMonthAssignment_4_1() { return cMonthAssignment_4_1; }
-		
-		//EIntegerObject
-		public RuleCall getMonthEIntegerObjectParserRuleCall_4_1_0() { return cMonthEIntegerObjectParserRuleCall_4_1_0; }
-		
-		//('day' day=EIntegerObject)?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'day'
-		public Keyword getDayKeyword_5_0() { return cDayKeyword_5_0; }
-		
-		//day=EIntegerObject
-		public Assignment getDayAssignment_5_1() { return cDayAssignment_5_1; }
-		
-		//EIntegerObject
-		public RuleCall getDayEIntegerObjectParserRuleCall_5_1_0() { return cDayEIntegerObjectParserRuleCall_5_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-	}
-	public class PersonElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gendsl.GenDsl.Person");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cPersonKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cUnknownKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cUnknownAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cUnknownEBooleanParserRuleCall_2_1_0 = (RuleCall)cUnknownAssignment_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cGivenNameKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cGivenNameAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cGivenNameEStringParserRuleCall_3_1_0 = (RuleCall)cGivenNameAssignment_3_1.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cBirthPlaceKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cBirthPlaceAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cBirthPlaceEStringParserRuleCall_4_1_0 = (RuleCall)cBirthPlaceAssignment_4_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cDeathPlaceKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cDeathPlaceAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cDeathPlaceEStringParserRuleCall_5_1_0 = (RuleCall)cDeathPlaceAssignment_5_1.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cRestingPlaceKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cRestingPlaceAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cRestingPlaceEStringParserRuleCall_6_1_0 = (RuleCall)cRestingPlaceAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cTypeKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cTypeAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cTypeTypeOfPersonEnumRuleCall_7_1_0 = (RuleCall)cTypeAssignment_7_1.eContents().get(0);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cGenderKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cGenderAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cGenderGenderEnumRuleCall_8_1_0 = (RuleCall)cGenderAssignment_8_1.eContents().get(0);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cOtherNamesKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
-		private final Assignment cOtherNamesAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
-		private final RuleCall cOtherNamesEStringParserRuleCall_9_2_0 = (RuleCall)cOtherNamesAssignment_9_2.eContents().get(0);
-		private final Group cGroup_9_3 = (Group)cGroup_9.eContents().get(3);
-		private final Keyword cCommaKeyword_9_3_0 = (Keyword)cGroup_9_3.eContents().get(0);
-		private final Assignment cOtherNamesAssignment_9_3_1 = (Assignment)cGroup_9_3.eContents().get(1);
-		private final RuleCall cOtherNamesEStringParserRuleCall_9_3_1_0 = (RuleCall)cOtherNamesAssignment_9_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cNicknameKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cNicknameAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cNicknameEStringParserRuleCall_10_1_0 = (RuleCall)cNicknameAssignment_10_1.eContents().get(0);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cDeathCauseKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cDeathCauseAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cDeathCauseEStringParserRuleCall_11_1_0 = (RuleCall)cDeathCauseAssignment_11_1.eContents().get(0);
-		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
-		private final Keyword cMarriagesKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
-		private final Assignment cMarriagesAssignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
-		private final CrossReference cMarriagesMarriageCrossReference_12_2_0 = (CrossReference)cMarriagesAssignment_12_2.eContents().get(0);
-		private final RuleCall cMarriagesMarriageEStringParserRuleCall_12_2_0_1 = (RuleCall)cMarriagesMarriageCrossReference_12_2_0.eContents().get(1);
-		private final Group cGroup_12_3 = (Group)cGroup_12.eContents().get(3);
-		private final Keyword cCommaKeyword_12_3_0 = (Keyword)cGroup_12_3.eContents().get(0);
-		private final Assignment cMarriagesAssignment_12_3_1 = (Assignment)cGroup_12_3.eContents().get(1);
-		private final CrossReference cMarriagesMarriageCrossReference_12_3_1_0 = (CrossReference)cMarriagesAssignment_12_3_1.eContents().get(0);
-		private final RuleCall cMarriagesMarriageEStringParserRuleCall_12_3_1_0_1 = (RuleCall)cMarriagesMarriageCrossReference_12_3_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_12_4 = (Keyword)cGroup_12.eContents().get(4);
-		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
-		private final Keyword cCohabitationsKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_13_1 = (Keyword)cGroup_13.eContents().get(1);
-		private final Assignment cCohabitationsAssignment_13_2 = (Assignment)cGroup_13.eContents().get(2);
-		private final CrossReference cCohabitationsCohabitationCrossReference_13_2_0 = (CrossReference)cCohabitationsAssignment_13_2.eContents().get(0);
-		private final RuleCall cCohabitationsCohabitationEStringParserRuleCall_13_2_0_1 = (RuleCall)cCohabitationsCohabitationCrossReference_13_2_0.eContents().get(1);
-		private final Group cGroup_13_3 = (Group)cGroup_13.eContents().get(3);
-		private final Keyword cCommaKeyword_13_3_0 = (Keyword)cGroup_13_3.eContents().get(0);
-		private final Assignment cCohabitationsAssignment_13_3_1 = (Assignment)cGroup_13_3.eContents().get(1);
-		private final CrossReference cCohabitationsCohabitationCrossReference_13_3_1_0 = (CrossReference)cCohabitationsAssignment_13_3_1.eContents().get(0);
-		private final RuleCall cCohabitationsCohabitationEStringParserRuleCall_13_3_1_0_1 = (RuleCall)cCohabitationsCohabitationCrossReference_13_3_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_13_4 = (Keyword)cGroup_13.eContents().get(4);
-		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
-		private final Keyword cBirthDateKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Assignment cBirthDateAssignment_14_1 = (Assignment)cGroup_14.eContents().get(1);
-		private final RuleCall cBirthDateDateXParserRuleCall_14_1_0 = (RuleCall)cBirthDateAssignment_14_1.eContents().get(0);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cDeathDateKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Assignment cDeathDateAssignment_15_1 = (Assignment)cGroup_15.eContents().get(1);
-		private final RuleCall cDeathDateDateXParserRuleCall_15_1_0 = (RuleCall)cDeathDateAssignment_15_1.eContents().get(0);
-		private final Group cGroup_16 = (Group)cGroup.eContents().get(16);
-		private final Keyword cPersonhistoryKeyword_16_0 = (Keyword)cGroup_16.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_16_1 = (Keyword)cGroup_16.eContents().get(1);
-		private final Assignment cPersonhistoryAssignment_16_2 = (Assignment)cGroup_16.eContents().get(2);
-		private final RuleCall cPersonhistoryPersonHistoryParserRuleCall_16_2_0 = (RuleCall)cPersonhistoryAssignment_16_2.eContents().get(0);
-		private final Group cGroup_16_3 = (Group)cGroup_16.eContents().get(3);
-		private final Keyword cCommaKeyword_16_3_0 = (Keyword)cGroup_16_3.eContents().get(0);
-		private final Assignment cPersonhistoryAssignment_16_3_1 = (Assignment)cGroup_16_3.eContents().get(1);
-		private final RuleCall cPersonhistoryPersonHistoryParserRuleCall_16_3_1_0 = (RuleCall)cPersonhistoryAssignment_16_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_16_4 = (Keyword)cGroup_16.eContents().get(4);
-		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
-		private final Keyword cCohabitationKeyword_17_0 = (Keyword)cGroup_17.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_17_1 = (Keyword)cGroup_17.eContents().get(1);
-		private final Assignment cCohabitationAssignment_17_2 = (Assignment)cGroup_17.eContents().get(2);
-		private final RuleCall cCohabitationCohabitationParserRuleCall_17_2_0 = (RuleCall)cCohabitationAssignment_17_2.eContents().get(0);
-		private final Group cGroup_17_3 = (Group)cGroup_17.eContents().get(3);
-		private final Keyword cCommaKeyword_17_3_0 = (Keyword)cGroup_17_3.eContents().get(0);
-		private final Assignment cCohabitationAssignment_17_3_1 = (Assignment)cGroup_17_3.eContents().get(1);
-		private final RuleCall cCohabitationCohabitationParserRuleCall_17_3_1_0 = (RuleCall)cCohabitationAssignment_17_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_17_4 = (Keyword)cGroup_17.eContents().get(4);
-		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
-		private final Keyword cMarriageKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
-		private final Assignment cMarriageAssignment_18_2 = (Assignment)cGroup_18.eContents().get(2);
-		private final RuleCall cMarriageMarriageParserRuleCall_18_2_0 = (RuleCall)cMarriageAssignment_18_2.eContents().get(0);
-		private final Group cGroup_18_3 = (Group)cGroup_18.eContents().get(3);
-		private final Keyword cCommaKeyword_18_3_0 = (Keyword)cGroup_18_3.eContents().get(0);
-		private final Assignment cMarriageAssignment_18_3_1 = (Assignment)cGroup_18_3.eContents().get(1);
-		private final RuleCall cMarriageMarriageParserRuleCall_18_3_1_0 = (RuleCall)cMarriageAssignment_18_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_18_4 = (Keyword)cGroup_18.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_19 = (Keyword)cGroup.eContents().get(19);
-		
-		//Person:
-		//	'Person'
-		//	'{' ('unknown' unknown=EBoolean) ('givenName' givenName=EString)? ('birthPlace' birthPlace=EString)? ('deathPlace'
-		//	deathPlace=EString)? ('restingPlace' restingPlace=EString)? ('type' type=TypeOfPerson)? ('gender' gender=Gender)?
-		//	('otherNames' '{' otherNames+=EString ("," otherNames+=EString)* '}')? ('nickname' nickname=EString)? ('deathCause'
-		//	deathCause=EString)? ('marriages' '(' marriages+=[Marriage|EString] ("," marriages+=[Marriage|EString])* ')')?
-		//	('cohabitations' '(' cohabitations+=[Cohabitation|EString] ("," cohabitations+=[Cohabitation|EString])* ')')?
-		//	('birthDate' birthDate=DateX)? ('deathDate' deathDate=DateX)? ('personhistory' '{' personhistory+=PersonHistory (","
-		//	personhistory+=PersonHistory)* '}')? ('cohabitation' '{' cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)*
-		//	'}')? ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
-		//	'}';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'Person' '{' ('unknown' unknown=EBoolean) ('givenName' givenName=EString)? ('birthPlace' birthPlace=EString)?
-		//('deathPlace' deathPlace=EString)? ('restingPlace' restingPlace=EString)? ('type' type=TypeOfPerson)? ('gender'
-		//gender=Gender)? ('otherNames' '{' otherNames+=EString ("," otherNames+=EString)* '}')? ('nickname' nickname=EString)?
-		//('deathCause' deathCause=EString)? ('marriages' '(' marriages+=[Marriage|EString] ("," marriages+=[Marriage|EString])*
-		//')')? ('cohabitations' '(' cohabitations+=[Cohabitation|EString] ("," cohabitations+=[Cohabitation|EString])* ')')?
-		//('birthDate' birthDate=DateX)? ('deathDate' deathDate=DateX)? ('personhistory' '{' personhistory+=PersonHistory (","
-		//personhistory+=PersonHistory)* '}')? ('cohabitation' '{' cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)*
-		//'}')? ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')? '}'
-		public Group getGroup() { return cGroup; }
-		
-		//'Person'
-		public Keyword getPersonKeyword_0() { return cPersonKeyword_0; }
-		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//('unknown' unknown=EBoolean)
+		//('year' year=EIntegerObject)?
 		public Group getGroup_2() { return cGroup_2; }
 		
-		//'unknown'
-		public Keyword getUnknownKeyword_2_0() { return cUnknownKeyword_2_0; }
+		//'year'
+		public Keyword getYearKeyword_2_0() { return cYearKeyword_2_0; }
 		
-		//unknown=EBoolean
-		public Assignment getUnknownAssignment_2_1() { return cUnknownAssignment_2_1; }
+		//year=EIntegerObject
+		public Assignment getYearAssignment_2_1() { return cYearAssignment_2_1; }
 		
-		//EBoolean
-		public RuleCall getUnknownEBooleanParserRuleCall_2_1_0() { return cUnknownEBooleanParserRuleCall_2_1_0; }
+		//EIntegerObject
+		public RuleCall getYearEIntegerObjectParserRuleCall_2_1_0() { return cYearEIntegerObjectParserRuleCall_2_1_0; }
 		
-		//('givenName' givenName=EString)?
+		//('month' month=EIntegerObject)?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'givenName'
-		public Keyword getGivenNameKeyword_3_0() { return cGivenNameKeyword_3_0; }
+		//'month'
+		public Keyword getMonthKeyword_3_0() { return cMonthKeyword_3_0; }
 		
-		//givenName=EString
-		public Assignment getGivenNameAssignment_3_1() { return cGivenNameAssignment_3_1; }
+		//month=EIntegerObject
+		public Assignment getMonthAssignment_3_1() { return cMonthAssignment_3_1; }
 		
-		//EString
-		public RuleCall getGivenNameEStringParserRuleCall_3_1_0() { return cGivenNameEStringParserRuleCall_3_1_0; }
+		//EIntegerObject
+		public RuleCall getMonthEIntegerObjectParserRuleCall_3_1_0() { return cMonthEIntegerObjectParserRuleCall_3_1_0; }
 		
-		//('birthPlace' birthPlace=EString)?
+		//('day' day=EIntegerObject)?
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'birthPlace'
-		public Keyword getBirthPlaceKeyword_4_0() { return cBirthPlaceKeyword_4_0; }
+		//'day'
+		public Keyword getDayKeyword_4_0() { return cDayKeyword_4_0; }
 		
-		//birthPlace=EString
-		public Assignment getBirthPlaceAssignment_4_1() { return cBirthPlaceAssignment_4_1; }
+		//day=EIntegerObject
+		public Assignment getDayAssignment_4_1() { return cDayAssignment_4_1; }
 		
-		//EString
-		public RuleCall getBirthPlaceEStringParserRuleCall_4_1_0() { return cBirthPlaceEStringParserRuleCall_4_1_0; }
-		
-		//('deathPlace' deathPlace=EString)?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'deathPlace'
-		public Keyword getDeathPlaceKeyword_5_0() { return cDeathPlaceKeyword_5_0; }
-		
-		//deathPlace=EString
-		public Assignment getDeathPlaceAssignment_5_1() { return cDeathPlaceAssignment_5_1; }
-		
-		//EString
-		public RuleCall getDeathPlaceEStringParserRuleCall_5_1_0() { return cDeathPlaceEStringParserRuleCall_5_1_0; }
-		
-		//('restingPlace' restingPlace=EString)?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//'restingPlace'
-		public Keyword getRestingPlaceKeyword_6_0() { return cRestingPlaceKeyword_6_0; }
-		
-		//restingPlace=EString
-		public Assignment getRestingPlaceAssignment_6_1() { return cRestingPlaceAssignment_6_1; }
-		
-		//EString
-		public RuleCall getRestingPlaceEStringParserRuleCall_6_1_0() { return cRestingPlaceEStringParserRuleCall_6_1_0; }
-		
-		//('type' type=TypeOfPerson)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'type'
-		public Keyword getTypeKeyword_7_0() { return cTypeKeyword_7_0; }
-		
-		//type=TypeOfPerson
-		public Assignment getTypeAssignment_7_1() { return cTypeAssignment_7_1; }
-		
-		//TypeOfPerson
-		public RuleCall getTypeTypeOfPersonEnumRuleCall_7_1_0() { return cTypeTypeOfPersonEnumRuleCall_7_1_0; }
-		
-		//('gender' gender=Gender)?
-		public Group getGroup_8() { return cGroup_8; }
-		
-		//'gender'
-		public Keyword getGenderKeyword_8_0() { return cGenderKeyword_8_0; }
-		
-		//gender=Gender
-		public Assignment getGenderAssignment_8_1() { return cGenderAssignment_8_1; }
-		
-		//Gender
-		public RuleCall getGenderGenderEnumRuleCall_8_1_0() { return cGenderGenderEnumRuleCall_8_1_0; }
-		
-		//('otherNames' '{' otherNames+=EString ("," otherNames+=EString)* '}')?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//'otherNames'
-		public Keyword getOtherNamesKeyword_9_0() { return cOtherNamesKeyword_9_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_9_1() { return cLeftCurlyBracketKeyword_9_1; }
-		
-		//otherNames+=EString
-		public Assignment getOtherNamesAssignment_9_2() { return cOtherNamesAssignment_9_2; }
-		
-		//EString
-		public RuleCall getOtherNamesEStringParserRuleCall_9_2_0() { return cOtherNamesEStringParserRuleCall_9_2_0; }
-		
-		//("," otherNames+=EString)*
-		public Group getGroup_9_3() { return cGroup_9_3; }
-		
-		//","
-		public Keyword getCommaKeyword_9_3_0() { return cCommaKeyword_9_3_0; }
-		
-		//otherNames+=EString
-		public Assignment getOtherNamesAssignment_9_3_1() { return cOtherNamesAssignment_9_3_1; }
-		
-		//EString
-		public RuleCall getOtherNamesEStringParserRuleCall_9_3_1_0() { return cOtherNamesEStringParserRuleCall_9_3_1_0; }
+		//EIntegerObject
+		public RuleCall getDayEIntegerObjectParserRuleCall_4_1_0() { return cDayEIntegerObjectParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_9_4() { return cRightCurlyBracketKeyword_9_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+	public class PersonElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gendsl.GenDsl.Person");
+		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
+		private final Assignment cGivenNameAssignment_0 = (Assignment)cUnorderedGroup.eContents().get(0);
+		private final RuleCall cGivenNameEStringParserRuleCall_0_0 = (RuleCall)cGivenNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
+		private final Keyword cUnknownKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cUnknownAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cUnknownEBooleanParserRuleCall_1_1_0 = (RuleCall)cUnknownAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cUnorderedGroup.eContents().get(2);
+		private final Keyword cBirthPlaceKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cBirthPlaceAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cBirthPlaceEStringParserRuleCall_2_1_0 = (RuleCall)cBirthPlaceAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cUnorderedGroup.eContents().get(3);
+		private final Keyword cDeathPlaceKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cDeathPlaceAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cDeathPlaceEStringParserRuleCall_3_1_0 = (RuleCall)cDeathPlaceAssignment_3_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cUnorderedGroup.eContents().get(4);
+		private final Keyword cRestingPlaceKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cRestingPlaceAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cRestingPlaceEStringParserRuleCall_4_1_0 = (RuleCall)cRestingPlaceAssignment_4_1.eContents().get(0);
+		private final Group cGroup_5 = (Group)cUnorderedGroup.eContents().get(5);
+		private final Keyword cTypeKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cTypeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cTypeTypeOfPersonEnumRuleCall_5_1_0 = (RuleCall)cTypeAssignment_5_1.eContents().get(0);
+		private final Group cGroup_6 = (Group)cUnorderedGroup.eContents().get(6);
+		private final Keyword cGenderKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cGenderAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cGenderGenderEnumRuleCall_6_1_0 = (RuleCall)cGenderAssignment_6_1.eContents().get(0);
+		private final Group cGroup_7 = (Group)cUnorderedGroup.eContents().get(7);
+		private final Keyword cOtherNamesKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Assignment cOtherNamesAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
+		private final RuleCall cOtherNamesEStringParserRuleCall_7_2_0 = (RuleCall)cOtherNamesAssignment_7_2.eContents().get(0);
+		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
+		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
+		private final Assignment cOtherNamesAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
+		private final RuleCall cOtherNamesEStringParserRuleCall_7_3_1_0 = (RuleCall)cOtherNamesAssignment_7_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
+		private final Group cGroup_8 = (Group)cUnorderedGroup.eContents().get(8);
+		private final Keyword cNicknameKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cNicknameAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cNicknameEStringParserRuleCall_8_1_0 = (RuleCall)cNicknameAssignment_8_1.eContents().get(0);
+		private final Group cGroup_9 = (Group)cUnorderedGroup.eContents().get(9);
+		private final Keyword cDeathCauseKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cDeathCauseAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cDeathCauseEStringParserRuleCall_9_1_0 = (RuleCall)cDeathCauseAssignment_9_1.eContents().get(0);
+		private final Group cGroup_10 = (Group)cUnorderedGroup.eContents().get(10);
+		private final Keyword cMarriagesKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
+		private final Assignment cMarriagesAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
+		private final CrossReference cMarriagesMarriageCrossReference_10_2_0 = (CrossReference)cMarriagesAssignment_10_2.eContents().get(0);
+		private final RuleCall cMarriagesMarriageEStringParserRuleCall_10_2_0_1 = (RuleCall)cMarriagesMarriageCrossReference_10_2_0.eContents().get(1);
+		private final Group cGroup_10_3 = (Group)cGroup_10.eContents().get(3);
+		private final Keyword cCommaKeyword_10_3_0 = (Keyword)cGroup_10_3.eContents().get(0);
+		private final Assignment cMarriagesAssignment_10_3_1 = (Assignment)cGroup_10_3.eContents().get(1);
+		private final CrossReference cMarriagesMarriageCrossReference_10_3_1_0 = (CrossReference)cMarriagesAssignment_10_3_1.eContents().get(0);
+		private final RuleCall cMarriagesMarriageEStringParserRuleCall_10_3_1_0_1 = (RuleCall)cMarriagesMarriageCrossReference_10_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_10_4 = (Keyword)cGroup_10.eContents().get(4);
+		private final Group cGroup_11 = (Group)cUnorderedGroup.eContents().get(11);
+		private final Keyword cCohabitationsKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
+		private final Assignment cCohabitationsAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
+		private final CrossReference cCohabitationsCohabitationCrossReference_11_2_0 = (CrossReference)cCohabitationsAssignment_11_2.eContents().get(0);
+		private final RuleCall cCohabitationsCohabitationEStringParserRuleCall_11_2_0_1 = (RuleCall)cCohabitationsCohabitationCrossReference_11_2_0.eContents().get(1);
+		private final Group cGroup_11_3 = (Group)cGroup_11.eContents().get(3);
+		private final Keyword cCommaKeyword_11_3_0 = (Keyword)cGroup_11_3.eContents().get(0);
+		private final Assignment cCohabitationsAssignment_11_3_1 = (Assignment)cGroup_11_3.eContents().get(1);
+		private final CrossReference cCohabitationsCohabitationCrossReference_11_3_1_0 = (CrossReference)cCohabitationsAssignment_11_3_1.eContents().get(0);
+		private final RuleCall cCohabitationsCohabitationEStringParserRuleCall_11_3_1_0_1 = (RuleCall)cCohabitationsCohabitationCrossReference_11_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_11_4 = (Keyword)cGroup_11.eContents().get(4);
+		private final Group cGroup_12 = (Group)cUnorderedGroup.eContents().get(12);
+		private final Keyword cBirthDateKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Assignment cBirthDateAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
+		private final RuleCall cBirthDateDateXParserRuleCall_12_1_0 = (RuleCall)cBirthDateAssignment_12_1.eContents().get(0);
+		private final Group cGroup_13 = (Group)cUnorderedGroup.eContents().get(13);
+		private final Keyword cDeathDateKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
+		private final Assignment cDeathDateAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
+		private final RuleCall cDeathDateDateXParserRuleCall_13_1_0 = (RuleCall)cDeathDateAssignment_13_1.eContents().get(0);
+		private final Group cGroup_14 = (Group)cUnorderedGroup.eContents().get(14);
+		private final Keyword cPersonhistoryKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
+		private final Assignment cPersonhistoryAssignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
+		private final RuleCall cPersonhistoryPersonHistoryParserRuleCall_14_2_0 = (RuleCall)cPersonhistoryAssignment_14_2.eContents().get(0);
+		private final Group cGroup_14_3 = (Group)cGroup_14.eContents().get(3);
+		private final Keyword cCommaKeyword_14_3_0 = (Keyword)cGroup_14_3.eContents().get(0);
+		private final Assignment cPersonhistoryAssignment_14_3_1 = (Assignment)cGroup_14_3.eContents().get(1);
+		private final RuleCall cPersonhistoryPersonHistoryParserRuleCall_14_3_1_0 = (RuleCall)cPersonhistoryAssignment_14_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_14_4 = (Keyword)cGroup_14.eContents().get(4);
+		private final Group cGroup_15 = (Group)cUnorderedGroup.eContents().get(15);
+		private final Keyword cCohabitationKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
+		private final Assignment cCohabitationAssignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
+		private final RuleCall cCohabitationCohabitationParserRuleCall_15_2_0 = (RuleCall)cCohabitationAssignment_15_2.eContents().get(0);
+		private final Group cGroup_15_3 = (Group)cGroup_15.eContents().get(3);
+		private final Keyword cCommaKeyword_15_3_0 = (Keyword)cGroup_15_3.eContents().get(0);
+		private final Assignment cCohabitationAssignment_15_3_1 = (Assignment)cGroup_15_3.eContents().get(1);
+		private final RuleCall cCohabitationCohabitationParserRuleCall_15_3_1_0 = (RuleCall)cCohabitationAssignment_15_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_15_4 = (Keyword)cGroup_15.eContents().get(4);
+		private final Group cGroup_16 = (Group)cUnorderedGroup.eContents().get(16);
+		private final Keyword cMarriageKeyword_16_0 = (Keyword)cGroup_16.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_16_1 = (Keyword)cGroup_16.eContents().get(1);
+		private final Assignment cMarriageAssignment_16_2 = (Assignment)cGroup_16.eContents().get(2);
+		private final RuleCall cMarriageMarriageParserRuleCall_16_2_0 = (RuleCall)cMarriageAssignment_16_2.eContents().get(0);
+		private final Group cGroup_16_3 = (Group)cGroup_16.eContents().get(3);
+		private final Keyword cCommaKeyword_16_3_0 = (Keyword)cGroup_16_3.eContents().get(0);
+		private final Assignment cMarriageAssignment_16_3_1 = (Assignment)cGroup_16_3.eContents().get(1);
+		private final RuleCall cMarriageMarriageParserRuleCall_16_3_1_0 = (RuleCall)cMarriageAssignment_16_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_16_4 = (Keyword)cGroup_16.eContents().get(4);
+		
+		//Person:
+		//	givenName=EString
+		//	//'{'
+		//	& ('unknown' unknown=EBoolean)?
+		//	& ('birthPlace' birthPlace=EString)?
+		//	& ('deathPlace' deathPlace=EString)?
+		//	& ('restingPlace' restingPlace=EString)?
+		//	& ('type' type=TypeOfPerson)?
+		//	& ('gender' gender=Gender)?
+		//	& ('otherNames' '{' otherNames+=EString ("," otherNames+=EString)* '}')?
+		//	& ('nickname' nickname=EString)?
+		//	& ('deathCause' deathCause=EString)?
+		//	& ('marriages' '(' marriages+=[Marriage|EString] ("," marriages+=[Marriage|EString])* ')')?
+		//	& ('cohabitations' '(' cohabitations+=[Cohabitation|EString] ("," cohabitations+=[Cohabitation|EString])* ')')?
+		//	& ('birthDate' birthDate=DateX)?
+		//	& ('deathDate' deathDate=DateX)?
+		//	& ('personhistory' '{' personhistory+=PersonHistory ("," personhistory+=PersonHistory)* '}')?
+		//	& ('cohabitation' '{' cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)* '}')?
+		//	& ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
+		//	//'}'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//givenName=EString //'{'
+		//& ('unknown' unknown=EBoolean)? & ('birthPlace' birthPlace=EString)? & ('deathPlace' deathPlace=EString)? &
+		//('restingPlace' restingPlace=EString)? & ('type' type=TypeOfPerson)? & ('gender' gender=Gender)? & ('otherNames' '{'
+		//otherNames+=EString ("," otherNames+=EString)* '}')? & ('nickname' nickname=EString)? & ('deathCause'
+		//deathCause=EString)? & ('marriages' '(' marriages+=[Marriage|EString] ("," marriages+=[Marriage|EString])* ')')? &
+		//('cohabitations' '(' cohabitations+=[Cohabitation|EString] ("," cohabitations+=[Cohabitation|EString])* ')')? &
+		//('birthDate' birthDate=DateX)? & ('deathDate' deathDate=DateX)? & ('personhistory' '{' personhistory+=PersonHistory
+		//("," personhistory+=PersonHistory)* '}')? & ('cohabitation' '{' cohabitation+=Cohabitation (","
+		//cohabitation+=Cohabitation)* '}')? & ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
+		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
+		
+		//givenName=EString
+		public Assignment getGivenNameAssignment_0() { return cGivenNameAssignment_0; }
+		
+		//EString
+		public RuleCall getGivenNameEStringParserRuleCall_0_0() { return cGivenNameEStringParserRuleCall_0_0; }
+		
+		//('unknown' unknown=EBoolean)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'unknown'
+		public Keyword getUnknownKeyword_1_0() { return cUnknownKeyword_1_0; }
+		
+		//unknown=EBoolean
+		public Assignment getUnknownAssignment_1_1() { return cUnknownAssignment_1_1; }
+		
+		//EBoolean
+		public RuleCall getUnknownEBooleanParserRuleCall_1_1_0() { return cUnknownEBooleanParserRuleCall_1_1_0; }
+		
+		//('birthPlace' birthPlace=EString)?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//'birthPlace'
+		public Keyword getBirthPlaceKeyword_2_0() { return cBirthPlaceKeyword_2_0; }
+		
+		//birthPlace=EString
+		public Assignment getBirthPlaceAssignment_2_1() { return cBirthPlaceAssignment_2_1; }
+		
+		//EString
+		public RuleCall getBirthPlaceEStringParserRuleCall_2_1_0() { return cBirthPlaceEStringParserRuleCall_2_1_0; }
+		
+		//('deathPlace' deathPlace=EString)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'deathPlace'
+		public Keyword getDeathPlaceKeyword_3_0() { return cDeathPlaceKeyword_3_0; }
+		
+		//deathPlace=EString
+		public Assignment getDeathPlaceAssignment_3_1() { return cDeathPlaceAssignment_3_1; }
+		
+		//EString
+		public RuleCall getDeathPlaceEStringParserRuleCall_3_1_0() { return cDeathPlaceEStringParserRuleCall_3_1_0; }
+		
+		//('restingPlace' restingPlace=EString)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'restingPlace'
+		public Keyword getRestingPlaceKeyword_4_0() { return cRestingPlaceKeyword_4_0; }
+		
+		//restingPlace=EString
+		public Assignment getRestingPlaceAssignment_4_1() { return cRestingPlaceAssignment_4_1; }
+		
+		//EString
+		public RuleCall getRestingPlaceEStringParserRuleCall_4_1_0() { return cRestingPlaceEStringParserRuleCall_4_1_0; }
+		
+		//('type' type=TypeOfPerson)?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//'type'
+		public Keyword getTypeKeyword_5_0() { return cTypeKeyword_5_0; }
+		
+		//type=TypeOfPerson
+		public Assignment getTypeAssignment_5_1() { return cTypeAssignment_5_1; }
+		
+		//TypeOfPerson
+		public RuleCall getTypeTypeOfPersonEnumRuleCall_5_1_0() { return cTypeTypeOfPersonEnumRuleCall_5_1_0; }
+		
+		//('gender' gender=Gender)?
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//'gender'
+		public Keyword getGenderKeyword_6_0() { return cGenderKeyword_6_0; }
+		
+		//gender=Gender
+		public Assignment getGenderAssignment_6_1() { return cGenderAssignment_6_1; }
+		
+		//Gender
+		public RuleCall getGenderGenderEnumRuleCall_6_1_0() { return cGenderGenderEnumRuleCall_6_1_0; }
+		
+		//('otherNames' '{' otherNames+=EString ("," otherNames+=EString)* '}')?
+		public Group getGroup_7() { return cGroup_7; }
+		
+		//'otherNames'
+		public Keyword getOtherNamesKeyword_7_0() { return cOtherNamesKeyword_7_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
+		
+		//otherNames+=EString
+		public Assignment getOtherNamesAssignment_7_2() { return cOtherNamesAssignment_7_2; }
+		
+		//EString
+		public RuleCall getOtherNamesEStringParserRuleCall_7_2_0() { return cOtherNamesEStringParserRuleCall_7_2_0; }
+		
+		//("," otherNames+=EString)*
+		public Group getGroup_7_3() { return cGroup_7_3; }
+		
+		//","
+		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
+		
+		//otherNames+=EString
+		public Assignment getOtherNamesAssignment_7_3_1() { return cOtherNamesAssignment_7_3_1; }
+		
+		//EString
+		public RuleCall getOtherNamesEStringParserRuleCall_7_3_1_0() { return cOtherNamesEStringParserRuleCall_7_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
 		
 		//('nickname' nickname=EString)?
-		public Group getGroup_10() { return cGroup_10; }
+		public Group getGroup_8() { return cGroup_8; }
 		
 		//'nickname'
-		public Keyword getNicknameKeyword_10_0() { return cNicknameKeyword_10_0; }
+		public Keyword getNicknameKeyword_8_0() { return cNicknameKeyword_8_0; }
 		
 		//nickname=EString
-		public Assignment getNicknameAssignment_10_1() { return cNicknameAssignment_10_1; }
+		public Assignment getNicknameAssignment_8_1() { return cNicknameAssignment_8_1; }
 		
 		//EString
-		public RuleCall getNicknameEStringParserRuleCall_10_1_0() { return cNicknameEStringParserRuleCall_10_1_0; }
+		public RuleCall getNicknameEStringParserRuleCall_8_1_0() { return cNicknameEStringParserRuleCall_8_1_0; }
 		
 		//('deathCause' deathCause=EString)?
-		public Group getGroup_11() { return cGroup_11; }
+		public Group getGroup_9() { return cGroup_9; }
 		
 		//'deathCause'
-		public Keyword getDeathCauseKeyword_11_0() { return cDeathCauseKeyword_11_0; }
+		public Keyword getDeathCauseKeyword_9_0() { return cDeathCauseKeyword_9_0; }
 		
 		//deathCause=EString
-		public Assignment getDeathCauseAssignment_11_1() { return cDeathCauseAssignment_11_1; }
+		public Assignment getDeathCauseAssignment_9_1() { return cDeathCauseAssignment_9_1; }
 		
 		//EString
-		public RuleCall getDeathCauseEStringParserRuleCall_11_1_0() { return cDeathCauseEStringParserRuleCall_11_1_0; }
+		public RuleCall getDeathCauseEStringParserRuleCall_9_1_0() { return cDeathCauseEStringParserRuleCall_9_1_0; }
 		
 		//('marriages' '(' marriages+=[Marriage|EString] ("," marriages+=[Marriage|EString])* ')')?
-		public Group getGroup_12() { return cGroup_12; }
+		public Group getGroup_10() { return cGroup_10; }
 		
 		//'marriages'
-		public Keyword getMarriagesKeyword_12_0() { return cMarriagesKeyword_12_0; }
+		public Keyword getMarriagesKeyword_10_0() { return cMarriagesKeyword_10_0; }
 		
 		//'('
-		public Keyword getLeftParenthesisKeyword_12_1() { return cLeftParenthesisKeyword_12_1; }
+		public Keyword getLeftParenthesisKeyword_10_1() { return cLeftParenthesisKeyword_10_1; }
 		
 		//marriages+=[Marriage|EString]
-		public Assignment getMarriagesAssignment_12_2() { return cMarriagesAssignment_12_2; }
+		public Assignment getMarriagesAssignment_10_2() { return cMarriagesAssignment_10_2; }
 		
 		//[Marriage|EString]
-		public CrossReference getMarriagesMarriageCrossReference_12_2_0() { return cMarriagesMarriageCrossReference_12_2_0; }
+		public CrossReference getMarriagesMarriageCrossReference_10_2_0() { return cMarriagesMarriageCrossReference_10_2_0; }
 		
 		//EString
-		public RuleCall getMarriagesMarriageEStringParserRuleCall_12_2_0_1() { return cMarriagesMarriageEStringParserRuleCall_12_2_0_1; }
+		public RuleCall getMarriagesMarriageEStringParserRuleCall_10_2_0_1() { return cMarriagesMarriageEStringParserRuleCall_10_2_0_1; }
 		
 		//("," marriages+=[Marriage|EString])*
-		public Group getGroup_12_3() { return cGroup_12_3; }
+		public Group getGroup_10_3() { return cGroup_10_3; }
 		
 		//","
-		public Keyword getCommaKeyword_12_3_0() { return cCommaKeyword_12_3_0; }
+		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
 		
 		//marriages+=[Marriage|EString]
-		public Assignment getMarriagesAssignment_12_3_1() { return cMarriagesAssignment_12_3_1; }
+		public Assignment getMarriagesAssignment_10_3_1() { return cMarriagesAssignment_10_3_1; }
 		
 		//[Marriage|EString]
-		public CrossReference getMarriagesMarriageCrossReference_12_3_1_0() { return cMarriagesMarriageCrossReference_12_3_1_0; }
+		public CrossReference getMarriagesMarriageCrossReference_10_3_1_0() { return cMarriagesMarriageCrossReference_10_3_1_0; }
 		
 		//EString
-		public RuleCall getMarriagesMarriageEStringParserRuleCall_12_3_1_0_1() { return cMarriagesMarriageEStringParserRuleCall_12_3_1_0_1; }
+		public RuleCall getMarriagesMarriageEStringParserRuleCall_10_3_1_0_1() { return cMarriagesMarriageEStringParserRuleCall_10_3_1_0_1; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_12_4() { return cRightParenthesisKeyword_12_4; }
+		public Keyword getRightParenthesisKeyword_10_4() { return cRightParenthesisKeyword_10_4; }
 		
 		//('cohabitations' '(' cohabitations+=[Cohabitation|EString] ("," cohabitations+=[Cohabitation|EString])* ')')?
-		public Group getGroup_13() { return cGroup_13; }
+		public Group getGroup_11() { return cGroup_11; }
 		
 		//'cohabitations'
-		public Keyword getCohabitationsKeyword_13_0() { return cCohabitationsKeyword_13_0; }
+		public Keyword getCohabitationsKeyword_11_0() { return cCohabitationsKeyword_11_0; }
 		
 		//'('
-		public Keyword getLeftParenthesisKeyword_13_1() { return cLeftParenthesisKeyword_13_1; }
+		public Keyword getLeftParenthesisKeyword_11_1() { return cLeftParenthesisKeyword_11_1; }
 		
 		//cohabitations+=[Cohabitation|EString]
-		public Assignment getCohabitationsAssignment_13_2() { return cCohabitationsAssignment_13_2; }
+		public Assignment getCohabitationsAssignment_11_2() { return cCohabitationsAssignment_11_2; }
 		
 		//[Cohabitation|EString]
-		public CrossReference getCohabitationsCohabitationCrossReference_13_2_0() { return cCohabitationsCohabitationCrossReference_13_2_0; }
+		public CrossReference getCohabitationsCohabitationCrossReference_11_2_0() { return cCohabitationsCohabitationCrossReference_11_2_0; }
 		
 		//EString
-		public RuleCall getCohabitationsCohabitationEStringParserRuleCall_13_2_0_1() { return cCohabitationsCohabitationEStringParserRuleCall_13_2_0_1; }
+		public RuleCall getCohabitationsCohabitationEStringParserRuleCall_11_2_0_1() { return cCohabitationsCohabitationEStringParserRuleCall_11_2_0_1; }
 		
 		//("," cohabitations+=[Cohabitation|EString])*
-		public Group getGroup_13_3() { return cGroup_13_3; }
+		public Group getGroup_11_3() { return cGroup_11_3; }
 		
 		//","
-		public Keyword getCommaKeyword_13_3_0() { return cCommaKeyword_13_3_0; }
+		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
 		
 		//cohabitations+=[Cohabitation|EString]
-		public Assignment getCohabitationsAssignment_13_3_1() { return cCohabitationsAssignment_13_3_1; }
+		public Assignment getCohabitationsAssignment_11_3_1() { return cCohabitationsAssignment_11_3_1; }
 		
 		//[Cohabitation|EString]
-		public CrossReference getCohabitationsCohabitationCrossReference_13_3_1_0() { return cCohabitationsCohabitationCrossReference_13_3_1_0; }
+		public CrossReference getCohabitationsCohabitationCrossReference_11_3_1_0() { return cCohabitationsCohabitationCrossReference_11_3_1_0; }
 		
 		//EString
-		public RuleCall getCohabitationsCohabitationEStringParserRuleCall_13_3_1_0_1() { return cCohabitationsCohabitationEStringParserRuleCall_13_3_1_0_1; }
+		public RuleCall getCohabitationsCohabitationEStringParserRuleCall_11_3_1_0_1() { return cCohabitationsCohabitationEStringParserRuleCall_11_3_1_0_1; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_13_4() { return cRightParenthesisKeyword_13_4; }
+		public Keyword getRightParenthesisKeyword_11_4() { return cRightParenthesisKeyword_11_4; }
 		
 		//('birthDate' birthDate=DateX)?
-		public Group getGroup_14() { return cGroup_14; }
+		public Group getGroup_12() { return cGroup_12; }
 		
 		//'birthDate'
-		public Keyword getBirthDateKeyword_14_0() { return cBirthDateKeyword_14_0; }
+		public Keyword getBirthDateKeyword_12_0() { return cBirthDateKeyword_12_0; }
 		
 		//birthDate=DateX
-		public Assignment getBirthDateAssignment_14_1() { return cBirthDateAssignment_14_1; }
+		public Assignment getBirthDateAssignment_12_1() { return cBirthDateAssignment_12_1; }
 		
 		//DateX
-		public RuleCall getBirthDateDateXParserRuleCall_14_1_0() { return cBirthDateDateXParserRuleCall_14_1_0; }
+		public RuleCall getBirthDateDateXParserRuleCall_12_1_0() { return cBirthDateDateXParserRuleCall_12_1_0; }
 		
 		//('deathDate' deathDate=DateX)?
-		public Group getGroup_15() { return cGroup_15; }
+		public Group getGroup_13() { return cGroup_13; }
 		
 		//'deathDate'
-		public Keyword getDeathDateKeyword_15_0() { return cDeathDateKeyword_15_0; }
+		public Keyword getDeathDateKeyword_13_0() { return cDeathDateKeyword_13_0; }
 		
 		//deathDate=DateX
-		public Assignment getDeathDateAssignment_15_1() { return cDeathDateAssignment_15_1; }
+		public Assignment getDeathDateAssignment_13_1() { return cDeathDateAssignment_13_1; }
 		
 		//DateX
-		public RuleCall getDeathDateDateXParserRuleCall_15_1_0() { return cDeathDateDateXParserRuleCall_15_1_0; }
+		public RuleCall getDeathDateDateXParserRuleCall_13_1_0() { return cDeathDateDateXParserRuleCall_13_1_0; }
 		
 		//('personhistory' '{' personhistory+=PersonHistory ("," personhistory+=PersonHistory)* '}')?
-		public Group getGroup_16() { return cGroup_16; }
+		public Group getGroup_14() { return cGroup_14; }
 		
 		//'personhistory'
-		public Keyword getPersonhistoryKeyword_16_0() { return cPersonhistoryKeyword_16_0; }
+		public Keyword getPersonhistoryKeyword_14_0() { return cPersonhistoryKeyword_14_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_14_1() { return cLeftCurlyBracketKeyword_14_1; }
+		
+		//personhistory+=PersonHistory
+		public Assignment getPersonhistoryAssignment_14_2() { return cPersonhistoryAssignment_14_2; }
+		
+		//PersonHistory
+		public RuleCall getPersonhistoryPersonHistoryParserRuleCall_14_2_0() { return cPersonhistoryPersonHistoryParserRuleCall_14_2_0; }
+		
+		//("," personhistory+=PersonHistory)*
+		public Group getGroup_14_3() { return cGroup_14_3; }
+		
+		//","
+		public Keyword getCommaKeyword_14_3_0() { return cCommaKeyword_14_3_0; }
+		
+		//personhistory+=PersonHistory
+		public Assignment getPersonhistoryAssignment_14_3_1() { return cPersonhistoryAssignment_14_3_1; }
+		
+		//PersonHistory
+		public RuleCall getPersonhistoryPersonHistoryParserRuleCall_14_3_1_0() { return cPersonhistoryPersonHistoryParserRuleCall_14_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_14_4() { return cRightCurlyBracketKeyword_14_4; }
+		
+		//('cohabitation' '{' cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)* '}')?
+		public Group getGroup_15() { return cGroup_15; }
+		
+		//'cohabitation'
+		public Keyword getCohabitationKeyword_15_0() { return cCohabitationKeyword_15_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_15_1() { return cLeftCurlyBracketKeyword_15_1; }
+		
+		//cohabitation+=Cohabitation
+		public Assignment getCohabitationAssignment_15_2() { return cCohabitationAssignment_15_2; }
+		
+		//Cohabitation
+		public RuleCall getCohabitationCohabitationParserRuleCall_15_2_0() { return cCohabitationCohabitationParserRuleCall_15_2_0; }
+		
+		//("," cohabitation+=Cohabitation)*
+		public Group getGroup_15_3() { return cGroup_15_3; }
+		
+		//","
+		public Keyword getCommaKeyword_15_3_0() { return cCommaKeyword_15_3_0; }
+		
+		//cohabitation+=Cohabitation
+		public Assignment getCohabitationAssignment_15_3_1() { return cCohabitationAssignment_15_3_1; }
+		
+		//Cohabitation
+		public RuleCall getCohabitationCohabitationParserRuleCall_15_3_1_0() { return cCohabitationCohabitationParserRuleCall_15_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_15_4() { return cRightCurlyBracketKeyword_15_4; }
+		
+		//('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
+		public Group getGroup_16() { return cGroup_16; }
+		
+		//'marriage'
+		public Keyword getMarriageKeyword_16_0() { return cMarriageKeyword_16_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_16_1() { return cLeftCurlyBracketKeyword_16_1; }
 		
-		//personhistory+=PersonHistory
-		public Assignment getPersonhistoryAssignment_16_2() { return cPersonhistoryAssignment_16_2; }
+		//marriage+=Marriage
+		public Assignment getMarriageAssignment_16_2() { return cMarriageAssignment_16_2; }
 		
-		//PersonHistory
-		public RuleCall getPersonhistoryPersonHistoryParserRuleCall_16_2_0() { return cPersonhistoryPersonHistoryParserRuleCall_16_2_0; }
+		//Marriage
+		public RuleCall getMarriageMarriageParserRuleCall_16_2_0() { return cMarriageMarriageParserRuleCall_16_2_0; }
 		
-		//("," personhistory+=PersonHistory)*
+		//("," marriage+=Marriage)*
 		public Group getGroup_16_3() { return cGroup_16_3; }
 		
 		//","
 		public Keyword getCommaKeyword_16_3_0() { return cCommaKeyword_16_3_0; }
 		
-		//personhistory+=PersonHistory
-		public Assignment getPersonhistoryAssignment_16_3_1() { return cPersonhistoryAssignment_16_3_1; }
+		//marriage+=Marriage
+		public Assignment getMarriageAssignment_16_3_1() { return cMarriageAssignment_16_3_1; }
 		
-		//PersonHistory
-		public RuleCall getPersonhistoryPersonHistoryParserRuleCall_16_3_1_0() { return cPersonhistoryPersonHistoryParserRuleCall_16_3_1_0; }
+		//Marriage
+		public RuleCall getMarriageMarriageParserRuleCall_16_3_1_0() { return cMarriageMarriageParserRuleCall_16_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_16_4() { return cRightCurlyBracketKeyword_16_4; }
-		
-		//('cohabitation' '{' cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)* '}')?
-		public Group getGroup_17() { return cGroup_17; }
-		
-		//'cohabitation'
-		public Keyword getCohabitationKeyword_17_0() { return cCohabitationKeyword_17_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_17_1() { return cLeftCurlyBracketKeyword_17_1; }
-		
-		//cohabitation+=Cohabitation
-		public Assignment getCohabitationAssignment_17_2() { return cCohabitationAssignment_17_2; }
-		
-		//Cohabitation
-		public RuleCall getCohabitationCohabitationParserRuleCall_17_2_0() { return cCohabitationCohabitationParserRuleCall_17_2_0; }
-		
-		//("," cohabitation+=Cohabitation)*
-		public Group getGroup_17_3() { return cGroup_17_3; }
-		
-		//","
-		public Keyword getCommaKeyword_17_3_0() { return cCommaKeyword_17_3_0; }
-		
-		//cohabitation+=Cohabitation
-		public Assignment getCohabitationAssignment_17_3_1() { return cCohabitationAssignment_17_3_1; }
-		
-		//Cohabitation
-		public RuleCall getCohabitationCohabitationParserRuleCall_17_3_1_0() { return cCohabitationCohabitationParserRuleCall_17_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_17_4() { return cRightCurlyBracketKeyword_17_4; }
-		
-		//('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
-		public Group getGroup_18() { return cGroup_18; }
-		
-		//'marriage'
-		public Keyword getMarriageKeyword_18_0() { return cMarriageKeyword_18_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_18_1() { return cLeftCurlyBracketKeyword_18_1; }
-		
-		//marriage+=Marriage
-		public Assignment getMarriageAssignment_18_2() { return cMarriageAssignment_18_2; }
-		
-		//Marriage
-		public RuleCall getMarriageMarriageParserRuleCall_18_2_0() { return cMarriageMarriageParserRuleCall_18_2_0; }
-		
-		//("," marriage+=Marriage)*
-		public Group getGroup_18_3() { return cGroup_18_3; }
-		
-		//","
-		public Keyword getCommaKeyword_18_3_0() { return cCommaKeyword_18_3_0; }
-		
-		//marriage+=Marriage
-		public Assignment getMarriageAssignment_18_3_1() { return cMarriageAssignment_18_3_1; }
-		
-		//Marriage
-		public RuleCall getMarriageMarriageParserRuleCall_18_3_1_0() { return cMarriageMarriageParserRuleCall_18_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_18_4() { return cRightCurlyBracketKeyword_18_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_19() { return cRightCurlyBracketKeyword_19; }
 	}
 	public class EIntegerObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gendsl.GenDsl.EIntegerObject");
@@ -715,55 +702,53 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMarriageAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cMarriageKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cTypeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cTypeTypeOfIntimateRelationshipEnumRuleCall_2_1_0 = (RuleCall)cTypeAssignment_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cTypeKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cTypeTypeOfIntimateRelationshipEnumRuleCall_3_1_0 = (RuleCall)cTypeAssignment_3_1.eContents().get(0);
+		private final Keyword cSpousesKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cSpousesAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final CrossReference cSpousesPersonCrossReference_3_2_0 = (CrossReference)cSpousesAssignment_3_2.eContents().get(0);
+		private final RuleCall cSpousesPersonEStringParserRuleCall_3_2_0_1 = (RuleCall)cSpousesPersonCrossReference_3_2_0.eContents().get(1);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cSpousesAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final CrossReference cSpousesPersonCrossReference_3_3_1_0 = (CrossReference)cSpousesAssignment_3_3_1.eContents().get(0);
+		private final RuleCall cSpousesPersonEStringParserRuleCall_3_3_1_0_1 = (RuleCall)cSpousesPersonCrossReference_3_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cSpousesKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cSpousesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final CrossReference cSpousesPersonCrossReference_4_2_0 = (CrossReference)cSpousesAssignment_4_2.eContents().get(0);
-		private final RuleCall cSpousesPersonEStringParserRuleCall_4_2_0_1 = (RuleCall)cSpousesPersonCrossReference_4_2_0.eContents().get(1);
-		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
-		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
-		private final Assignment cSpousesAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
-		private final CrossReference cSpousesPersonCrossReference_4_3_1_0 = (CrossReference)cSpousesAssignment_4_3_1.eContents().get(0);
-		private final RuleCall cSpousesPersonEStringParserRuleCall_4_3_1_0_1 = (RuleCall)cSpousesPersonCrossReference_4_3_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
+		private final Keyword cFromDateKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cFromDateAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cFromDateDateXParserRuleCall_4_1_0 = (RuleCall)cFromDateAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cFromDateKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cFromDateAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cFromDateDateXParserRuleCall_5_1_0 = (RuleCall)cFromDateAssignment_5_1.eContents().get(0);
+		private final Keyword cToDateKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cToDateAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cToDateDateXParserRuleCall_5_1_0 = (RuleCall)cToDateAssignment_5_1.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cToDateKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cToDateAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cToDateDateXParserRuleCall_6_1_0 = (RuleCall)cToDateAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cChildrenKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cChildrenAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cChildrenPersonParserRuleCall_7_2_0 = (RuleCall)cChildrenAssignment_7_2.eContents().get(0);
-		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
-		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Assignment cChildrenAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
-		private final RuleCall cChildrenPersonParserRuleCall_7_3_1_0 = (RuleCall)cChildrenAssignment_7_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cChildrenKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cChildrenAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cChildrenPersonParserRuleCall_6_2_0 = (RuleCall)cChildrenAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cChildrenAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cChildrenPersonParserRuleCall_6_3_1_0 = (RuleCall)cChildrenAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		
 		//Marriage:
 		//	{Marriage}
-		//	'Marriage'
-		//	'{' ('type' type=TypeOfIntimateRelationship)? ('spouses' '(' spouses+=[Person|EString] (","
+		//	'Marriage' ('type' type=TypeOfIntimateRelationship)? ('spouses' '(' spouses+=[Person|EString] (","
 		//	spouses+=[Person|EString])* ')')? ('fromDate' fromDate=DateX)? ('toDate' toDate=DateX)? ('children' '{'
 		//	children+=Person ("," children+=Person)* '}')?
-		//	'}';
+		//	//'}'
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Marriage} 'Marriage' '{' ('type' type=TypeOfIntimateRelationship)? ('spouses' '(' spouses+=[Person|EString] (","
+		//{Marriage} 'Marriage' ('type' type=TypeOfIntimateRelationship)? ('spouses' '(' spouses+=[Person|EString] (","
 		//spouses+=[Person|EString])* ')')? ('fromDate' fromDate=DateX)? ('toDate' toDate=DateX)? ('children' '{'
-		//children+=Person ("," children+=Person)* '}')? '}'
+		//children+=Person ("," children+=Person)* '}')?
 		public Group getGroup() { return cGroup; }
 		
 		//{Marriage}
@@ -772,113 +757,107 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'Marriage'
 		public Keyword getMarriageKeyword_1() { return cMarriageKeyword_1; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-		
 		//('type' type=TypeOfIntimateRelationship)?
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_2() { return cGroup_2; }
 		
 		//'type'
-		public Keyword getTypeKeyword_3_0() { return cTypeKeyword_3_0; }
+		public Keyword getTypeKeyword_2_0() { return cTypeKeyword_2_0; }
 		
 		//type=TypeOfIntimateRelationship
-		public Assignment getTypeAssignment_3_1() { return cTypeAssignment_3_1; }
+		public Assignment getTypeAssignment_2_1() { return cTypeAssignment_2_1; }
 		
 		//TypeOfIntimateRelationship
-		public RuleCall getTypeTypeOfIntimateRelationshipEnumRuleCall_3_1_0() { return cTypeTypeOfIntimateRelationshipEnumRuleCall_3_1_0; }
+		public RuleCall getTypeTypeOfIntimateRelationshipEnumRuleCall_2_1_0() { return cTypeTypeOfIntimateRelationshipEnumRuleCall_2_1_0; }
 		
 		//('spouses' '(' spouses+=[Person|EString] ("," spouses+=[Person|EString])* ')')?
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'spouses'
-		public Keyword getSpousesKeyword_4_0() { return cSpousesKeyword_4_0; }
+		public Keyword getSpousesKeyword_3_0() { return cSpousesKeyword_3_0; }
 		
 		//'('
-		public Keyword getLeftParenthesisKeyword_4_1() { return cLeftParenthesisKeyword_4_1; }
+		public Keyword getLeftParenthesisKeyword_3_1() { return cLeftParenthesisKeyword_3_1; }
 		
 		//spouses+=[Person|EString]
-		public Assignment getSpousesAssignment_4_2() { return cSpousesAssignment_4_2; }
+		public Assignment getSpousesAssignment_3_2() { return cSpousesAssignment_3_2; }
 		
 		//[Person|EString]
-		public CrossReference getSpousesPersonCrossReference_4_2_0() { return cSpousesPersonCrossReference_4_2_0; }
+		public CrossReference getSpousesPersonCrossReference_3_2_0() { return cSpousesPersonCrossReference_3_2_0; }
 		
 		//EString
-		public RuleCall getSpousesPersonEStringParserRuleCall_4_2_0_1() { return cSpousesPersonEStringParserRuleCall_4_2_0_1; }
+		public RuleCall getSpousesPersonEStringParserRuleCall_3_2_0_1() { return cSpousesPersonEStringParserRuleCall_3_2_0_1; }
 		
 		//("," spouses+=[Person|EString])*
-		public Group getGroup_4_3() { return cGroup_4_3; }
+		public Group getGroup_3_3() { return cGroup_3_3; }
 		
 		//","
-		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
 		
 		//spouses+=[Person|EString]
-		public Assignment getSpousesAssignment_4_3_1() { return cSpousesAssignment_4_3_1; }
+		public Assignment getSpousesAssignment_3_3_1() { return cSpousesAssignment_3_3_1; }
 		
 		//[Person|EString]
-		public CrossReference getSpousesPersonCrossReference_4_3_1_0() { return cSpousesPersonCrossReference_4_3_1_0; }
+		public CrossReference getSpousesPersonCrossReference_3_3_1_0() { return cSpousesPersonCrossReference_3_3_1_0; }
 		
 		//EString
-		public RuleCall getSpousesPersonEStringParserRuleCall_4_3_1_0_1() { return cSpousesPersonEStringParserRuleCall_4_3_1_0_1; }
+		public RuleCall getSpousesPersonEStringParserRuleCall_3_3_1_0_1() { return cSpousesPersonEStringParserRuleCall_3_3_1_0_1; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_4_4() { return cRightParenthesisKeyword_4_4; }
+		public Keyword getRightParenthesisKeyword_3_4() { return cRightParenthesisKeyword_3_4; }
 		
 		//('fromDate' fromDate=DateX)?
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'fromDate'
-		public Keyword getFromDateKeyword_5_0() { return cFromDateKeyword_5_0; }
+		public Keyword getFromDateKeyword_4_0() { return cFromDateKeyword_4_0; }
 		
 		//fromDate=DateX
-		public Assignment getFromDateAssignment_5_1() { return cFromDateAssignment_5_1; }
+		public Assignment getFromDateAssignment_4_1() { return cFromDateAssignment_4_1; }
 		
 		//DateX
-		public RuleCall getFromDateDateXParserRuleCall_5_1_0() { return cFromDateDateXParserRuleCall_5_1_0; }
+		public RuleCall getFromDateDateXParserRuleCall_4_1_0() { return cFromDateDateXParserRuleCall_4_1_0; }
 		
 		//('toDate' toDate=DateX)?
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'toDate'
-		public Keyword getToDateKeyword_6_0() { return cToDateKeyword_6_0; }
+		public Keyword getToDateKeyword_5_0() { return cToDateKeyword_5_0; }
 		
 		//toDate=DateX
-		public Assignment getToDateAssignment_6_1() { return cToDateAssignment_6_1; }
+		public Assignment getToDateAssignment_5_1() { return cToDateAssignment_5_1; }
 		
 		//DateX
-		public RuleCall getToDateDateXParserRuleCall_6_1_0() { return cToDateDateXParserRuleCall_6_1_0; }
+		public RuleCall getToDateDateXParserRuleCall_5_1_0() { return cToDateDateXParserRuleCall_5_1_0; }
 		
 		//('children' '{' children+=Person ("," children+=Person)* '}')?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_6() { return cGroup_6; }
 		
 		//'children'
-		public Keyword getChildrenKeyword_7_0() { return cChildrenKeyword_7_0; }
+		public Keyword getChildrenKeyword_6_0() { return cChildrenKeyword_6_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
+		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
 		
 		//children+=Person
-		public Assignment getChildrenAssignment_7_2() { return cChildrenAssignment_7_2; }
+		public Assignment getChildrenAssignment_6_2() { return cChildrenAssignment_6_2; }
 		
 		//Person
-		public RuleCall getChildrenPersonParserRuleCall_7_2_0() { return cChildrenPersonParserRuleCall_7_2_0; }
+		public RuleCall getChildrenPersonParserRuleCall_6_2_0() { return cChildrenPersonParserRuleCall_6_2_0; }
 		
 		//("," children+=Person)*
-		public Group getGroup_7_3() { return cGroup_7_3; }
+		public Group getGroup_6_3() { return cGroup_6_3; }
 		
 		//","
-		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 		
 		//children+=Person
-		public Assignment getChildrenAssignment_7_3_1() { return cChildrenAssignment_7_3_1; }
+		public Assignment getChildrenAssignment_6_3_1() { return cChildrenAssignment_6_3_1; }
 		
 		//Person
-		public RuleCall getChildrenPersonParserRuleCall_7_3_1_0() { return cChildrenPersonParserRuleCall_7_3_1_0; }
+		public RuleCall getChildrenPersonParserRuleCall_6_3_1_0() { return cChildrenPersonParserRuleCall_6_3_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 	}
 	public class CohabitationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gendsl.GenDsl.Cohabitation");
@@ -1333,7 +1312,7 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 	//GenealogyTree:
 	//	'GenealogyTree'
 	//	'{'
-	//	'familyName' familyName=EString ('established' established=DateX)? ('person' '{' person+=Person ("," person+=Person)*
+	//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person ("," person+=Person)*
 	//	'}')?
 	//	'}';
 	public GenealogyTreeElements getGenealogyTreeAccess() {
@@ -1356,7 +1335,6 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DateX:
 	//	{DateX}
-	//	'DateX'
 	//	'{' ('year' year=EIntegerObject)? ('month' month=EIntegerObject)? ('day' day=EIntegerObject)?
 	//	'}';
 	public DateXElements getDateXAccess() {
@@ -1368,16 +1346,26 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Person:
-	//	'Person'
-	//	'{' ('unknown' unknown=EBoolean) ('givenName' givenName=EString)? ('birthPlace' birthPlace=EString)? ('deathPlace'
-	//	deathPlace=EString)? ('restingPlace' restingPlace=EString)? ('type' type=TypeOfPerson)? ('gender' gender=Gender)?
-	//	('otherNames' '{' otherNames+=EString ("," otherNames+=EString)* '}')? ('nickname' nickname=EString)? ('deathCause'
-	//	deathCause=EString)? ('marriages' '(' marriages+=[Marriage|EString] ("," marriages+=[Marriage|EString])* ')')?
-	//	('cohabitations' '(' cohabitations+=[Cohabitation|EString] ("," cohabitations+=[Cohabitation|EString])* ')')?
-	//	('birthDate' birthDate=DateX)? ('deathDate' deathDate=DateX)? ('personhistory' '{' personhistory+=PersonHistory (","
-	//	personhistory+=PersonHistory)* '}')? ('cohabitation' '{' cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)*
-	//	'}')? ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
-	//	'}';
+	//	givenName=EString
+	//	//'{'
+	//	& ('unknown' unknown=EBoolean)?
+	//	& ('birthPlace' birthPlace=EString)?
+	//	& ('deathPlace' deathPlace=EString)?
+	//	& ('restingPlace' restingPlace=EString)?
+	//	& ('type' type=TypeOfPerson)?
+	//	& ('gender' gender=Gender)?
+	//	& ('otherNames' '{' otherNames+=EString ("," otherNames+=EString)* '}')?
+	//	& ('nickname' nickname=EString)?
+	//	& ('deathCause' deathCause=EString)?
+	//	& ('marriages' '(' marriages+=[Marriage|EString] ("," marriages+=[Marriage|EString])* ')')?
+	//	& ('cohabitations' '(' cohabitations+=[Cohabitation|EString] ("," cohabitations+=[Cohabitation|EString])* ')')?
+	//	& ('birthDate' birthDate=DateX)?
+	//	& ('deathDate' deathDate=DateX)?
+	//	& ('personhistory' '{' personhistory+=PersonHistory ("," personhistory+=PersonHistory)* '}')?
+	//	& ('cohabitation' '{' cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)* '}')?
+	//	& ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
+	//	//'}'
+	//;
 	public PersonElements getPersonAccess() {
 		return pPerson;
 	}
@@ -1418,11 +1406,11 @@ public class GenDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Marriage:
 	//	{Marriage}
-	//	'Marriage'
-	//	'{' ('type' type=TypeOfIntimateRelationship)? ('spouses' '(' spouses+=[Person|EString] (","
+	//	'Marriage' ('type' type=TypeOfIntimateRelationship)? ('spouses' '(' spouses+=[Person|EString] (","
 	//	spouses+=[Person|EString])* ')')? ('fromDate' fromDate=DateX)? ('toDate' toDate=DateX)? ('children' '{'
 	//	children+=Person ("," children+=Person)* '}')?
-	//	'}';
+	//	//'}'
+	//;
 	public MarriageElements getMarriageAccess() {
 		return pMarriage;
 	}

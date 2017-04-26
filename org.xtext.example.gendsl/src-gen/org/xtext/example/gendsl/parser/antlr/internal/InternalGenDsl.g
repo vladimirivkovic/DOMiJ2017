@@ -134,9 +134,9 @@ ruleGenealogyTree returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_6='person'
+			otherlv_6='persons'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getGenealogyTreeAccess().getPersonKeyword_5_0());
+				newLeafNode(otherlv_6, grammarAccess.getGenealogyTreeAccess().getPersonsKeyword_5_0());
 			}
 			otherlv_7='{'
 			{
@@ -255,25 +255,21 @@ ruleDateX returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='DateX'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getDateXAccess().getDateXKeyword_1());
-		}
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getDateXAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getDateXAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
-			otherlv_3='year'
+			otherlv_2='year'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getDateXAccess().getYearKeyword_3_0());
+				newLeafNode(otherlv_2, grammarAccess.getDateXAccess().getYearKeyword_2_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDateXAccess().getYearEIntegerObjectParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getDateXAccess().getYearEIntegerObjectParserRuleCall_2_1_0());
 					}
-					lv_year_4_0=ruleEIntegerObject
+					lv_year_3_0=ruleEIntegerObject
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDateXRule());
@@ -281,7 +277,7 @@ ruleDateX returns [EObject current=null]
 						set(
 							$current,
 							"year",
-							lv_year_4_0,
+							lv_year_3_0,
 							"org.xtext.example.gendsl.GenDsl.EIntegerObject");
 						afterParserOrEnumRuleCall();
 					}
@@ -289,16 +285,16 @@ ruleDateX returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_5='month'
+			otherlv_4='month'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getDateXAccess().getMonthKeyword_4_0());
+				newLeafNode(otherlv_4, grammarAccess.getDateXAccess().getMonthKeyword_3_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDateXAccess().getMonthEIntegerObjectParserRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getDateXAccess().getMonthEIntegerObjectParserRuleCall_3_1_0());
 					}
-					lv_month_6_0=ruleEIntegerObject
+					lv_month_5_0=ruleEIntegerObject
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDateXRule());
@@ -306,7 +302,7 @@ ruleDateX returns [EObject current=null]
 						set(
 							$current,
 							"month",
-							lv_month_6_0,
+							lv_month_5_0,
 							"org.xtext.example.gendsl.GenDsl.EIntegerObject");
 						afterParserOrEnumRuleCall();
 					}
@@ -314,16 +310,16 @@ ruleDateX returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_7='day'
+			otherlv_6='day'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getDateXAccess().getDayKeyword_5_0());
+				newLeafNode(otherlv_6, grammarAccess.getDateXAccess().getDayKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDateXAccess().getDayEIntegerObjectParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getDateXAccess().getDayEIntegerObjectParserRuleCall_4_1_0());
 					}
-					lv_day_8_0=ruleEIntegerObject
+					lv_day_7_0=ruleEIntegerObject
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDateXRule());
@@ -331,16 +327,16 @@ ruleDateX returns [EObject current=null]
 						set(
 							$current,
 							"day",
-							lv_day_8_0,
+							lv_day_7_0,
 							"org.xtext.example.gendsl.GenDsl.EIntegerObject");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_9='}'
+		otherlv_8='}'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDateXAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_8, grammarAccess.getDateXAccess().getRightCurlyBracketKeyword_5());
 		}
 	)
 ;
@@ -361,629 +357,777 @@ rulePerson returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='Person'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getPersonAccess().getPersonKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_1());
-		}
 		(
-			otherlv_2='unknown'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getPersonAccess().getUnknownKeyword_2_0());
+			{ 
+			  getUnorderedGroupHelper().enter(grammarAccess.getPersonAccess().getUnorderedGroup());
 			}
 			(
 				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getUnknownEBooleanParserRuleCall_2_1_0());
-					}
-					lv_unknown_3_0=ruleEBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"unknown",
-							lv_unknown_3_0,
-							"org.xtext.example.gendsl.GenDsl.EBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 0)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 0);
+				}
+							({true}?=>((
+								{
+									newCompositeNode(grammarAccess.getPersonAccess().getGivenNameEStringParserRuleCall_0_0());
+								}
+								lv_givenName_1_0=ruleEString
+								{
+									if ($current==null) {
+										$current = createModelElementForParent(grammarAccess.getPersonRule());
+									}
+									set(
+										$current,
+										"givenName",
+										lv_givenName_1_0,
+										"org.xtext.example.gendsl.GenDsl.EString");
+									afterParserOrEnumRuleCall();
+								}
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 1)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 1);
+				}
+							({true}?=>(otherlv_2='unknown'
+							{
+								newLeafNode(otherlv_2, grammarAccess.getPersonAccess().getUnknownKeyword_1_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getUnknownEBooleanParserRuleCall_1_1_0());
+									}
+									lv_unknown_3_0=ruleEBoolean
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"unknown",
+											lv_unknown_3_0,
+											"org.xtext.example.gendsl.GenDsl.EBoolean");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 2)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 2);
+				}
+							({true}?=>(otherlv_4='birthPlace'
+							{
+								newLeafNode(otherlv_4, grammarAccess.getPersonAccess().getBirthPlaceKeyword_2_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getBirthPlaceEStringParserRuleCall_2_1_0());
+									}
+									lv_birthPlace_5_0=ruleEString
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"birthPlace",
+											lv_birthPlace_5_0,
+											"org.xtext.example.gendsl.GenDsl.EString");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 3)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 3);
+				}
+							({true}?=>(otherlv_6='deathPlace'
+							{
+								newLeafNode(otherlv_6, grammarAccess.getPersonAccess().getDeathPlaceKeyword_3_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getDeathPlaceEStringParserRuleCall_3_1_0());
+									}
+									lv_deathPlace_7_0=ruleEString
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"deathPlace",
+											lv_deathPlace_7_0,
+											"org.xtext.example.gendsl.GenDsl.EString");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 4)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 4);
+				}
+							({true}?=>(otherlv_8='restingPlace'
+							{
+								newLeafNode(otherlv_8, grammarAccess.getPersonAccess().getRestingPlaceKeyword_4_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getRestingPlaceEStringParserRuleCall_4_1_0());
+									}
+									lv_restingPlace_9_0=ruleEString
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"restingPlace",
+											lv_restingPlace_9_0,
+											"org.xtext.example.gendsl.GenDsl.EString");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 5)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 5);
+				}
+							({true}?=>(otherlv_10='type'
+							{
+								newLeafNode(otherlv_10, grammarAccess.getPersonAccess().getTypeKeyword_5_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getTypeTypeOfPersonEnumRuleCall_5_1_0());
+									}
+									lv_type_11_0=ruleTypeOfPerson
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"type",
+											lv_type_11_0,
+											"org.xtext.example.gendsl.GenDsl.TypeOfPerson");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 6)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 6);
+				}
+							({true}?=>(otherlv_12='gender'
+							{
+								newLeafNode(otherlv_12, grammarAccess.getPersonAccess().getGenderKeyword_6_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getGenderGenderEnumRuleCall_6_1_0());
+									}
+									lv_gender_13_0=ruleGender
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"gender",
+											lv_gender_13_0,
+											"org.xtext.example.gendsl.GenDsl.Gender");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 7)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 7);
+				}
+							({true}?=>(otherlv_14='otherNames'
+							{
+								newLeafNode(otherlv_14, grammarAccess.getPersonAccess().getOtherNamesKeyword_7_0());
+							}
+							otherlv_15='{'
+							{
+								newLeafNode(otherlv_15, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_7_1());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getOtherNamesEStringParserRuleCall_7_2_0());
+									}
+									lv_otherNames_16_0=ruleEString
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										add(
+											$current,
+											"otherNames",
+											lv_otherNames_16_0,
+											"org.xtext.example.gendsl.GenDsl.EString");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							(
+								otherlv_17=','
+								{
+									newLeafNode(otherlv_17, grammarAccess.getPersonAccess().getCommaKeyword_7_3_0());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getPersonAccess().getOtherNamesEStringParserRuleCall_7_3_1_0());
+										}
+										lv_otherNames_18_0=ruleEString
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getPersonRule());
+											}
+											add(
+												$current,
+												"otherNames",
+												lv_otherNames_18_0,
+												"org.xtext.example.gendsl.GenDsl.EString");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)*
+							otherlv_19='}'
+							{
+								newLeafNode(otherlv_19, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_7_4());
+							}
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 8)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 8);
+				}
+							({true}?=>(otherlv_20='nickname'
+							{
+								newLeafNode(otherlv_20, grammarAccess.getPersonAccess().getNicknameKeyword_8_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getNicknameEStringParserRuleCall_8_1_0());
+									}
+									lv_nickname_21_0=ruleEString
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"nickname",
+											lv_nickname_21_0,
+											"org.xtext.example.gendsl.GenDsl.EString");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 9)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 9);
+				}
+							({true}?=>(otherlv_22='deathCause'
+							{
+								newLeafNode(otherlv_22, grammarAccess.getPersonAccess().getDeathCauseKeyword_9_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getDeathCauseEStringParserRuleCall_9_1_0());
+									}
+									lv_deathCause_23_0=ruleEString
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"deathCause",
+											lv_deathCause_23_0,
+											"org.xtext.example.gendsl.GenDsl.EString");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 10)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 10);
+				}
+							({true}?=>(otherlv_24='marriages'
+							{
+								newLeafNode(otherlv_24, grammarAccess.getPersonAccess().getMarriagesKeyword_10_0());
+							}
+							otherlv_25='('
+							{
+								newLeafNode(otherlv_25, grammarAccess.getPersonAccess().getLeftParenthesisKeyword_10_1());
+							}
+							(
+								(
+									{
+										if ($current==null) {
+											$current = createModelElement(grammarAccess.getPersonRule());
+										}
+									}
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getMarriagesMarriageCrossReference_10_2_0());
+									}
+									ruleEString
+									{
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							(
+								otherlv_27=','
+								{
+									newLeafNode(otherlv_27, grammarAccess.getPersonAccess().getCommaKeyword_10_3_0());
+								}
+								(
+									(
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getPersonRule());
+											}
+										}
+										{
+											newCompositeNode(grammarAccess.getPersonAccess().getMarriagesMarriageCrossReference_10_3_1_0());
+										}
+										ruleEString
+										{
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)*
+							otherlv_29=')'
+							{
+								newLeafNode(otherlv_29, grammarAccess.getPersonAccess().getRightParenthesisKeyword_10_4());
+							}
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 11)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 11);
+				}
+							({true}?=>(otherlv_30='cohabitations'
+							{
+								newLeafNode(otherlv_30, grammarAccess.getPersonAccess().getCohabitationsKeyword_11_0());
+							}
+							otherlv_31='('
+							{
+								newLeafNode(otherlv_31, grammarAccess.getPersonAccess().getLeftParenthesisKeyword_11_1());
+							}
+							(
+								(
+									{
+										if ($current==null) {
+											$current = createModelElement(grammarAccess.getPersonRule());
+										}
+									}
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getCohabitationsCohabitationCrossReference_11_2_0());
+									}
+									ruleEString
+									{
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							(
+								otherlv_33=','
+								{
+									newLeafNode(otherlv_33, grammarAccess.getPersonAccess().getCommaKeyword_11_3_0());
+								}
+								(
+									(
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getPersonRule());
+											}
+										}
+										{
+											newCompositeNode(grammarAccess.getPersonAccess().getCohabitationsCohabitationCrossReference_11_3_1_0());
+										}
+										ruleEString
+										{
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)*
+							otherlv_35=')'
+							{
+								newLeafNode(otherlv_35, grammarAccess.getPersonAccess().getRightParenthesisKeyword_11_4());
+							}
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 12)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 12);
+				}
+							({true}?=>(otherlv_36='birthDate'
+							{
+								newLeafNode(otherlv_36, grammarAccess.getPersonAccess().getBirthDateKeyword_12_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getBirthDateDateXParserRuleCall_12_1_0());
+									}
+									lv_birthDate_37_0=ruleDateX
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"birthDate",
+											lv_birthDate_37_0,
+											"org.xtext.example.gendsl.GenDsl.DateX");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 13)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 13);
+				}
+							({true}?=>(otherlv_38='deathDate'
+							{
+								newLeafNode(otherlv_38, grammarAccess.getPersonAccess().getDeathDateKeyword_13_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getDeathDateDateXParserRuleCall_13_1_0());
+									}
+									lv_deathDate_39_0=ruleDateX
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										set(
+											$current,
+											"deathDate",
+											lv_deathDate_39_0,
+											"org.xtext.example.gendsl.GenDsl.DateX");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 14)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 14);
+				}
+							({true}?=>(otherlv_40='personhistory'
+							{
+								newLeafNode(otherlv_40, grammarAccess.getPersonAccess().getPersonhistoryKeyword_14_0());
+							}
+							otherlv_41='{'
+							{
+								newLeafNode(otherlv_41, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_14_1());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getPersonhistoryPersonHistoryParserRuleCall_14_2_0());
+									}
+									lv_personhistory_42_0=rulePersonHistory
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										add(
+											$current,
+											"personhistory",
+											lv_personhistory_42_0,
+											"org.xtext.example.gendsl.GenDsl.PersonHistory");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							(
+								otherlv_43=','
+								{
+									newLeafNode(otherlv_43, grammarAccess.getPersonAccess().getCommaKeyword_14_3_0());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getPersonAccess().getPersonhistoryPersonHistoryParserRuleCall_14_3_1_0());
+										}
+										lv_personhistory_44_0=rulePersonHistory
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getPersonRule());
+											}
+											add(
+												$current,
+												"personhistory",
+												lv_personhistory_44_0,
+												"org.xtext.example.gendsl.GenDsl.PersonHistory");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)*
+							otherlv_45='}'
+							{
+								newLeafNode(otherlv_45, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_14_4());
+							}
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 15)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 15);
+				}
+							({true}?=>(otherlv_46='cohabitation'
+							{
+								newLeafNode(otherlv_46, grammarAccess.getPersonAccess().getCohabitationKeyword_15_0());
+							}
+							otherlv_47='{'
+							{
+								newLeafNode(otherlv_47, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_15_1());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getCohabitationCohabitationParserRuleCall_15_2_0());
+									}
+									lv_cohabitation_48_0=ruleCohabitation
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										add(
+											$current,
+											"cohabitation",
+											lv_cohabitation_48_0,
+											"org.xtext.example.gendsl.GenDsl.Cohabitation");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							(
+								otherlv_49=','
+								{
+									newLeafNode(otherlv_49, grammarAccess.getPersonAccess().getCommaKeyword_15_3_0());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getPersonAccess().getCohabitationCohabitationParserRuleCall_15_3_1_0());
+										}
+										lv_cohabitation_50_0=ruleCohabitation
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getPersonRule());
+											}
+											add(
+												$current,
+												"cohabitation",
+												lv_cohabitation_50_0,
+												"org.xtext.example.gendsl.GenDsl.Cohabitation");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)*
+							otherlv_51='}'
+							{
+								newLeafNode(otherlv_51, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_15_4());
+							}
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
+			)
+		)|
+		(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getPersonAccess().getUnorderedGroup(), 16)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getPersonAccess().getUnorderedGroup(), 16);
+				}
+							({true}?=>(otherlv_52='marriage'
+							{
+								newLeafNode(otherlv_52, grammarAccess.getPersonAccess().getMarriageKeyword_16_0());
+							}
+							otherlv_53='{'
+							{
+								newLeafNode(otherlv_53, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_16_1());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getPersonAccess().getMarriageMarriageParserRuleCall_16_2_0());
+									}
+									lv_marriage_54_0=ruleMarriage
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getPersonRule());
+										}
+										add(
+											$current,
+											"marriage",
+											lv_marriage_54_0,
+											"org.xtext.example.gendsl.GenDsl.Marriage");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							(
+								otherlv_55=','
+								{
+									newLeafNode(otherlv_55, grammarAccess.getPersonAccess().getCommaKeyword_16_3_0());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getPersonAccess().getMarriageMarriageParserRuleCall_16_3_1_0());
+										}
+										lv_marriage_56_0=ruleMarriage
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getPersonRule());
+											}
+											add(
+												$current,
+												"marriage",
+												lv_marriage_56_0,
+												"org.xtext.example.gendsl.GenDsl.Marriage");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)*
+							otherlv_57='}'
+							{
+								newLeafNode(otherlv_57, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_16_4());
+							}
+							))
+				{ 
+					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getPersonAccess().getUnorderedGroup());
+				}
 			)
 		)
-		(
-			otherlv_4='givenName'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getPersonAccess().getGivenNameKeyword_3_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getGivenNameEStringParserRuleCall_3_1_0());
-					}
-					lv_givenName_5_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"givenName",
-							lv_givenName_5_0,
-							"org.xtext.example.gendsl.GenDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
+				)+
+				{getUnorderedGroupHelper().canLeave(grammarAccess.getPersonAccess().getUnorderedGroup())}?
 			)
-		)?
-		(
-			otherlv_6='birthPlace'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getPersonAccess().getBirthPlaceKeyword_4_0());
+		)
+			{ 
+			  getUnorderedGroupHelper().leave(grammarAccess.getPersonAccess().getUnorderedGroup());
 			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getBirthPlaceEStringParserRuleCall_4_1_0());
-					}
-					lv_birthPlace_7_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"birthPlace",
-							lv_birthPlace_7_0,
-							"org.xtext.example.gendsl.GenDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_8='deathPlace'
-			{
-				newLeafNode(otherlv_8, grammarAccess.getPersonAccess().getDeathPlaceKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getDeathPlaceEStringParserRuleCall_5_1_0());
-					}
-					lv_deathPlace_9_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"deathPlace",
-							lv_deathPlace_9_0,
-							"org.xtext.example.gendsl.GenDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_10='restingPlace'
-			{
-				newLeafNode(otherlv_10, grammarAccess.getPersonAccess().getRestingPlaceKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getRestingPlaceEStringParserRuleCall_6_1_0());
-					}
-					lv_restingPlace_11_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"restingPlace",
-							lv_restingPlace_11_0,
-							"org.xtext.example.gendsl.GenDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_12='type'
-			{
-				newLeafNode(otherlv_12, grammarAccess.getPersonAccess().getTypeKeyword_7_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getTypeTypeOfPersonEnumRuleCall_7_1_0());
-					}
-					lv_type_13_0=ruleTypeOfPerson
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"type",
-							lv_type_13_0,
-							"org.xtext.example.gendsl.GenDsl.TypeOfPerson");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_14='gender'
-			{
-				newLeafNode(otherlv_14, grammarAccess.getPersonAccess().getGenderKeyword_8_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getGenderGenderEnumRuleCall_8_1_0());
-					}
-					lv_gender_15_0=ruleGender
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"gender",
-							lv_gender_15_0,
-							"org.xtext.example.gendsl.GenDsl.Gender");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_16='otherNames'
-			{
-				newLeafNode(otherlv_16, grammarAccess.getPersonAccess().getOtherNamesKeyword_9_0());
-			}
-			otherlv_17='{'
-			{
-				newLeafNode(otherlv_17, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_9_1());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getOtherNamesEStringParserRuleCall_9_2_0());
-					}
-					lv_otherNames_18_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						add(
-							$current,
-							"otherNames",
-							lv_otherNames_18_0,
-							"org.xtext.example.gendsl.GenDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_19=','
-				{
-					newLeafNode(otherlv_19, grammarAccess.getPersonAccess().getCommaKeyword_9_3_0());
-				}
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getPersonAccess().getOtherNamesEStringParserRuleCall_9_3_1_0());
-						}
-						lv_otherNames_20_0=ruleEString
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getPersonRule());
-							}
-							add(
-								$current,
-								"otherNames",
-								lv_otherNames_20_0,
-								"org.xtext.example.gendsl.GenDsl.EString");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_21='}'
-			{
-				newLeafNode(otherlv_21, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_9_4());
-			}
-		)?
-		(
-			otherlv_22='nickname'
-			{
-				newLeafNode(otherlv_22, grammarAccess.getPersonAccess().getNicknameKeyword_10_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getNicknameEStringParserRuleCall_10_1_0());
-					}
-					lv_nickname_23_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"nickname",
-							lv_nickname_23_0,
-							"org.xtext.example.gendsl.GenDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_24='deathCause'
-			{
-				newLeafNode(otherlv_24, grammarAccess.getPersonAccess().getDeathCauseKeyword_11_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getDeathCauseEStringParserRuleCall_11_1_0());
-					}
-					lv_deathCause_25_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"deathCause",
-							lv_deathCause_25_0,
-							"org.xtext.example.gendsl.GenDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_26='marriages'
-			{
-				newLeafNode(otherlv_26, grammarAccess.getPersonAccess().getMarriagesKeyword_12_0());
-			}
-			otherlv_27='('
-			{
-				newLeafNode(otherlv_27, grammarAccess.getPersonAccess().getLeftParenthesisKeyword_12_1());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getPersonRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getMarriagesMarriageCrossReference_12_2_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_29=','
-				{
-					newLeafNode(otherlv_29, grammarAccess.getPersonAccess().getCommaKeyword_12_3_0());
-				}
-				(
-					(
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getPersonRule());
-							}
-						}
-						{
-							newCompositeNode(grammarAccess.getPersonAccess().getMarriagesMarriageCrossReference_12_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_31=')'
-			{
-				newLeafNode(otherlv_31, grammarAccess.getPersonAccess().getRightParenthesisKeyword_12_4());
-			}
-		)?
-		(
-			otherlv_32='cohabitations'
-			{
-				newLeafNode(otherlv_32, grammarAccess.getPersonAccess().getCohabitationsKeyword_13_0());
-			}
-			otherlv_33='('
-			{
-				newLeafNode(otherlv_33, grammarAccess.getPersonAccess().getLeftParenthesisKeyword_13_1());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getPersonRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getCohabitationsCohabitationCrossReference_13_2_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_35=','
-				{
-					newLeafNode(otherlv_35, grammarAccess.getPersonAccess().getCommaKeyword_13_3_0());
-				}
-				(
-					(
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getPersonRule());
-							}
-						}
-						{
-							newCompositeNode(grammarAccess.getPersonAccess().getCohabitationsCohabitationCrossReference_13_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_37=')'
-			{
-				newLeafNode(otherlv_37, grammarAccess.getPersonAccess().getRightParenthesisKeyword_13_4());
-			}
-		)?
-		(
-			otherlv_38='birthDate'
-			{
-				newLeafNode(otherlv_38, grammarAccess.getPersonAccess().getBirthDateKeyword_14_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getBirthDateDateXParserRuleCall_14_1_0());
-					}
-					lv_birthDate_39_0=ruleDateX
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"birthDate",
-							lv_birthDate_39_0,
-							"org.xtext.example.gendsl.GenDsl.DateX");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_40='deathDate'
-			{
-				newLeafNode(otherlv_40, grammarAccess.getPersonAccess().getDeathDateKeyword_15_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getDeathDateDateXParserRuleCall_15_1_0());
-					}
-					lv_deathDate_41_0=ruleDateX
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						set(
-							$current,
-							"deathDate",
-							lv_deathDate_41_0,
-							"org.xtext.example.gendsl.GenDsl.DateX");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_42='personhistory'
-			{
-				newLeafNode(otherlv_42, grammarAccess.getPersonAccess().getPersonhistoryKeyword_16_0());
-			}
-			otherlv_43='{'
-			{
-				newLeafNode(otherlv_43, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_16_1());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getPersonhistoryPersonHistoryParserRuleCall_16_2_0());
-					}
-					lv_personhistory_44_0=rulePersonHistory
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						add(
-							$current,
-							"personhistory",
-							lv_personhistory_44_0,
-							"org.xtext.example.gendsl.GenDsl.PersonHistory");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_45=','
-				{
-					newLeafNode(otherlv_45, grammarAccess.getPersonAccess().getCommaKeyword_16_3_0());
-				}
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getPersonAccess().getPersonhistoryPersonHistoryParserRuleCall_16_3_1_0());
-						}
-						lv_personhistory_46_0=rulePersonHistory
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getPersonRule());
-							}
-							add(
-								$current,
-								"personhistory",
-								lv_personhistory_46_0,
-								"org.xtext.example.gendsl.GenDsl.PersonHistory");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_47='}'
-			{
-				newLeafNode(otherlv_47, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_16_4());
-			}
-		)?
-		(
-			otherlv_48='cohabitation'
-			{
-				newLeafNode(otherlv_48, grammarAccess.getPersonAccess().getCohabitationKeyword_17_0());
-			}
-			otherlv_49='{'
-			{
-				newLeafNode(otherlv_49, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_17_1());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getCohabitationCohabitationParserRuleCall_17_2_0());
-					}
-					lv_cohabitation_50_0=ruleCohabitation
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						add(
-							$current,
-							"cohabitation",
-							lv_cohabitation_50_0,
-							"org.xtext.example.gendsl.GenDsl.Cohabitation");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_51=','
-				{
-					newLeafNode(otherlv_51, grammarAccess.getPersonAccess().getCommaKeyword_17_3_0());
-				}
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getPersonAccess().getCohabitationCohabitationParserRuleCall_17_3_1_0());
-						}
-						lv_cohabitation_52_0=ruleCohabitation
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getPersonRule());
-							}
-							add(
-								$current,
-								"cohabitation",
-								lv_cohabitation_52_0,
-								"org.xtext.example.gendsl.GenDsl.Cohabitation");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_53='}'
-			{
-				newLeafNode(otherlv_53, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_17_4());
-			}
-		)?
-		(
-			otherlv_54='marriage'
-			{
-				newLeafNode(otherlv_54, grammarAccess.getPersonAccess().getMarriageKeyword_18_0());
-			}
-			otherlv_55='{'
-			{
-				newLeafNode(otherlv_55, grammarAccess.getPersonAccess().getLeftCurlyBracketKeyword_18_1());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getPersonAccess().getMarriageMarriageParserRuleCall_18_2_0());
-					}
-					lv_marriage_56_0=ruleMarriage
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getPersonRule());
-						}
-						add(
-							$current,
-							"marriage",
-							lv_marriage_56_0,
-							"org.xtext.example.gendsl.GenDsl.Marriage");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_57=','
-				{
-					newLeafNode(otherlv_57, grammarAccess.getPersonAccess().getCommaKeyword_18_3_0());
-				}
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getPersonAccess().getMarriageMarriageParserRuleCall_18_3_1_0());
-						}
-						lv_marriage_58_0=ruleMarriage
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getPersonRule());
-							}
-							add(
-								$current,
-								"marriage",
-								lv_marriage_58_0,
-								"org.xtext.example.gendsl.GenDsl.Marriage");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_59='}'
-			{
-				newLeafNode(otherlv_59, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_18_4());
-			}
-		)?
-		otherlv_60='}'
-		{
-			newLeafNode(otherlv_60, grammarAccess.getPersonAccess().getRightCurlyBracketKeyword_19());
-		}
 	)
 ;
 
@@ -1047,21 +1191,17 @@ ruleMarriage returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getMarriageAccess().getMarriageKeyword_1());
 		}
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getMarriageAccess().getLeftCurlyBracketKeyword_2());
-		}
 		(
-			otherlv_3='type'
+			otherlv_2='type'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getMarriageAccess().getTypeKeyword_3_0());
+				newLeafNode(otherlv_2, grammarAccess.getMarriageAccess().getTypeKeyword_2_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMarriageAccess().getTypeTypeOfIntimateRelationshipEnumRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getMarriageAccess().getTypeTypeOfIntimateRelationshipEnumRuleCall_2_1_0());
 					}
-					lv_type_4_0=ruleTypeOfIntimateRelationship
+					lv_type_3_0=ruleTypeOfIntimateRelationship
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMarriageRule());
@@ -1069,7 +1209,7 @@ ruleMarriage returns [EObject current=null]
 						set(
 							$current,
 							"type",
-							lv_type_4_0,
+							lv_type_3_0,
 							"org.xtext.example.gendsl.GenDsl.TypeOfIntimateRelationship");
 						afterParserOrEnumRuleCall();
 					}
@@ -1077,13 +1217,13 @@ ruleMarriage returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_5='spouses'
+			otherlv_4='spouses'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getMarriageAccess().getSpousesKeyword_4_0());
+				newLeafNode(otherlv_4, grammarAccess.getMarriageAccess().getSpousesKeyword_3_0());
 			}
-			otherlv_6='('
+			otherlv_5='('
 			{
-				newLeafNode(otherlv_6, grammarAccess.getMarriageAccess().getLeftParenthesisKeyword_4_1());
+				newLeafNode(otherlv_5, grammarAccess.getMarriageAccess().getLeftParenthesisKeyword_3_1());
 			}
 			(
 				(
@@ -1093,7 +1233,7 @@ ruleMarriage returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getMarriageAccess().getSpousesPersonCrossReference_4_2_0());
+						newCompositeNode(grammarAccess.getMarriageAccess().getSpousesPersonCrossReference_3_2_0());
 					}
 					ruleEString
 					{
@@ -1102,9 +1242,9 @@ ruleMarriage returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_8=','
+				otherlv_7=','
 				{
-					newLeafNode(otherlv_8, grammarAccess.getMarriageAccess().getCommaKeyword_4_3_0());
+					newLeafNode(otherlv_7, grammarAccess.getMarriageAccess().getCommaKeyword_3_3_0());
 				}
 				(
 					(
@@ -1114,7 +1254,7 @@ ruleMarriage returns [EObject current=null]
 							}
 						}
 						{
-							newCompositeNode(grammarAccess.getMarriageAccess().getSpousesPersonCrossReference_4_3_1_0());
+							newCompositeNode(grammarAccess.getMarriageAccess().getSpousesPersonCrossReference_3_3_1_0());
 						}
 						ruleEString
 						{
@@ -1123,22 +1263,22 @@ ruleMarriage returns [EObject current=null]
 					)
 				)
 			)*
-			otherlv_10=')'
+			otherlv_9=')'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getMarriageAccess().getRightParenthesisKeyword_4_4());
+				newLeafNode(otherlv_9, grammarAccess.getMarriageAccess().getRightParenthesisKeyword_3_4());
 			}
 		)?
 		(
-			otherlv_11='fromDate'
+			otherlv_10='fromDate'
 			{
-				newLeafNode(otherlv_11, grammarAccess.getMarriageAccess().getFromDateKeyword_5_0());
+				newLeafNode(otherlv_10, grammarAccess.getMarriageAccess().getFromDateKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMarriageAccess().getFromDateDateXParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getMarriageAccess().getFromDateDateXParserRuleCall_4_1_0());
 					}
-					lv_fromDate_12_0=ruleDateX
+					lv_fromDate_11_0=ruleDateX
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMarriageRule());
@@ -1146,7 +1286,7 @@ ruleMarriage returns [EObject current=null]
 						set(
 							$current,
 							"fromDate",
-							lv_fromDate_12_0,
+							lv_fromDate_11_0,
 							"org.xtext.example.gendsl.GenDsl.DateX");
 						afterParserOrEnumRuleCall();
 					}
@@ -1154,16 +1294,16 @@ ruleMarriage returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_13='toDate'
+			otherlv_12='toDate'
 			{
-				newLeafNode(otherlv_13, grammarAccess.getMarriageAccess().getToDateKeyword_6_0());
+				newLeafNode(otherlv_12, grammarAccess.getMarriageAccess().getToDateKeyword_5_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMarriageAccess().getToDateDateXParserRuleCall_6_1_0());
+						newCompositeNode(grammarAccess.getMarriageAccess().getToDateDateXParserRuleCall_5_1_0());
 					}
-					lv_toDate_14_0=ruleDateX
+					lv_toDate_13_0=ruleDateX
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMarriageRule());
@@ -1171,7 +1311,7 @@ ruleMarriage returns [EObject current=null]
 						set(
 							$current,
 							"toDate",
-							lv_toDate_14_0,
+							lv_toDate_13_0,
 							"org.xtext.example.gendsl.GenDsl.DateX");
 						afterParserOrEnumRuleCall();
 					}
@@ -1179,20 +1319,20 @@ ruleMarriage returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_15='children'
+			otherlv_14='children'
 			{
-				newLeafNode(otherlv_15, grammarAccess.getMarriageAccess().getChildrenKeyword_7_0());
+				newLeafNode(otherlv_14, grammarAccess.getMarriageAccess().getChildrenKeyword_6_0());
 			}
-			otherlv_16='{'
+			otherlv_15='{'
 			{
-				newLeafNode(otherlv_16, grammarAccess.getMarriageAccess().getLeftCurlyBracketKeyword_7_1());
+				newLeafNode(otherlv_15, grammarAccess.getMarriageAccess().getLeftCurlyBracketKeyword_6_1());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMarriageAccess().getChildrenPersonParserRuleCall_7_2_0());
+						newCompositeNode(grammarAccess.getMarriageAccess().getChildrenPersonParserRuleCall_6_2_0());
 					}
-					lv_children_17_0=rulePerson
+					lv_children_16_0=rulePerson
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMarriageRule());
@@ -1200,23 +1340,23 @@ ruleMarriage returns [EObject current=null]
 						add(
 							$current,
 							"children",
-							lv_children_17_0,
+							lv_children_16_0,
 							"org.xtext.example.gendsl.GenDsl.Person");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_18=','
+				otherlv_17=','
 				{
-					newLeafNode(otherlv_18, grammarAccess.getMarriageAccess().getCommaKeyword_7_3_0());
+					newLeafNode(otherlv_17, grammarAccess.getMarriageAccess().getCommaKeyword_6_3_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getMarriageAccess().getChildrenPersonParserRuleCall_7_3_1_0());
+							newCompositeNode(grammarAccess.getMarriageAccess().getChildrenPersonParserRuleCall_6_3_1_0());
 						}
-						lv_children_19_0=rulePerson
+						lv_children_18_0=rulePerson
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getMarriageRule());
@@ -1224,22 +1364,18 @@ ruleMarriage returns [EObject current=null]
 							add(
 								$current,
 								"children",
-								lv_children_19_0,
+								lv_children_18_0,
 								"org.xtext.example.gendsl.GenDsl.Person");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_20='}'
+			otherlv_19='}'
 			{
-				newLeafNode(otherlv_20, grammarAccess.getMarriageAccess().getRightCurlyBracketKeyword_7_4());
+				newLeafNode(otherlv_19, grammarAccess.getMarriageAccess().getRightCurlyBracketKeyword_6_4());
 			}
 		)?
-		otherlv_21='}'
-		{
-			newLeafNode(otherlv_21, grammarAccess.getMarriageAccess().getRightCurlyBracketKeyword_8());
-		}
 	)
 ;
 

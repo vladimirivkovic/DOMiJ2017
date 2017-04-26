@@ -135,24 +135,24 @@ public class GenDslSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
-	 *         unknown=EBoolean 
-	 *         givenName=EString? 
-	 *         birthPlace=EString? 
-	 *         deathPlace=EString? 
-	 *         restingPlace=EString? 
-	 *         type=TypeOfPerson? 
-	 *         gender=Gender? 
-	 *         (otherNames+=EString otherNames+=EString*)? 
-	 *         nickname=EString? 
-	 *         deathCause=EString? 
-	 *         (marriages+=[Marriage|EString] marriages+=[Marriage|EString]*)? 
-	 *         (cohabitations+=[Cohabitation|EString] cohabitations+=[Cohabitation|EString]*)? 
-	 *         birthDate=DateX? 
-	 *         deathDate=DateX? 
-	 *         (personhistory+=PersonHistory personhistory+=PersonHistory*)? 
-	 *         (cohabitation+=Cohabitation cohabitation+=Cohabitation*)? 
-	 *         (marriage+=Marriage marriage+=Marriage*)?
-	 *     )
+	 *         givenName=EString | 
+	 *         unknown=EBoolean | 
+	 *         birthPlace=EString | 
+	 *         deathPlace=EString | 
+	 *         restingPlace=EString | 
+	 *         type=TypeOfPerson | 
+	 *         gender=Gender | 
+	 *         (otherNames+=EString otherNames+=EString*) | 
+	 *         nickname=EString | 
+	 *         deathCause=EString | 
+	 *         (marriages+=[Marriage|EString] marriages+=[Marriage|EString]*) | 
+	 *         (cohabitations+=[Cohabitation|EString] cohabitations+=[Cohabitation|EString]*) | 
+	 *         birthDate=DateX | 
+	 *         deathDate=DateX | 
+	 *         (personhistory+=PersonHistory personhistory+=PersonHistory*) | 
+	 *         (cohabitation+=Cohabitation cohabitation+=Cohabitation*) | 
+	 *         (marriage+=Marriage marriage+=Marriage*)
+	 *     )+
 	 */
 	protected void sequence_Person(ISerializationContext context, Person semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

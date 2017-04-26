@@ -14,7 +14,11 @@ import gENdsl.Person;
 public class GenDslQNP extends DefaultDeclarativeQualifiedNameProvider{
 
 	QualifiedName qualifiedName(Person e){
-		return QualifiedName.create(e.getGivenName());
+		String postfix = "";
+		if (e.getBirthDate() != null)
+			postfix = e.getBirthDate().getYear().toString();
+		
+		return QualifiedName.create(e.getGivenName()+postfix);
 	}
 	
 	
