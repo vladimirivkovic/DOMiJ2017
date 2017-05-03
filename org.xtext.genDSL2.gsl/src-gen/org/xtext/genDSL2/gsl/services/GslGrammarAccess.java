@@ -55,8 +55,8 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		//GenealogyTree:
 		//	'GenealogyTree'
 		//	'{'
-		//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person ("," person+=Person)*
-		//	'}')?
+		//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person (","
+		//	person+=Person)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -331,8 +331,9 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		//('restingPlace' restingPlace=EString)? & ('type' type=TypeOfPerson)? & ('gender' gender=Gender)? & ('otherNames' '{'
 		//otherNames+=EString ("," otherNames+=EString)* '}')? & ('nickname' nickname=EString)? & ('deathCause'
 		//deathCause=EString)? & ('birthDate' birthDate=DateX)? & ('deathDate' deathDate=DateX)? & ('personhistory' '{'
-		//personhistory+=PersonHistory ("," personhistory+=PersonHistory)* '}')? & ('cohabitation' '{' cohabitation+=Cohabitation
-		//("," cohabitation+=Cohabitation)* '}')? & ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
+		//personhistory+=PersonHistory ("," personhistory+=PersonHistory)* '}')? & ('cohabitation' '{'
+		//cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)* '}')? & ('marriage' '{' marriage+=Marriage (","
+		//marriage+=Marriage)* '}')?
 		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
 		
 		//givenName=EString
@@ -1169,8 +1170,8 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 	//GenealogyTree:
 	//	'GenealogyTree'
 	//	'{'
-	//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person ("," person+=Person)*
-	//	'}')?
+	//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person (","
+	//	person+=Person)* '}')?
 	//	'}';
 	public GenealogyTreeElements getGenealogyTreeAccess() {
 		return pGenealogyTree;
@@ -1345,8 +1346,7 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' |
-	//	"'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}

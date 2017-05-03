@@ -14,16 +14,15 @@ GenealogyTree {
             Haso,
             Mersiha gender FEMALE
           }
-}
-        marriage {
+,
           Marriage spouses ( MujoY,
           Selma ) children {
             Mujica
           }
-        }
-      marriage {
+,
           Marriage spouses ( MujoY,
-          Haso )
+          Haso ,
+					Mersiha )
         }
       }
     },

@@ -1,0 +1,46 @@
+GenealogyTree {
+	familyName Prvi
+persons {
+		Adam birthPlace Eden
+		personhistory { 
+			PersonHistory givenName Adem,
+			PersonHistory givenName Ademko
+		}
+		birthDate { year 0 }
+		deathDate {
+		}
+		marriage {
+			Marriage spouses ( Adam0,
+			Eve ) children {
+				d1 unknown true gender FEMALE,
+				Cain marriage {
+					Marriage spouses ( d1, Cain,
+					child0 ) children {
+						Enoch
+					}
+},
+				Abel,
+				Seth marriage {
+					Marriage spouses ( Seth,
+					d2 ) children {
+						Enos
+					,
+						child0 birthDate {
+							year 23
+						}
+						deathDate {
+							year 45
+						}
+					}
+				},
+				d2 gender FEMALE,
+				d3 gender FEMALE
+			unknown true
+			,
+				
+			child0
+			}
+		},
+		Eve type MARRIED gender FEMALE
+	}
+}

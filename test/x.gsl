@@ -1,0 +1,42 @@
+GenealogyTree {
+	familyName Topalovic
+persons {
+		Pantelija marriage {
+			Marriage spouses ( Pantelija,
+			zena1 ) children {
+				Maksimilijan marriage {
+					Marriage spouses ( Maksimilijan,
+					zena2 ) children {
+						Aksentije marriage {
+							Marriage spouses ( Aksentije,
+							zena3 ) children {
+								Milutin marriage {
+									Marriage spouses ( Milutin,
+									zena4 ) children {
+										Laki marriage {
+											Marriage spouses ( Laki,
+											zena5 ) children {
+												Mirko,
+												MujoX,
+												MujoX
+											}
+										},
+										MujoX
+									}
+								},
+								MujoX
+							}
+						},
+						MujoX
+					}
+				}
+			}
+		},
+		zena1 type MARRIED gender FEMALE,
+		zena2 type MARRIED gender FEMALE,
+		zena3 type MARRIED gender FEMALE,
+		zena4 type MARRIED gender FEMALE,
+		zena5 type MARRIED gender FEMALE,
+		person7 unknown true type MARRIED gender FEMALE
+	}
+}
