@@ -94,7 +94,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PersonHistory" referenceName="personHistory">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PersonHistory" referenceName="personhistory">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="[container.givenName/]"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -113,14 +113,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="addSpouse" edgeMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='m2c']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="addSpouse" edgeMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='s2m']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="[spouses->append(target)/]"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="[spouses->including(target)/]"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -137,15 +137,15 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="changeSpouse" forceRefresh="true">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="changeSpouse">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
             <targetView name="targetView"/>
             <element name="element"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="aql: source.spouses->including(target)"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="[element.spouses->excluding(source.oclAsType(Person))->including(target)/]"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
