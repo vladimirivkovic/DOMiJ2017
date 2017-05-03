@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:genDSL2="http://www.example.org/genDSL2" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_KAeqAC-LEeeUbrCUGya1Zg" selectedViews="_24WGEC-LEeeUbrCUGya1Zg" version="11.1.0.201608251200">
+    <semanticResources>krem.gsl</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_24WGEC-LEeeUbrCUGya1Zg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_4gMNoC-LEeeUbrCUGya1Zg" name="kremx" representation="_4gMNoS-LEeeUbrCUGya1Zg">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']"/>
+        <target xmi:type="genDSL2:GenealogyTree" href="krem.gsl#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_4gMNoS-LEeeUbrCUGya1Zg" name="kremx">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_4gMNoi-LEeeUbrCUGya1Zg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_4gMNoy-LEeeUbrCUGya1Zg"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_4gM0sC-LEeeUbrCUGya1Zg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_4gM0sS-LEeeUbrCUGya1Zg" type="Sirius" element="_4gMNoS-LEeeUbrCUGya1Zg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_CuOH4C-MEeeUbrCUGya1Zg" type="2001" element="_CtsjcC-MEeeUbrCUGya1Zg">
+          <children xmi:type="notation:Node" xmi:id="_CuWDsC-MEeeUbrCUGya1Zg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_CuWDsS-MEeeUbrCUGya1Zg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_NlRNIC-QEeemWfK3Q3V3GQ" type="3016" element="_NkvosC-QEeemWfK3Q3V3GQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_NlRNIS-QEeemWfK3Q3V3GQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NlRNIi-QEeemWfK3Q3V3GQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_CuOH4S-MEeeUbrCUGya1Zg" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CuOH4i-MEeeUbrCUGya1Zg" x="252" y="36" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_FTBm8C-MEeeUbrCUGya1Zg" type="2001" element="_FS_KsC-MEeeUbrCUGya1Zg">
+          <children xmi:type="notation:Node" xmi:id="_FTC1EC-MEeeUbrCUGya1Zg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_FTC1ES-MEeeUbrCUGya1Zg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_OzAyoC-QEeemWfK3Q3V3GQ" type="3016" element="_OyspkC-QEeemWfK3Q3V3GQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_OzAyoS-QEeemWfK3Q3V3GQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OzAyoi-QEeemWfK3Q3V3GQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_FTCOAC-MEeeUbrCUGya1Zg" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FTCOAS-MEeeUbrCUGya1Zg" x="504" y="12" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_zy6JsC-MEeeUbrCUGya1Zg" type="2001" element="_zy3GYC-MEeeUbrCUGya1Zg">
+          <children xmi:type="notation:Node" xmi:id="_zy7X0C-MEeeUbrCUGya1Zg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_zy7X0S-MEeeUbrCUGya1Zg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_zy7-4C-MEeeUbrCUGya1Zg" type="3017" element="_zy4UgC-MEeeUbrCUGya1Zg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_zy7-4S-MEeeUbrCUGya1Zg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zy7-4i-MEeeUbrCUGya1Zg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_zy6JsS-MEeeUbrCUGya1Zg" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zy6Jsi-MEeeUbrCUGya1Zg" x="504" y="110" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tm8EwC-OEeemWfK3Q3V3GQ" type="2001" element="_tmuCUC-OEeemWfK3Q3V3GQ">
+          <children xmi:type="notation:Node" xmi:id="_tm-hAC-OEeemWfK3Q3V3GQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tm-hAS-OEeemWfK3Q3V3GQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_NlR0MC-QEeemWfK3Q3V3GQ" type="3016" element="_Nk-SMC-QEeemWfK3Q3V3GQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_NlR0MS-QEeemWfK3Q3V3GQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NlR0Mi-QEeemWfK3Q3V3GQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tm8EwS-OEeemWfK3Q3V3GQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tm8Ewi-OEeemWfK3Q3V3GQ" x="180" y="144" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tnAWMC-OEeemWfK3Q3V3GQ" type="2001" element="_tmrmEC-OEeemWfK3Q3V3GQ">
+          <children xmi:type="notation:Node" xmi:id="_tnA9QC-OEeemWfK3Q3V3GQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tnA9QS-OEeemWfK3Q3V3GQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_NlSbQC-QEeemWfK3Q3V3GQ" type="3016" element="_Nk8dAC-QEeemWfK3Q3V3GQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_NlSbQS-QEeemWfK3Q3V3GQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NlSbQi-QEeemWfK3Q3V3GQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tnAWMS-OEeemWfK3Q3V3GQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tnAWMi-OEeemWfK3Q3V3GQ" x="351" y="193" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_7e1PYC-TEeexf9iSfx5NvA" type="2001" element="_7eiUcC-TEeexf9iSfx5NvA">
+          <children xmi:type="notation:Node" xmi:id="_7e8kIC-TEeexf9iSfx5NvA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_7e8kIS-TEeexf9iSfx5NvA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_7e_AYC-TEeexf9iSfx5NvA" type="3016" element="_7ekJoC-TEeexf9iSfx5NvA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_7e_AYS-TEeexf9iSfx5NvA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7e_AYi-TEeexf9iSfx5NvA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_7e1PYS-TEeexf9iSfx5NvA" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7e1PYi-TEeexf9iSfx5NvA" x="492" y="216" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_GDLicC-VEeew2NaiqR6GvQ" type="2001" element="_GClskC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_GDUFUC-VEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_GDUFUS-VEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WekW0C-VEeew2NaiqR6GvQ" type="3016" element="_WecbAC-VEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_WekW0S-VEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WekW0i-VEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_GDLicS-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GDLici-VEeew2NaiqR6GvQ" x="780" y="61" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_0f1yEC-VEeew2NaiqR6GvQ" type="2001" element="_0fvEYC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_0f2ZIC-VEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_0f2ZIS-VEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0f3nQC-VEeew2NaiqR6GvQ" type="3016" element="_0fwSgC-VEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0f3nQS-VEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0f3nQi-VEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_0f1yES-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0f1yEi-VEeew2NaiqR6GvQ" x="696" y="191" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_7VRY0C-VEeew2NaiqR6GvQ" type="2001" element="_7U3wMC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_7VR_4C-VEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_7VR_4S-VEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8LaWoC-VEeew2NaiqR6GvQ" type="3016" element="_8LTo8C-VEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_8LaWoS-VEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8LaWoi-VEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_7VRY0S-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7VRY0i-VEeew2NaiqR6GvQ" x="876" y="204" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-AJDoC-VEeew2NaiqR6GvQ" type="2001" element="_-AELIC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_-AJDoy-VEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-AJDpC-VEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-AKRwC-VEeew2NaiqR6GvQ" type="3017" element="_-AEyMC-VEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-AKRwS-VEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-AKRwi-VEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-AJDoS-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-AJDoi-VEeew2NaiqR6GvQ" x="876" y="324" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__ZFMgC-VEeew2NaiqR6GvQ" type="2001" element="__Y4YMC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="__ZFzkC-VEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="__ZFzkS-VEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__ZGaoC-VEeew2NaiqR6GvQ" type="3016" element="__Y5mUC-VEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__ZGaoS-VEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ZGaoi-VEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__ZFMgS-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ZFMgi-VEeew2NaiqR6GvQ" x="864" y="408" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AH1I4C-WEeew2NaiqR6GvQ" type="2001" element="_AHsmAC-WEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_AH1I4y-WEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AH1I5C-WEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_CY_TMC-WEeew2NaiqR6GvQ" type="3016" element="_CY4lgC-WEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_CY_TMS-WEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CY_TMi-WEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AH1I4S-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AH1I4i-WEeew2NaiqR6GvQ" x="1008" y="396" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_IKjpMC-WEeew2NaiqR6GvQ" type="2001" element="_IKewsC-WEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_IKjpMy-WEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_IKjpNC-WEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IKkQQC-WEeew2NaiqR6GvQ" type="3017" element="_IKewsS-WEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_IKkQQS-WEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKkQQi-WEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_IKjpMS-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKjpMi-WEeew2NaiqR6GvQ" x="708" y="321" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_IwExEC-WEeew2NaiqR6GvQ" type="2001" element="_Iv6ZAC-WEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_IwExEy-WEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_IwExFC-WEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JaN6QC-WEeew2NaiqR6GvQ" type="3016" element="_JaIasC-WEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_JaN6QS-WEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JaN6Qi-WEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_IwExES-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IwExEi-WEeew2NaiqR6GvQ" x="528" y="300" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_L7VzMC-WEeew2NaiqR6GvQ" type="2001" element="_L7Q6sC-WEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_L7WaQC-WEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_L7WaQS-WEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_L7XBUC-WEeew2NaiqR6GvQ" type="3016" element="_L7RhwC-WEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_L7XBUS-WEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L7XBUi-WEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_L7VzMS-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L7VzMi-WEeew2NaiqR6GvQ" x="612" y="444" width="100" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_GYFwkC-XEeew2NaiqR6GvQ" type="2001" element="_GYBfIC-XEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_GYFwky-XEeew2NaiqR6GvQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_GYFwlC-XEeew2NaiqR6GvQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_GYGXoC-XEeew2NaiqR6GvQ" type="3017" element="_GYBfIS-XEeew2NaiqR6GvQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_GYGXoS-XEeew2NaiqR6GvQ" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GYGXoi-XEeew2NaiqR6GvQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_GYFwkS-XEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GYFwki-XEeew2NaiqR6GvQ" x="815" y="504" width="50" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_4gM0si-LEeeUbrCUGya1Zg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_o6zFwC-OEeemWfK3Q3V3GQ" type="4001" element="_o6C30C-OEeemWfK3Q3V3GQ" source="_zy6JsC-MEeeUbrCUGya1Zg" target="_CuOH4C-MEeeUbrCUGya1Zg">
+          <children xmi:type="notation:Node" xmi:id="_o67BkC-OEeemWfK3Q3V3GQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o67BkS-OEeemWfK3Q3V3GQ" x="28" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_o68PsC-OEeemWfK3Q3V3GQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o68PsS-OEeemWfK3Q3V3GQ" x="-8" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_o69d0C-OEeemWfK3Q3V3GQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o69d0S-OEeemWfK3Q3V3GQ" x="-20" y="12"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_o6zs0C-OEeemWfK3Q3V3GQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_o6zs0S-OEeemWfK3Q3V3GQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o6zs0i-OEeemWfK3Q3V3GQ" points="[-25, -9, 202, 65]$[-177, -59, 50, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o7Ic8C-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o7Ic8S-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_o7JEAC-OEeemWfK3Q3V3GQ" type="4001" element="_o6Q6QC-OEeemWfK3Q3V3GQ" source="_zy6JsC-MEeeUbrCUGya1Zg" target="_FTBm8C-MEeeUbrCUGya1Zg">
+          <children xmi:type="notation:Node" xmi:id="_o7JrEC-OEeemWfK3Q3V3GQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o7JrES-OEeemWfK3Q3V3GQ" x="5" y="-2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_o7JrEi-OEeemWfK3Q3V3GQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o7JrEy-OEeemWfK3Q3V3GQ" x="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_o7JrFC-OEeemWfK3Q3V3GQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o7JrFS-OEeemWfK3Q3V3GQ" x="-2" y="-1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_o7JEAS-OEeemWfK3Q3V3GQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_o7JEAi-OEeemWfK3Q3V3GQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o7JEAy-OEeemWfK3Q3V3GQ" points="[-9, -25, -34, 73]$[-25, -76, -50, 22]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o7KSIC-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o7KSIS-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_09nXYC-OEeemWfK3Q3V3GQ" type="4001" element="_09jtAC-OEeemWfK3Q3V3GQ" source="_zy6JsC-MEeeUbrCUGya1Zg" target="_tm8EwC-OEeemWfK3Q3V3GQ">
+          <children xmi:type="notation:Node" xmi:id="_09n-cC-OEeemWfK3Q3V3GQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09n-cS-OEeemWfK3Q3V3GQ" x="-6" y="-4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_09n-ci-OEeemWfK3Q3V3GQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09n-cy-OEeemWfK3Q3V3GQ" x="15" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_09olgC-OEeemWfK3Q3V3GQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09olgS-OEeemWfK3Q3V3GQ" x="12" y="7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_09nXYS-OEeemWfK3Q3V3GQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_09nXYi-OEeemWfK3Q3V3GQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_09nXYy-OEeemWfK3Q3V3GQ" points="[-25, 12, 274, -22]$[-249, 29, 50, -5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_09olgi-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_09olgy-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_09pMkC-OEeemWfK3Q3V3GQ" type="4001" element="_09kUEC-OEeemWfK3Q3V3GQ" source="_zy6JsC-MEeeUbrCUGya1Zg" target="_tnAWMC-OEeemWfK3Q3V3GQ">
+          <children xmi:type="notation:Node" xmi:id="_09usIC-OEeemWfK3Q3V3GQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09usIS-OEeemWfK3Q3V3GQ" x="-30" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_09usIi-OEeemWfK3Q3V3GQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09usIy-OEeemWfK3Q3V3GQ" x="28" y="2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_09usJC-OEeemWfK3Q3V3GQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09usJS-OEeemWfK3Q3V3GQ" x="29" y="3"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_09pMkS-OEeemWfK3Q3V3GQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_09pMki-OEeemWfK3Q3V3GQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_09pMky-OEeemWfK3Q3V3GQ" points="[-10, 25, 118, -58]$[-78, 58, 50, -25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_09vTMC-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_09vTMS-OEeemWfK3Q3V3GQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_7fA1kC-TEeexf9iSfx5NvA" type="4001" element="_7ereYC-TEeexf9iSfx5NvA" source="_zy6JsC-MEeeUbrCUGya1Zg" target="_7e1PYC-TEeexf9iSfx5NvA">
+          <children xmi:type="notation:Node" xmi:id="_7fCDsC-TEeexf9iSfx5NvA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7fCDsS-TEeexf9iSfx5NvA" x="-12" y="-6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_7fCqwC-TEeexf9iSfx5NvA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7fCqwS-TEeexf9iSfx5NvA" x="4" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_7fDR0C-TEeexf9iSfx5NvA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7fDR0S-TEeexf9iSfx5NvA" x="4" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_7fA1kS-TEeexf9iSfx5NvA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_7fA1ki-TEeexf9iSfx5NvA" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7fA1ky-TEeexf9iSfx5NvA" points="[20, 25, 7, -81]$[15, 81, 2, -25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7fGVIC-TEeexf9iSfx5NvA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7fGVIS-TEeexf9iSfx5NvA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_ZEnMAC-VEeew2NaiqR6GvQ" type="4001" element="_ZECkQC-VEeew2NaiqR6GvQ" source="_zy6JsC-MEeeUbrCUGya1Zg" target="_GDLicC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_ZEoaIC-VEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZEoaIS-VEeew2NaiqR6GvQ" x="4" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZEqPUC-VEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZEqPUS-VEeew2NaiqR6GvQ" x="-5" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZEq2YC-VEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZEq2YS-VEeew2NaiqR6GvQ" x="-4" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZEnMAS-VEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZEnMAi-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZEnMAy-VEeew2NaiqR6GvQ" points="[0, 0, -226, 48]$[226, -48, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZErdcC-VEeew2NaiqR6GvQ" id="(1.0,0.22)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZErdcS-VEeew2NaiqR6GvQ" id="(0.0,0.24)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_0f7RoC-VEeew2NaiqR6GvQ" type="4001" element="_0fyuwC-VEeew2NaiqR6GvQ" source="_zy6JsC-MEeeUbrCUGya1Zg" target="_0f1yEC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_0f7RpC-VEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0f7RpS-VEeew2NaiqR6GvQ" x="1" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0f7Rpi-VEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0f7Rpy-VEeew2NaiqR6GvQ" x="-6" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0f7RqC-VEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0f74sC-VEeew2NaiqR6GvQ" x="-3" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_0f7RoS-VEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_0f7Roi-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0f7Roy-VEeew2NaiqR6GvQ" points="[25, 11, -192, -70]$[167, 62, -50, -19]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0f-U8C-VEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0f-U8S-VEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-AK40C-VEeew2NaiqR6GvQ" type="4001" element="_-AGAUC-VEeew2NaiqR6GvQ" source="_-AJDoC-VEeew2NaiqR6GvQ" target="_0f1yEC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_-ALf4C-VEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ALf4S-VEeew2NaiqR6GvQ" x="14" y="-6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-ALf4i-VEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ALf4y-VEeew2NaiqR6GvQ" x="-9" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-ALf5C-VEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ALf5S-VEeew2NaiqR6GvQ" x="-11" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-AK40S-VEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-AK40i-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-AK40y-VEeew2NaiqR6GvQ" points="[-25, -20, 130, 113]$[-142, -108, 13, 25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-ALf5i-VEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-ALf5y-VEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-sArIC-VEeew2NaiqR6GvQ" type="4001" element="_-rlNUC-VEeew2NaiqR6GvQ" source="_-AJDoC-VEeew2NaiqR6GvQ" target="_7VRY0C-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_-sBSMC-VEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-sBSMS-VEeew2NaiqR6GvQ" x="7" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-sBSMi-VEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-sBSMy-VEeew2NaiqR6GvQ" x="-6" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-sBSNC-VEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-sBSNS-VEeew2NaiqR6GvQ" x="-6" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-sArIS-VEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-sArIi-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-sArIy-VEeew2NaiqR6GvQ" points="[0, 0, -36, 70]$[36, -70, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-sBSNi-VEeew2NaiqR6GvQ" id="(0.48,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-sBSNy-VEeew2NaiqR6GvQ" id="(0.6,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="__ZHowC-VEeew2NaiqR6GvQ" type="4001" element="__ZA7EC-VEeew2NaiqR6GvQ" source="_-AJDoC-VEeew2NaiqR6GvQ" target="__ZFMgC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="__ZHoxC-VEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ZHoxS-VEeew2NaiqR6GvQ" x="6" y="-2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__ZIP0C-VEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ZIP0S-VEeew2NaiqR6GvQ" x="-15" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__ZIP0i-VEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ZIP0y-VEeew2NaiqR6GvQ" x="-13" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="__ZHowS-VEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="__ZHowi-VEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__ZHowy-VEeew2NaiqR6GvQ" points="[-3, 25, -16, -59]$[6, 59, -7, -25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__ZIP1C-VEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__ZIP1S-VEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_AH2XAC-WEeew2NaiqR6GvQ" type="4001" element="_AHyFkC-WEeew2NaiqR6GvQ" source="_-AJDoC-VEeew2NaiqR6GvQ" target="_AH1I4C-WEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_AH2-EC-WEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AH2-ES-WEeew2NaiqR6GvQ" x="19" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AH2-Ei-WEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AH2-Ey-WEeew2NaiqR6GvQ" x="-32" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AH2-FC-WEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AH2-FS-WEeew2NaiqR6GvQ" x="-12" y="-2"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_AH2XAS-WEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_AH2XAi-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AH2XAy-WEeew2NaiqR6GvQ" points="[5, 25, -152, -47]$[107, 56, -50, -16]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AH2-Fi-WEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AH2-Fy-WEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IKleYC-WEeew2NaiqR6GvQ" type="4001" element="_IKf-0C-WEeew2NaiqR6GvQ" source="_IKjpMC-WEeew2NaiqR6GvQ" target="_0f1yEC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_IKleZC-WEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKleZS-WEeew2NaiqR6GvQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IKleZi-WEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKleZy-WEeew2NaiqR6GvQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IKleaC-WEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKleaS-WEeew2NaiqR6GvQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IKleYS-WEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IKleYi-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IKleYy-WEeew2NaiqR6GvQ" points="[0, 0, 0, 0]$[696, 191, 696, 191]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IKmFcC-WEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IKmFcS-WEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_K-eiUC-WEeew2NaiqR6GvQ" type="4001" element="_K-RG8C-WEeew2NaiqR6GvQ" source="_IKjpMC-WEeew2NaiqR6GvQ" target="_IwExEC-WEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_K-eiVC-WEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K-fJYC-WEeew2NaiqR6GvQ" x="-6" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_K-fJYS-WEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K-fJYi-WEeew2NaiqR6GvQ" x="8" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_K-fJYy-WEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K-fJZC-WEeew2NaiqR6GvQ" x="5" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_K-eiUS-WEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_K-eiUi-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_K-eiUy-WEeew2NaiqR6GvQ" points="[0, 0, 80, 12]$[-80, -12, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_K-fJZS-WEeew2NaiqR6GvQ" id="(0.0,0.32)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_K-fJZi-WEeew2NaiqR6GvQ" id="(1.0,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_L7YPcC-WEeew2NaiqR6GvQ" type="4001" element="_L7T-AC-WEeew2NaiqR6GvQ" source="_IKjpMC-WEeew2NaiqR6GvQ" target="_L7VzMC-WEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_L7Y2gC-WEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L7Y2gS-WEeew2NaiqR6GvQ" x="-19" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_L7Y2gi-WEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L7Y2gy-WEeew2NaiqR6GvQ" x="21" y="-6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_L7Y2hC-WEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L7Y2hS-WEeew2NaiqR6GvQ" x="21" y="-5"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_L7YPcS-WEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_L7YPci-WEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_L7YPcy-WEeew2NaiqR6GvQ" points="[-24, 25, 47, -98]$[-60, 98, 11, -25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L7Y2hi-WEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L7Y2hy-WEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_GYG-sC-XEeew2NaiqR6GvQ" type="4001" element="_GYCtQC-XEeew2NaiqR6GvQ" source="_GYFwkC-XEeew2NaiqR6GvQ" target="_0f1yEC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_GYHlwC-XEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GYHlwS-XEeew2NaiqR6GvQ" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_GYHlwi-XEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GYHlwy-XEeew2NaiqR6GvQ" x="4" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_GYHlxC-XEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GYHlxS-XEeew2NaiqR6GvQ" x="6" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_GYG-sS-XEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_GYG-si-XEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GYG-sy-XEeew2NaiqR6GvQ" points="[-8, -25, 86, 288]$[-91, -288, 3, 25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GYHlxi-XEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GYIM0C-XEeew2NaiqR6GvQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Hx1KsC-XEeew2NaiqR6GvQ" type="4001" element="_HxfMcC-XEeew2NaiqR6GvQ" source="_GYFwkC-XEeew2NaiqR6GvQ" target="__ZFMgC-VEeew2NaiqR6GvQ">
+          <children xmi:type="notation:Node" xmi:id="_Hx1KtC-XEeew2NaiqR6GvQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hx1KtS-XEeew2NaiqR6GvQ" x="8" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Hx1xwC-XEeew2NaiqR6GvQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hx1xwS-XEeew2NaiqR6GvQ" x="-6" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Hx1xwi-XEeew2NaiqR6GvQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hx1xwy-XEeew2NaiqR6GvQ" x="-6" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Hx1KsS-XEeew2NaiqR6GvQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Hx1Ksi-XEeew2NaiqR6GvQ" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Hx1Ksy-XEeew2NaiqR6GvQ" points="[0, 0, -47, 69]$[47, -69, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Hx1xxC-XEeew2NaiqR6GvQ" id="(1.0,0.46)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Hx1xxS-XEeew2NaiqR6GvQ" id="(0.48,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_tmrmEC-OEeemWfK3Q3V3GQ" name="Suljo" incomingEdges="_09kUEC-OEeemWfK3Q3V3GQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.1"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_Nk8dAC-QEeemWfK3Q3V3GQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_7U3wMC-VEeew2NaiqR6GvQ" name="Fata" incomingEdges="_-rlNUC-VEeew2NaiqR6GvQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.3"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_8LTo8C-VEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_L7Q6sC-WEeew2NaiqR6GvQ" name="Mujica" incomingEdges="_L7T-AC-WEeew2NaiqR6GvQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.1/@children.0"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.1/@children.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_L7RhwC-WEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_GClskC-VEeew2NaiqR6GvQ" name="person3" incomingEdges="_ZECkQC-VEeew2NaiqR6GvQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.2"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_WecbAC-VEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_7eiUcC-TEeexf9iSfx5NvA" name="MujoX" incomingEdges="_7ereYC-TEeexf9iSfx5NvA" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.2"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_7ekJoC-TEeexf9iSfx5NvA" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_AHsmAC-WEeew2NaiqR6GvQ" name="Mersiha" incomingEdges="_AHyFkC-WEeew2NaiqR6GvQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0/@children.1"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0/@children.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_CY4lgC-WEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Iv6ZAC-WEeew2NaiqR6GvQ" name="Selma" incomingEdges="_K-RG8C-WEeew2NaiqR6GvQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.4"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_JaIasC-WEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_CtsjcC-MEeeUbrCUGya1Zg" name="Fred" incomingEdges="_o6C30C-OEeemWfK3Q3V3GQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_NkvosC-QEeemWfK3Q3V3GQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_tmuCUC-OEeemWfK3Q3V3GQ" name="Mujo" incomingEdges="_09jtAC-OEeemWfK3Q3V3GQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.0"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_Nk-SMC-QEeemWfK3Q3V3GQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="__Y4YMC-VEeew2NaiqR6GvQ" name="Haso" incomingEdges="__ZA7EC-VEeew2NaiqR6GvQ _HxfMcC-XEeew2NaiqR6GvQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0/@children.0"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0/@children.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="__Y5mUC-VEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_0fvEYC-VEeew2NaiqR6GvQ" name="MujoY" incomingEdges="_0fyuwC-VEeew2NaiqR6GvQ _-AGAUC-VEeew2NaiqR6GvQ _IKf-0C-WEeew2NaiqR6GvQ _GYCtQC-XEeew2NaiqR6GvQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.0/@marriage.0/@children.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_0fwSgC-VEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_FS_KsC-MEeeUbrCUGya1Zg" name="Vilma" incomingEdges="_o6Q6QC-OEeemWfK3Q3V3GQ" width="10" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Person" href="krem.gsl#//@person.1"/>
+      <semanticElements xmi:type="genDSL2:Person" href="krem.gsl#//@person.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_OyspkC-QEeemWfK3Q3V3GQ" showIcon="false" labelPosition="node" horizontalDiameter="10" verticalDiameter="5" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='personNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-AELIC-VEeew2NaiqR6GvQ" outgoingEdges="_-AGAUC-VEeew2NaiqR6GvQ _-rlNUC-VEeew2NaiqR6GvQ __ZA7EC-VEeew2NaiqR6GvQ _AHyFkC-WEeew2NaiqR6GvQ" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0"/>
+      <semanticElements xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_-AEyMC-VEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" width="5" height="5" color="238,201,142">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_GYBfIC-XEeew2NaiqR6GvQ" outgoingEdges="_GYCtQC-XEeew2NaiqR6GvQ _HxfMcC-XEeew2NaiqR6GvQ" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.2"/>
+      <semanticElements xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_GYBfIS-XEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" width="5" height="5" color="238,201,142">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_IKewsC-WEeew2NaiqR6GvQ" outgoingEdges="_IKf-0C-WEeew2NaiqR6GvQ _K-RG8C-WEeew2NaiqR6GvQ _L7T-AC-WEeew2NaiqR6GvQ" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.1"/>
+      <semanticElements xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.1"/>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_IKewsS-WEeew2NaiqR6GvQ" showIcon="false" labelPosition="node" width="5" height="5" color="238,201,142">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_zy3GYC-MEeeUbrCUGya1Zg" outgoingEdges="_o6C30C-OEeemWfK3Q3V3GQ _o6Q6QC-OEeemWfK3Q3V3GQ _09jtAC-OEeemWfK3Q3V3GQ _09kUEC-OEeemWfK3Q3V3GQ _7ereYC-TEeexf9iSfx5NvA _ZECkQC-VEeew2NaiqR6GvQ _0fyuwC-VEeew2NaiqR6GvQ" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <semanticElements xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_zy4UgC-MEeeUbrCUGya1Zg" showIcon="false" labelPosition="node" width="5" height="5" color="238,201,142">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='marriageNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_o6C30C-OEeemWfK3Q3V3GQ" sourceNode="_zy3GYC-MEeeUbrCUGya1Zg" targetNode="_CtsjcC-MEeeUbrCUGya1Zg">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_o6PFEC-OEeemWfK3Q3V3GQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_o6PFES-OEeemWfK3Q3V3GQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_o6Q6QC-OEeemWfK3Q3V3GQ" sourceNode="_zy3GYC-MEeeUbrCUGya1Zg" targetNode="_FS_KsC-MEeeUbrCUGya1Zg">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_o6RhUC-OEeemWfK3Q3V3GQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_o6RhUS-OEeemWfK3Q3V3GQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_09jtAC-OEeemWfK3Q3V3GQ" sourceNode="_zy3GYC-MEeeUbrCUGya1Zg" targetNode="_tmuCUC-OEeemWfK3Q3V3GQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_09jtAS-OEeemWfK3Q3V3GQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_09jtAi-OEeemWfK3Q3V3GQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_09kUEC-OEeemWfK3Q3V3GQ" sourceNode="_zy3GYC-MEeeUbrCUGya1Zg" targetNode="_tmrmEC-OEeemWfK3Q3V3GQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_09k7IC-OEeemWfK3Q3V3GQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_09k7IS-OEeemWfK3Q3V3GQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_7ereYC-TEeexf9iSfx5NvA" sourceNode="_zy3GYC-MEeeUbrCUGya1Zg" targetNode="_7eiUcC-TEeexf9iSfx5NvA">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_7esFcC-TEeexf9iSfx5NvA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_7esFcS-TEeexf9iSfx5NvA"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ZECkQC-VEeew2NaiqR6GvQ" sourceNode="_zy3GYC-MEeeUbrCUGya1Zg" targetNode="_GClskC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ZEDLUC-VEeew2NaiqR6GvQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ZEDLUS-VEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0fyuwC-VEeew2NaiqR6GvQ" sourceNode="_zy3GYC-MEeeUbrCUGya1Zg" targetNode="_0fvEYC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_0fzV0C-VEeew2NaiqR6GvQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_0fzV0S-VEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-AGAUC-VEeew2NaiqR6GvQ" sourceNode="_-AELIC-VEeew2NaiqR6GvQ" targetNode="_0fvEYC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-AGAUS-VEeew2NaiqR6GvQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-AGAUi-VEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rlNUC-VEeew2NaiqR6GvQ" sourceNode="_-AELIC-VEeew2NaiqR6GvQ" targetNode="_7U3wMC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rlNUS-VEeew2NaiqR6GvQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rlNUi-VEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="__ZA7EC-VEeew2NaiqR6GvQ" sourceNode="_-AELIC-VEeew2NaiqR6GvQ" targetNode="__Y4YMC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__ZBiIC-VEeew2NaiqR6GvQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="__ZBiIS-VEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_AHyFkC-WEeew2NaiqR6GvQ" sourceNode="_-AELIC-VEeew2NaiqR6GvQ" targetNode="_AHsmAC-WEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_AHyFkS-WEeew2NaiqR6GvQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_AHyFki-WEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_IKf-0C-WEeew2NaiqR6GvQ" sourceNode="_IKewsC-WEeew2NaiqR6GvQ" targetNode="_0fvEYC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_IKf-0S-WEeew2NaiqR6GvQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_IKf-0i-WEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_K-RG8C-WEeew2NaiqR6GvQ" sourceNode="_IKewsC-WEeew2NaiqR6GvQ" targetNode="_Iv6ZAC-WEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_K-RuAC-WEeew2NaiqR6GvQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_K-RuAS-WEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_L7T-AC-WEeew2NaiqR6GvQ" sourceNode="_IKewsC-WEeew2NaiqR6GvQ" targetNode="_L7Q6sC-WEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_L7T-AS-WEeew2NaiqR6GvQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_L7T-Ai-WEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='childEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GYCtQC-XEeew2NaiqR6GvQ" sourceNode="_GYBfIC-XEeew2NaiqR6GvQ" targetNode="_0fvEYC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_GYCtQS-XEeew2NaiqR6GvQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_GYCtQi-XEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_HxfMcC-XEeew2NaiqR6GvQ" sourceNode="_GYBfIC-XEeew2NaiqR6GvQ" targetNode="__Y4YMC-VEeew2NaiqR6GvQ">
+      <target xmi:type="genDSL2:Marriage" href="krem.gsl#//@person.0/@marriage.0/@children.3/@marriage.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_HxfzgC-XEeew2NaiqR6GvQ" sourceArrow="InputArrow" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_HxfzgS-XEeew2NaiqR6GvQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='marriageEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_4gMNpC-LEeeUbrCUGya1Zg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer"/>
+    <target xmi:type="genDSL2:GenealogyTree" href="krem.gsl#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

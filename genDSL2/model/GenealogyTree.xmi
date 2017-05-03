@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genDSL2:GenealogyTree
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:genDSL2="http://www.example.org/genDSL2"
+    xsi:schemaLocation="http://www.example.org/genDSL2 genDSL2.ecore"
+    familyName="Kremenko">
+  <person givenName="Fred"
+      nickname="Fred">
+    <marriage
+        spouses="//@person.0 //@person.1"/>
+  </person>
+  <person givenName="Vilma"
+      type="MARRIED"
+      gender="FEMALE"/>
+</genDSL2:GenealogyTree>

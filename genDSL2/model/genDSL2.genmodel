@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/genDSL2/src" modelPluginID="genDSL2" modelName="GenDSL2"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>genDSL2.ecore</foreignModel>
+  <genPackages prefix="GenDSL2" disposableProviderFactory="true" ecorePackage="genDSL2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="genDSL2.ecore#//TypeOfIntimateRelationship">
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfIntimateRelationship/MONOGAMY"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfIntimateRelationship/POLYGAMY"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfIntimateRelationship/POLYFIDELITY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="genDSL2.ecore#//TypeOfPerson">
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfPerson/BIOLOGICAL"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfPerson/ADOPTED"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfPerson/SEMIADOPTED"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfPerson/MARRIED"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfPerson/DISOWNED"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//TypeOfPerson/ILLEGITIMATE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="genDSL2.ecore#//Gender">
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//Gender/MALE"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//Gender/FEMALE"/>
+      <genEnumLiterals ecoreEnumLiteral="genDSL2.ecore#//Gender/BIGENDER"/>
+    </genEnums>
+    <genClasses ecoreClass="genDSL2.ecore#//GenealogyTree">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//GenealogyTree/familyName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//GenealogyTree/established"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//GenealogyTree/person"/>
+    </genClasses>
+    <genClasses ecoreClass="genDSL2.ecore#//Marriage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Marriage/fromDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Marriage/toDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Marriage/children"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Marriage/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Marriage/spouses"/>
+    </genClasses>
+    <genClasses ecoreClass="genDSL2.ecore#//Cohabitation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Cohabitation/children"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Cohabitation/legitimate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Cohabitation/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Cohabitation/partners"/>
+    </genClasses>
+    <genClasses ecoreClass="genDSL2.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/givenName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Person/birthDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Person/deathDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/birthPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/deathPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/restingPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/otherNames"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/nickname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/deathCause"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Person/personhistory"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Person/cohabitation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference genDSL2.ecore#//Person/marriage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//Person/unknown"/>
+    </genClasses>
+    <genClasses ecoreClass="genDSL2.ecore#//PersonHistory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//PersonHistory/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//PersonHistory/givenName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//PersonHistory/changed"/>
+    </genClasses>
+    <genClasses ecoreClass="genDSL2.ecore#//DateX">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//DateX/year"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//DateX/month"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute genDSL2.ecore#//DateX/day"/>
+      <genOperations ecoreOperation="genDSL2.ecore#//DateX/before">
+        <genParameters ecoreParameter="genDSL2.ecore#//DateX/before/d"/>
+      </genOperations>
+      <genOperations ecoreOperation="genDSL2.ecore#//DateX/after">
+        <genParameters ecoreParameter="genDSL2.ecore#//DateX/after/d"/>
+      </genOperations>
+      <genOperations ecoreOperation="genDSL2.ecore#//DateX/isNull"/>
+      <genOperations ecoreOperation="genDSL2.ecore#//DateX/isNotNull"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

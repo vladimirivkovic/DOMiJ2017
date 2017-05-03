@@ -1,0 +1,37 @@
+GenealogyTree {
+  familyName Kremenko
+  persons {
+    Fred 
+    marriage {
+      Marriage spouses(Fred, Vilma,
+      person3 ) children {
+        Mujo , Suljo ,
+        MujoX
+      ,
+        MujoY marriage {
+          Marriage spouses ( MujoY,
+          Fata ) children {
+            Haso,
+            Mersiha gender FEMALE
+          }
+}
+        marriage {
+          Marriage spouses ( MujoY,
+          Selma ) children {
+            Mujica
+          }
+        }
+      marriage {
+          Marriage spouses ( MujoY,
+          Haso )
+        }
+      }
+    },
+    Vilma gender FEMALE type MARRIED
+  ,
+    person3 gender FEMALE type MARRIED
+  ,
+    Fata type MARRIED gender FEMALE,
+    Selma type MARRIED gender FEMALE
+  }
+}
