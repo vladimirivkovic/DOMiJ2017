@@ -74,6 +74,7 @@ public class GslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCohabitationAccess().getGroup(), "rule__Cohabitation__Group__0");
 					put(grammarAccess.getCohabitationAccess().getGroup_3(), "rule__Cohabitation__Group_3__0");
 					put(grammarAccess.getCohabitationAccess().getGroup_4(), "rule__Cohabitation__Group_4__0");
+					put(grammarAccess.getCohabitationAccess().getGroup_4_3(), "rule__Cohabitation__Group_4_3__0");
 					put(grammarAccess.getCohabitationAccess().getGroup_5(), "rule__Cohabitation__Group_5__0");
 					put(grammarAccess.getCohabitationAccess().getGroup_5_3(), "rule__Cohabitation__Group_5_3__0");
 					put(grammarAccess.getMarriageAccess().getGroup(), "rule__Marriage__Group__0");
@@ -115,7 +116,8 @@ public class GslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPersonHistoryAccess().getChangedAssignment_4_1(), "rule__PersonHistory__ChangedAssignment_4_1");
 					put(grammarAccess.getCohabitationAccess().getLegitimateAssignment_1(), "rule__Cohabitation__LegitimateAssignment_1");
 					put(grammarAccess.getCohabitationAccess().getTypeAssignment_3_1(), "rule__Cohabitation__TypeAssignment_3_1");
-					put(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_1(), "rule__Cohabitation__PartnersAssignment_4_1");
+					put(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_2(), "rule__Cohabitation__PartnersAssignment_4_2");
+					put(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_3_1(), "rule__Cohabitation__PartnersAssignment_4_3_1");
 					put(grammarAccess.getCohabitationAccess().getChildrenAssignment_5_2(), "rule__Cohabitation__ChildrenAssignment_5_2");
 					put(grammarAccess.getCohabitationAccess().getChildrenAssignment_5_3_1(), "rule__Cohabitation__ChildrenAssignment_5_3_1");
 					put(grammarAccess.getMarriageAccess().getTypeAssignment_2_1(), "rule__Marriage__TypeAssignment_2_1");

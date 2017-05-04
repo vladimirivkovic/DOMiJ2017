@@ -3,23 +3,40 @@ GenealogyTree {
 persons {
 		Adam birthPlace Eden
 		birthDate { year 0 }
-		deathDate {
-		}
-		personhistory { 
-			PersonHistory givenName Adem
-		}
-		personhistory {
-			PersonHistory givenName Ademko
-		}
-		marriage {
+    deathDate {
+      year 1100
+    }
+    personhistory {
+      PersonHistory givenName Adam changed 2012-12-12
+    }
+    cohabitation {
+        Cohabitation partners ( Adam0,
+      Eve )children { Mujaga }
+    }
+    marriage {
 			Marriage spouses ( Adam0,
-			Eve ) children {
-				d1 unknown true gender FEMALE,
+			Eve ) fromDate {
+        year 1
+      }
+      children {
+        d1 unknown true gender FEMALE birthDate {
+        year 11
+        }
+        deathDate {
+        year 50
+        },
 				Cain marriage {
-					Marriage spouses ( d1, Cain,
-					Abel ) children {
-						Enoch
-					}
+					Marriage spouses ( d111, Cain,
+					Abel ,
+          evo_ga12 ) children {
+            Enoch
+					marriage {
+              Marriage spouses ( Enoch,
+              WomanX ) },
+            
+          child1,
+            child3
+          }
 },
 				Abel,
 				Seth marriage {
@@ -33,21 +50,22 @@ persons {
 						deathDate {
 							year 45
 						}
-					}
+					,
+            child3
+          }
 				},
-				d2 gender FEMALE personhistory {
-					PersonHistory givenName d2
-				},
+				d2 gender FEMALE,
 				d3 gender FEMALE
 			unknown true
 			,
 				
-			child0
-			}
+			evo_ga
+			birthDate {
+          year 12
+        }
+      }
 		},
-		Eve type MARRIED gender FEMALE
-	personhistory {
-			PersonHistory givenName Evica
-		}
-	}
+		Eve type MARRIED gender FEMALE,
+    WomanX type MARRIED gender FEMALE
+  }
 }

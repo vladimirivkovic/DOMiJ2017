@@ -3,9 +3,11 @@
  */
 package org.xtext.genDSL2.gsl;
 
+import org.eclipse.xtext.conversion.IValueConverterService;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.xtext.genDSL2.gsl.AbstractGslRuntimeModule;
 import org.xtext.genDSL2.gsl.GenDslQNP;
+import org.xtext.genDSL2.gsl.valueconverter.GSLValueConverter;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -15,5 +17,10 @@ public class GslRuntimeModule extends AbstractGslRuntimeModule {
   @Override
   public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
     return GenDslQNP.class;
+  }
+  
+  @Override
+  public Class<? extends IValueConverterService> bindIValueConverterService() {
+    return GSLValueConverter.class;
   }
 }

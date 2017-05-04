@@ -226,7 +226,7 @@ public interface GenDSL2Package extends EPackage {
 	int COHABITATION__TYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Partners</b></em>' reference.
+	 * The feature id for the '<em><b>Partners</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -744,10 +744,10 @@ public interface GenDSL2Package extends EPackage {
 	EAttribute getCohabitation_Type();
 
 	/**
-	 * Returns the meta object for the reference '{@link genDSL2.Cohabitation#getPartners <em>Partners</em>}'.
+	 * Returns the meta object for the reference list '{@link genDSL2.Cohabitation#getPartners <em>Partners</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Partners</em>'.
+	 * @return the meta object for the reference list '<em>Partners</em>'.
 	 * @see genDSL2.Cohabitation#getPartners()
 	 * @see #getCohabitation()
 	 * @generated
@@ -1227,7 +1227,7 @@ public interface GenDSL2Package extends EPackage {
 		EAttribute COHABITATION__TYPE = eINSTANCE.getCohabitation_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Partners</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Partners</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

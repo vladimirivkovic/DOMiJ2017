@@ -63,7 +63,12 @@ public class GslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Cohabitation returns Cohabitation
 	 *
 	 * Constraint:
-	 *     (legitimate?='legitimate'? type=TypeOfIntimateRelationship? partners=[Person|EString]? (children+=Person children+=Person*)?)
+	 *     (
+	 *         legitimate?='legitimate'? 
+	 *         type=TypeOfIntimateRelationship? 
+	 *         (partners+=[Person|EString] partners+=[Person|EString]*)? 
+	 *         (children+=Person children+=Person*)?
+	 *     )
 	 */
 	protected void sequence_Cohabitation(ISerializationContext context, Cohabitation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -117,7 +122,7 @@ public class GslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     PersonHistory returns PersonHistory
 	 *
 	 * Constraint:
-	 *     (gender=Gender? givenName=EString? changed=EDate?)
+	 *     (gender=Gender? givenName=EString? changed=EDATE?)
 	 */
 	protected void sequence_PersonHistory(ISerializationContext context, PersonHistory semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

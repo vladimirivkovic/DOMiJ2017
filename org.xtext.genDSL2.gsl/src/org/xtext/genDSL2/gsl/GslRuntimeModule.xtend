@@ -3,6 +3,8 @@
  */
 package org.xtext.genDSL2.gsl
 
+import org.xtext.genDSL2.gsl.valueconverter.GSLValueConverter
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
@@ -10,4 +12,9 @@ class GslRuntimeModule extends AbstractGslRuntimeModule {
   override bindIQualifiedNameProvider() {
     GenDslQNP;
   }
+  
+  override bindIValueConverterService() {
+    GSLValueConverter;
+  }
+  
 }

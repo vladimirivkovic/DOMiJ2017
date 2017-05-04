@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -91,14 +92,14 @@ public class CohabitationImpl extends MinimalEObjectImpl.Container implements Co
 	protected TypeOfIntimateRelationship type = TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPartners() <em>Partners</em>}' reference.
+	 * The cached value of the '{@link #getPartners() <em>Partners</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPartners()
 	 * @generated
 	 * @ordered
 	 */
-	protected Person partners;
+	protected EList<Person> partners;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,37 +179,11 @@ public class CohabitationImpl extends MinimalEObjectImpl.Container implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Person getPartners() {
-		if (partners != null && partners.eIsProxy()) {
-			InternalEObject oldPartners = (InternalEObject)partners;
-			partners = (Person)eResolveProxy(oldPartners);
-			if (partners != oldPartners) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GenDSL2Package.COHABITATION__PARTNERS, oldPartners, partners));
-			}
+	public EList<Person> getPartners() {
+		if (partners == null) {
+			partners = new EObjectResolvingEList<Person>(Person.class, this, GenDSL2Package.COHABITATION__PARTNERS);
 		}
 		return partners;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Person basicGetPartners() {
-		return partners;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPartners(Person newPartners) {
-		Person oldPartners = partners;
-		partners = newPartners;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GenDSL2Package.COHABITATION__PARTNERS, oldPartners, partners));
 	}
 
 	/**
@@ -240,8 +215,7 @@ public class CohabitationImpl extends MinimalEObjectImpl.Container implements Co
 			case GenDSL2Package.COHABITATION__TYPE:
 				return getType();
 			case GenDSL2Package.COHABITATION__PARTNERS:
-				if (resolve) return getPartners();
-				return basicGetPartners();
+				return getPartners();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -266,7 +240,8 @@ public class CohabitationImpl extends MinimalEObjectImpl.Container implements Co
 				setType((TypeOfIntimateRelationship)newValue);
 				return;
 			case GenDSL2Package.COHABITATION__PARTNERS:
-				setPartners((Person)newValue);
+				getPartners().clear();
+				getPartners().addAll((Collection<? extends Person>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -290,7 +265,7 @@ public class CohabitationImpl extends MinimalEObjectImpl.Container implements Co
 				setType(TYPE_EDEFAULT);
 				return;
 			case GenDSL2Package.COHABITATION__PARTNERS:
-				setPartners((Person)null);
+				getPartners().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -311,7 +286,7 @@ public class CohabitationImpl extends MinimalEObjectImpl.Container implements Co
 			case GenDSL2Package.COHABITATION__TYPE:
 				return type != TYPE_EDEFAULT;
 			case GenDSL2Package.COHABITATION__PARTNERS:
-				return partners != null;
+				return partners != null && !partners.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

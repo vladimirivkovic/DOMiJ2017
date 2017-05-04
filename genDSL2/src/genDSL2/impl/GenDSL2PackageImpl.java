@@ -709,7 +709,7 @@ public class GenDSL2PackageImpl extends EPackageImpl implements GenDSL2Package {
 		initEReference(getCohabitation_Children(), this.getPerson(), null, "children", null, 0, -1, Cohabitation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCohabitation_Legitimate(), ecorePackage.getEBoolean(), "legitimate", null, 0, 1, Cohabitation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCohabitation_Type(), this.getTypeOfIntimateRelationship(), "type", null, 0, 1, Cohabitation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCohabitation_Partners(), this.getPerson(), null, "partners", null, 0, 1, Cohabitation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCohabitation_Partners(), this.getPerson(), null, "partners", null, 0, -1, Cohabitation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPerson_GivenName(), ecorePackage.getEString(), "givenName", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -827,7 +827,7 @@ public class GenDSL2PackageImpl extends EPackageImpl implements GenDSL2Package {
 		  (personEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "noName oneRoot inMyMarriages inMyCohabitations marrigesInLifetime"
+			 "constraints", "noName leastOneMarriageOrCohabitation oneRoot inMyMarriages inMyCohabitations marrigesInLifetime"
 		   });
 	}
 
@@ -865,6 +865,7 @@ public class GenDSL2PackageImpl extends EPackageImpl implements GenDSL2Package {
 		   source, 
 		   new String[] {
 			 "noName", "not unknown implies givenName <> \'\'",
+			 "leastOneMarriageOrCohabitation", "\n                (type = TypeOfPerson::MARRIED) \n                implies (Marriage.allInstances()->exists(m | m.spouses->includes(self))\n                  or Cohabitation.allInstances()->exists(c | c.partners->includes(self))\n                )",
 			 "oneRoot", "Person.allInstances()->select(p : Person |\n\t\t\t\t\t((p.type <> TypeOfPerson::MARRIED) and ((Marriage.allInstances()->select(m : Marriage |\n\t\t\t\t\t\tm.children->includes(p))->isEmpty()) and (Cohabitation.allInstances()->select(c : Cohabitation |\n\t\t\t\t\t\tc.children->includes(p))->isEmpty()))))->size() = 1",
 			 "inMyMarriages", "marriage->forAll(spouses->count(self) = 1)",
 			 "inMyCohabitations", "cohabitation->forAll(partners->count(self) = 1)",

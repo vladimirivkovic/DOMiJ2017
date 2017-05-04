@@ -99,29 +99,19 @@ public interface Cohabitation extends EObject {
 	void setType(TypeOfIntimateRelationship value);
 
 	/**
-	 * Returns the value of the '<em><b>Partners</b></em>' reference.
+	 * Returns the value of the '<em><b>Partners</b></em>' reference list.
+	 * The list contents are of type {@link genDSL2.Person}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Partners</em>' reference isn't clear,
+	 * If the meaning of the '<em>Partners</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Partners</em>' reference.
-	 * @see #setPartners(Person)
+	 * @return the value of the '<em>Partners</em>' reference list.
 	 * @see genDSL2.GenDSL2Package#getCohabitation_Partners()
 	 * @model
 	 * @generated
 	 */
-	Person getPartners();
-
-	/**
-	 * Sets the value of the '{@link genDSL2.Cohabitation#getPartners <em>Partners</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Partners</em>' reference.
-	 * @see #getPartners()
-	 * @generated
-	 */
-	void setPartners(Person value);
+	EList<Person> getPartners();
 
 } // Cohabitation

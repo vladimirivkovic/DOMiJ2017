@@ -55,8 +55,8 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		//GenealogyTree:
 		//	'GenealogyTree'
 		//	'{'
-		//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person (","
-		//	person+=Person)* '}')?
+		//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person ("," person+=Person)*
+		//	'}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -331,9 +331,8 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		//('restingPlace' restingPlace=EString)? & ('type' type=TypeOfPerson)? & ('gender' gender=Gender)? & ('otherNames' '{'
 		//otherNames+=EString ("," otherNames+=EString)* '}')? & ('nickname' nickname=EString)? & ('deathCause'
 		//deathCause=EString)? & ('birthDate' birthDate=DateX)? & ('deathDate' deathDate=DateX)? & ('personhistory' '{'
-		//personhistory+=PersonHistory ("," personhistory+=PersonHistory)* '}')? & ('cohabitation' '{'
-		//cohabitation+=Cohabitation ("," cohabitation+=Cohabitation)* '}')? & ('marriage' '{' marriage+=Marriage (","
-		//marriage+=Marriage)* '}')?
+		//personhistory+=PersonHistory ("," personhistory+=PersonHistory)* '}')? & ('cohabitation' '{' cohabitation+=Cohabitation
+		//("," cohabitation+=Cohabitation)* '}')? & ('marriage' '{' marriage+=Marriage ("," marriage+=Marriage)* '}')?
 		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
 		
 		//givenName=EString
@@ -617,16 +616,16 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cChangedKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cChangedAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cChangedEDateParserRuleCall_4_1_0 = (RuleCall)cChangedAssignment_4_1.eContents().get(0);
+		private final RuleCall cChangedEDATETerminalRuleCall_4_1_0 = (RuleCall)cChangedAssignment_4_1.eContents().get(0);
 		
 		//PersonHistory:
 		//	{PersonHistory}
-		//	'PersonHistory' ('gender' gender=Gender)? ('givenName' givenName=EString)? ('changed' changed=EDate)?
+		//	'PersonHistory' ('gender' gender=Gender)? ('givenName' givenName=EString)? ('changed' changed=EDATE)?
 		//	//'}'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{PersonHistory} 'PersonHistory' ('gender' gender=Gender)? ('givenName' givenName=EString)? ('changed' changed=EDate)?
+		//{PersonHistory} 'PersonHistory' ('gender' gender=Gender)? ('givenName' givenName=EString)? ('changed' changed=EDATE)?
 		public Group getGroup() { return cGroup; }
 		
 		//{PersonHistory}
@@ -659,17 +658,17 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getGivenNameEStringParserRuleCall_3_1_0() { return cGivenNameEStringParserRuleCall_3_1_0; }
 		
-		//('changed' changed=EDate)?
+		//('changed' changed=EDATE)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'changed'
 		public Keyword getChangedKeyword_4_0() { return cChangedKeyword_4_0; }
 		
-		//changed=EDate
+		//changed=EDATE
 		public Assignment getChangedAssignment_4_1() { return cChangedAssignment_4_1; }
 		
-		//EDate
-		public RuleCall getChangedEDateParserRuleCall_4_1_0() { return cChangedEDateParserRuleCall_4_1_0; }
+		//EDATE
+		public RuleCall getChangedEDATETerminalRuleCall_4_1_0() { return cChangedEDATETerminalRuleCall_4_1_0; }
 	}
 	public class CohabitationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.genDSL2.gsl.Gsl.Cohabitation");
@@ -684,9 +683,16 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeTypeOfIntimateRelationshipEnumRuleCall_3_1_0 = (RuleCall)cTypeAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cPartnersKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cPartnersAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cPartnersPersonCrossReference_4_1_0 = (CrossReference)cPartnersAssignment_4_1.eContents().get(0);
-		private final RuleCall cPartnersPersonEStringParserRuleCall_4_1_0_1 = (RuleCall)cPartnersPersonCrossReference_4_1_0.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cPartnersAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final CrossReference cPartnersPersonCrossReference_4_2_0 = (CrossReference)cPartnersAssignment_4_2.eContents().get(0);
+		private final RuleCall cPartnersPersonEStringParserRuleCall_4_2_0_1 = (RuleCall)cPartnersPersonCrossReference_4_2_0.eContents().get(1);
+		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
+		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
+		private final Assignment cPartnersAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final CrossReference cPartnersPersonCrossReference_4_3_1_0 = (CrossReference)cPartnersAssignment_4_3_1.eContents().get(0);
+		private final RuleCall cPartnersPersonEStringParserRuleCall_4_3_1_0_1 = (RuleCall)cPartnersPersonCrossReference_4_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cChildrenKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
@@ -700,14 +706,15 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Cohabitation:
 		//	{Cohabitation} legitimate?='legitimate'?
-		//	'Cohabitation' ('type' type=TypeOfIntimateRelationship)? ('partners' partners=[Person|EString])? ('children' '{'
-		//	children+=Person ("," children+=Person)* '}')?
+		//	'Cohabitation' ('type' type=TypeOfIntimateRelationship)? ('partners' '(' partners+=[Person|EString] (","
+		//	partners+=[Person|EString])* ')')? ('children' '{' children+=Person ("," children+=Person)* '}')?
 		//	//'}'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Cohabitation} legitimate?='legitimate'? 'Cohabitation' ('type' type=TypeOfIntimateRelationship)? ('partners'
-		//partners=[Person|EString])? ('children' '{' children+=Person ("," children+=Person)* '}')?
+		//{Cohabitation} legitimate?='legitimate'? 'Cohabitation' ('type' type=TypeOfIntimateRelationship)? ('partners' '('
+		//partners+=[Person|EString] ("," partners+=[Person|EString])* ')')? ('children' '{' children+=Person (","
+		//children+=Person)* '}')?
 		public Group getGroup() { return cGroup; }
 		
 		//{Cohabitation}
@@ -734,20 +741,41 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		//TypeOfIntimateRelationship
 		public RuleCall getTypeTypeOfIntimateRelationshipEnumRuleCall_3_1_0() { return cTypeTypeOfIntimateRelationshipEnumRuleCall_3_1_0; }
 		
-		//('partners' partners=[Person|EString])?
+		//('partners' '(' partners+=[Person|EString] ("," partners+=[Person|EString])* ')')?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'partners'
 		public Keyword getPartnersKeyword_4_0() { return cPartnersKeyword_4_0; }
 		
-		//partners=[Person|EString]
-		public Assignment getPartnersAssignment_4_1() { return cPartnersAssignment_4_1; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_4_1() { return cLeftParenthesisKeyword_4_1; }
+		
+		//partners+=[Person|EString]
+		public Assignment getPartnersAssignment_4_2() { return cPartnersAssignment_4_2; }
 		
 		//[Person|EString]
-		public CrossReference getPartnersPersonCrossReference_4_1_0() { return cPartnersPersonCrossReference_4_1_0; }
+		public CrossReference getPartnersPersonCrossReference_4_2_0() { return cPartnersPersonCrossReference_4_2_0; }
 		
 		//EString
-		public RuleCall getPartnersPersonEStringParserRuleCall_4_1_0_1() { return cPartnersPersonEStringParserRuleCall_4_1_0_1; }
+		public RuleCall getPartnersPersonEStringParserRuleCall_4_2_0_1() { return cPartnersPersonEStringParserRuleCall_4_2_0_1; }
+		
+		//("," partners+=[Person|EString])*
+		public Group getGroup_4_3() { return cGroup_4_3; }
+		
+		//","
+		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
+		
+		//partners+=[Person|EString]
+		public Assignment getPartnersAssignment_4_3_1() { return cPartnersAssignment_4_3_1; }
+		
+		//[Person|EString]
+		public CrossReference getPartnersPersonCrossReference_4_3_1_0() { return cPartnersPersonCrossReference_4_3_1_0; }
+		
+		//EString
+		public RuleCall getPartnersPersonEStringParserRuleCall_4_3_1_0_1() { return cPartnersPersonEStringParserRuleCall_4_3_1_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_4_4() { return cRightParenthesisKeyword_4_4; }
 		
 		//('children' '{' children+=Person ("," children+=Person)* '}')?
 		public Group getGroup_5() { return cGroup_5; }
@@ -960,17 +988,6 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		//'false'
 		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
 	}
-	public class EDateElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.genDSL2.gsl.Gsl.EDate");
-		private final Keyword cEDateKeyword = (Keyword)rule.eContents().get(1);
-		
-		//EDate ecore::EDate:
-		//	'EDate'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'EDate'
-		public Keyword getEDateKeyword() { return cEDateKeyword; }
-	}
 	
 	public class TypeOfPersonElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.genDSL2.gsl.Gsl.TypeOfPerson");
@@ -1113,7 +1130,7 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 	private final CohabitationElements pCohabitation;
 	private final MarriageElements pMarriage;
 	private final EBooleanElements pEBoolean;
-	private final EDateElements pEDate;
+	private final TerminalRule tEDATE;
 	private final TypeOfIntimateRelationshipElements eTypeOfIntimateRelationship;
 	
 	private final Grammar grammar;
@@ -1136,7 +1153,7 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pCohabitation = new CohabitationElements();
 		this.pMarriage = new MarriageElements();
 		this.pEBoolean = new EBooleanElements();
-		this.pEDate = new EDateElements();
+		this.tEDATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.genDSL2.gsl.Gsl.EDATE");
 		this.eTypeOfIntimateRelationship = new TypeOfIntimateRelationshipElements();
 	}
 	
@@ -1170,8 +1187,8 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 	//GenealogyTree:
 	//	'GenealogyTree'
 	//	'{'
-	//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person (","
-	//	person+=Person)* '}')?
+	//	'familyName' familyName=EString ('established' established=DateX)? ('persons' '{' person+=Person ("," person+=Person)*
+	//	'}')?
 	//	'}';
 	public GenealogyTreeElements getGenealogyTreeAccess() {
 		return pGenealogyTree;
@@ -1263,7 +1280,7 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//PersonHistory:
 	//	{PersonHistory}
-	//	'PersonHistory' ('gender' gender=Gender)? ('givenName' givenName=EString)? ('changed' changed=EDate)?
+	//	'PersonHistory' ('gender' gender=Gender)? ('givenName' givenName=EString)? ('changed' changed=EDATE)?
 	//	//'}'
 	//;
 	public PersonHistoryElements getPersonHistoryAccess() {
@@ -1276,8 +1293,8 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Cohabitation:
 	//	{Cohabitation} legitimate?='legitimate'?
-	//	'Cohabitation' ('type' type=TypeOfIntimateRelationship)? ('partners' partners=[Person|EString])? ('children' '{'
-	//	children+=Person ("," children+=Person)* '}')?
+	//	'Cohabitation' ('type' type=TypeOfIntimateRelationship)? ('partners' '(' partners+=[Person|EString] (","
+	//	partners+=[Person|EString])* ')')? ('children' '{' children+=Person ("," children+=Person)* '}')?
 	//	//'}'
 	//;
 	public CohabitationElements getCohabitationAccess() {
@@ -1313,14 +1330,10 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEBooleanAccess().getRule();
 	}
 	
-	//EDate ecore::EDate:
-	//	'EDate'
-	public EDateElements getEDateAccess() {
-		return pEDate;
-	}
-	
-	public ParserRule getEDateRule() {
-		return getEDateAccess().getRule();
+	//terminal EDATE returns ecore::EDate:
+	//	'0'..'9' '0'..'9' '0'..'9' '0'..'9' '-' '0'..'9' '0'..'9' '-' '0'..'9' '0'..'9';
+	public TerminalRule getEDATERule() {
+		return tEDATE;
 	}
 	
 	//enum TypeOfIntimateRelationship:
@@ -1346,7 +1359,8 @@ public class GslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}

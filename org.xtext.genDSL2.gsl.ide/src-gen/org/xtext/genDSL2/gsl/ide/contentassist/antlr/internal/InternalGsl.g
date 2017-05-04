@@ -274,31 +274,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleEDate
-entryRuleEDate
-:
-{ before(grammarAccess.getEDateRule()); }
-	 ruleEDate
-{ after(grammarAccess.getEDateRule()); } 
-	 EOF 
-;
-
-// Rule EDate
-ruleEDate 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getEDateAccess().getEDateKeyword()); }
-		'EDate'
-		{ after(grammarAccess.getEDateAccess().getEDateKeyword()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Rule TypeOfPerson
 ruleTypeOfPerson
 	@init {
@@ -3140,6 +3115,7 @@ rule__Cohabitation__Group_4__1
 	}
 :
 	rule__Cohabitation__Group_4__1__Impl
+	rule__Cohabitation__Group_4__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3151,9 +3127,143 @@ rule__Cohabitation__Group_4__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_1()); }
-	(rule__Cohabitation__PartnersAssignment_4_1)
-	{ after(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_1()); }
+	{ before(grammarAccess.getCohabitationAccess().getLeftParenthesisKeyword_4_1()); }
+	'('
+	{ after(grammarAccess.getCohabitationAccess().getLeftParenthesisKeyword_4_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Cohabitation__Group_4__2__Impl
+	rule__Cohabitation__Group_4__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_2()); }
+	(rule__Cohabitation__PartnersAssignment_4_2)
+	{ after(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Cohabitation__Group_4__3__Impl
+	rule__Cohabitation__Group_4__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCohabitationAccess().getGroup_4_3()); }
+	(rule__Cohabitation__Group_4_3__0)*
+	{ after(grammarAccess.getCohabitationAccess().getGroup_4_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Cohabitation__Group_4__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCohabitationAccess().getRightParenthesisKeyword_4_4()); }
+	')'
+	{ after(grammarAccess.getCohabitationAccess().getRightParenthesisKeyword_4_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Cohabitation__Group_4_3__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Cohabitation__Group_4_3__0__Impl
+	rule__Cohabitation__Group_4_3__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4_3__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCohabitationAccess().getCommaKeyword_4_3_0()); }
+	','
+	{ after(grammarAccess.getCohabitationAccess().getCommaKeyword_4_3_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4_3__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Cohabitation__Group_4_3__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__Group_4_3__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_3_1()); }
+	(rule__Cohabitation__PartnersAssignment_4_3_1)
+	{ after(grammarAccess.getCohabitationAccess().getPartnersAssignment_4_3_1()); }
 )
 ;
 finally {
@@ -4939,9 +5049,9 @@ rule__PersonHistory__ChangedAssignment_4_1
 	}
 :
 	(
-		{ before(grammarAccess.getPersonHistoryAccess().getChangedEDateParserRuleCall_4_1_0()); }
-		ruleEDate
-		{ after(grammarAccess.getPersonHistoryAccess().getChangedEDateParserRuleCall_4_1_0()); }
+		{ before(grammarAccess.getPersonHistoryAccess().getChangedEDATETerminalRuleCall_4_1_0()); }
+		RULE_EDATE
+		{ after(grammarAccess.getPersonHistoryAccess().getChangedEDATETerminalRuleCall_4_1_0()); }
 	)
 ;
 finally {
@@ -4982,19 +5092,38 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Cohabitation__PartnersAssignment_4_1
+rule__Cohabitation__PartnersAssignment_4_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getCohabitationAccess().getPartnersPersonCrossReference_4_1_0()); }
+		{ before(grammarAccess.getCohabitationAccess().getPartnersPersonCrossReference_4_2_0()); }
 		(
-			{ before(grammarAccess.getCohabitationAccess().getPartnersPersonEStringParserRuleCall_4_1_0_1()); }
+			{ before(grammarAccess.getCohabitationAccess().getPartnersPersonEStringParserRuleCall_4_2_0_1()); }
 			ruleEString
-			{ after(grammarAccess.getCohabitationAccess().getPartnersPersonEStringParserRuleCall_4_1_0_1()); }
+			{ after(grammarAccess.getCohabitationAccess().getPartnersPersonEStringParserRuleCall_4_2_0_1()); }
 		)
-		{ after(grammarAccess.getCohabitationAccess().getPartnersPersonCrossReference_4_1_0()); }
+		{ after(grammarAccess.getCohabitationAccess().getPartnersPersonCrossReference_4_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Cohabitation__PartnersAssignment_4_3_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getCohabitationAccess().getPartnersPersonCrossReference_4_3_1_0()); }
+		(
+			{ before(grammarAccess.getCohabitationAccess().getPartnersPersonEStringParserRuleCall_4_3_1_0_1()); }
+			ruleEString
+			{ after(grammarAccess.getCohabitationAccess().getPartnersPersonEStringParserRuleCall_4_3_1_0_1()); }
+		)
+		{ after(grammarAccess.getCohabitationAccess().getPartnersPersonCrossReference_4_3_1_0()); }
 	)
 ;
 finally {
@@ -5143,6 +5272,8 @@ rule__Marriage__ChildrenAssignment_6_3_1
 finally {
 	restoreStackSize(stackSize);
 }
+
+RULE_EDATE : '0'..'9' '0'..'9' '0'..'9' '0'..'9' '-' '0'..'9' '0'..'9' '-' '0'..'9' '0'..'9';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

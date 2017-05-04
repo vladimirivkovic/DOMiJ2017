@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="genDSL2" nsURI="http://www.example.org/genDSL2" nsPrefix="genDSL2">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
@@ -61,7 +61,8 @@
         eType="#//Person" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="legitimate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TypeOfIntimateRelationship"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="partners" eType="#//Person"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partners" upperBound="-1"
+        eType="#//Person"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

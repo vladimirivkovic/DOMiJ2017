@@ -327,6 +327,7 @@ public class GenDSL2Validator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(person, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(person, diagnostics, context);
 		if (result || diagnostics != null) result &= validatePerson_noName(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePerson_leastOneMarriageOrCohabitation(person, diagnostics, context);
 		if (result || diagnostics != null) result &= validatePerson_oneRoot(person, diagnostics, context);
 		if (result || diagnostics != null) result &= validatePerson_inMyMarriages(person, diagnostics, context);
 		if (result || diagnostics != null) result &= validatePerson_inMyCohabitations(person, diagnostics, context);
@@ -358,6 +359,39 @@ public class GenDSL2Validator extends EObjectValidator {
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "noName",
 				 PERSON__NO_NAME__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the leastOneMarriageOrCohabitation constraint of '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String PERSON__LEAST_ONE_MARRIAGE_OR_COHABITATION__EEXPRESSION = "\n" +
+		"                (type = TypeOfPerson::MARRIED) \n" +
+		"                implies (Marriage.allInstances()->exists(m | m.spouses->includes(self))\n" +
+		"                  or Cohabitation.allInstances()->exists(c | c.partners->includes(self))\n" +
+		"                )";
+
+	/**
+	 * Validates the leastOneMarriageOrCohabitation constraint of '<em>Person</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePerson_leastOneMarriageOrCohabitation(Person person, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(GenDSL2Package.Literals.PERSON,
+				 person,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "leastOneMarriageOrCohabitation",
+				 PERSON__LEAST_ONE_MARRIAGE_OR_COHABITATION__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);

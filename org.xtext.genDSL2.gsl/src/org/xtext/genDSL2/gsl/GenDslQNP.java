@@ -5,13 +5,13 @@ import org.eclipse.xtext.naming.QualifiedName;
 
 import genDSL2.Person;
 
-public class GenDslQNP extends DefaultDeclarativeQualifiedNameProvider{
+public class GenDslQNP extends DefaultDeclarativeQualifiedNameProvider {
 
-	QualifiedName qualifiedName(Person e){
+	QualifiedName qualifiedName(Person e) {
 		String postfix = "";
 		if (e.getBirthDate() != null)
 			postfix = e.getBirthDate().getYear() + "";
-		
-		return QualifiedName.create(e.getGivenName()+postfix);
-}
+
+		return QualifiedName.create(e.getGivenName() + postfix);
+	}
 }

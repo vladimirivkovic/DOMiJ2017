@@ -3,8 +3,8 @@
   <viewpoint:DAnalysis xmi:id="_lxOnYC97Eeeg_s9uCqkXPg" selectedViews="_lzobIC97Eeeg_s9uCqkXPg" version="11.1.0.201608251200">
     <semanticResources>genDSL2.ecore</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
-    <semanticResources>genDSL2.genmodel</semanticResources>
     <semanticResources>GenealogyTree.xmi</semanticResources>
+    <semanticResources>genDSL2.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_lzobIC97Eeeg_s9uCqkXPg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_l0Xa8C97Eeeg_s9uCqkXPg" name="genDSL2" representation="_l0YCAC97Eeeg_s9uCqkXPg">
@@ -16,12 +16,6 @@
   <diagram:DSemanticDiagram xmi:id="_l0YCAC97Eeeg_s9uCqkXPg" name="genDSL2">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_l0YCAS97Eeeg_s9uCqkXPg" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_l0YCAi97Eeeg_s9uCqkXPg">
-        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_oO6KwC97Eeeg_s9uCqkXPg" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
-          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
-        </computedStyleDescriptions>
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_oQI50C97Eeeg_s9uCqkXPg" sourceArrow="FillDiamond" routingStyle="manhattan">
           <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_oQI50S97Eeeg_s9uCqkXPg" showIcon="false" labelExpression="service:render">
@@ -496,13 +490,15 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oO_DQC97Eeeg_s9uCqkXPg" name="Marriage" tooltipText="&#xA;ERROR : The feature 'eType' of 'EReference{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/fromDate}' contains a dangling reference 'EClass{#//}'&#xA;ERROR : The feature 'eClassifier' of 'EGenericType{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/fromDate/@eGenericType}' contains a dangling reference 'EClass{#//}'&#xA;ERROR : The feature 'eType' of 'EReference{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/toDate}' contains a dangling reference 'EClass{#//}'&#xA;ERROR : The feature 'eClassifier' of 'EGenericType{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/toDate/@eGenericType}' contains a dangling reference 'EClass{#//}'&#xA;ERROR : The feature 'eType' of 'EReference{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/children}' contains a dangling reference 'EClass{#//}'&#xA;ERROR : The feature 'eClassifier' of 'EGenericType{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/children/@eGenericType}' contains a dangling reference 'EClass{#//}'&#xA;ERROR : The feature 'eType' of 'EAttribute{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/type}' contains a dangling reference 'EEnum{#//}'&#xA;ERROR : The feature 'eClassifier' of 'EGenericType{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/type/@eGenericType}' contains a dangling reference 'EEnum{#//}'&#xA;ERROR : The feature 'eType' of 'EReference{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/spouses}' contains a dangling reference 'EClass{#//}'&#xA;ERROR : The feature 'eClassifier' of 'EGenericType{platform:/resource/genDSL2/model/genDSL2.ecore#//Marriage/spouses/@eGenericType}' contains a dangling reference 'EClass{#//}'" outgoingEdges="_oQKvAC97Eeeg_s9uCqkXPg _oQLWEy97Eeeg_s9uCqkXPg _oQL9Iy97Eeeg_s9uCqkXPg _oQNLQC97Eeeg_s9uCqkXPg" incomingEdges="_oQSq0y97Eeeg_s9uCqkXPg" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oO_DQC97Eeeg_s9uCqkXPg" name="Marriage" tooltipText="" outgoingEdges="_oQKvAC97Eeeg_s9uCqkXPg _oQLWEy97Eeeg_s9uCqkXPg _oQL9Iy97Eeeg_s9uCqkXPg _oQNLQC97Eeeg_s9uCqkXPg" incomingEdges="_oQSq0y97Eeeg_s9uCqkXPg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="genDSL2.ecore#//Marriage"/>
       <semanticElements xmi:type="ecore:EClass" href="genDSL2.ecore#//Marriage"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oPARYC97Eeeg_s9uCqkXPg" labelColor="239,41,41" description="_oO6KwC97Eeeg_s9uCqkXPg" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_BePSMDBGEeeYL4VQFBXThA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oPwfUC97Eeeg_s9uCqkXPg" name="type : TypeOfIntimateRelationship = MONOGAMY" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="genDSL2.ecore#//Marriage/type"/>
@@ -735,7 +731,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP96sS97Eeeg_s9uCqkXPg" name="before(d DateX)" tooltipText="before(d)">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP96sS97Eeeg_s9uCqkXPg" name="before(d DateX) : EBoolean" tooltipText="before(d) : EBoolean">
         <target xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/before"/>
         <semanticElements xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/before"/>
         <semanticElements xmi:type="ecore:EParameter" href="genDSL2.ecore#//DateX/before/d"/>
@@ -744,7 +740,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP-hwS97Eeeg_s9uCqkXPg" name="after(d DateX)" tooltipText="after(d)">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP-hwS97Eeeg_s9uCqkXPg" name="after(d DateX) : EBoolean" tooltipText="after(d) : EBoolean">
         <target xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/after"/>
         <semanticElements xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/after"/>
         <semanticElements xmi:type="ecore:EParameter" href="genDSL2.ecore#//DateX/after/d"/>
@@ -753,7 +749,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP_I0S97Eeeg_s9uCqkXPg" name="isNull()" tooltipText="isNull()">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP_I0S97Eeeg_s9uCqkXPg" name="isNull() : EBoolean" tooltipText="isNull() : EBoolean">
         <target xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/isNull"/>
         <semanticElements xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/isNull"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_oP_I0i97Eeeg_s9uCqkXPg" labelAlignment="LEFT">
@@ -761,7 +757,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP_v4C97Eeeg_s9uCqkXPg" name="isNotNull()" tooltipText="isNotNull()">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oP_v4C97Eeeg_s9uCqkXPg" name="isNotNull() : EBoolean" tooltipText="isNotNull() : EBoolean">
         <target xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/isNotNull"/>
         <semanticElements xmi:type="ecore:EOperation" href="genDSL2.ecore#//DateX/isNotNull"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_oP_v4S97Eeeg_s9uCqkXPg" labelAlignment="LEFT">
@@ -1021,7 +1017,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Ows1kC98Eeeg_s9uCqkXPg" name="[0..1] partners" sourceNode="_oPGYAC97Eeeg_s9uCqkXPg" targetNode="_oPKCYC97Eeeg_s9uCqkXPg">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Ows1kC98Eeeg_s9uCqkXPg" name="[0..*] partners" sourceNode="_oPGYAC97Eeeg_s9uCqkXPg" targetNode="_oPKCYC97Eeeg_s9uCqkXPg">
       <target xmi:type="ecore:EReference" href="genDSL2.ecore#//Cohabitation/partners"/>
       <semanticElements xmi:type="ecore:EReference" href="genDSL2.ecore#//Cohabitation/partners"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_OwtcoC98Eeeg_s9uCqkXPg" routingStyle="manhattan" strokeColor="0,0,0">
