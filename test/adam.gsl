@@ -1,71 +1,55 @@
 GenealogyTree {
 	familyName Prvi
 persons {
-		Adam birthPlace Eden
-		birthDate { year 0 }
+		Stefan_Nemanja otherNames {
+      Simeon
+    }
+    birthDate {
+      year 1111
+    }
     deathDate {
-      year 1100
-    }
-    personhistory {
-      PersonHistory givenName Adam changed 2012-12-12
-    }
-    cohabitation {
-        Cohabitation partners ( Adam0,
-      Eve )children { Mujaga }
+      year 1198
     }
     marriage {
-			Marriage spouses ( Adam0,
-			Eve ) fromDate {
-        year 1
-      }
-      children {
-        d1 unknown true gender FEMALE birthDate {
-        year 11
-        }
-        deathDate {
-        year 50
+      Marriage spouses ( Stefan_Nemanja1111,
+      Ana ) children {
+        Rastko deathDate {
+          year 1236
         },
-				Cain marriage {
-					Marriage spouses ( d111, Cain,
-					Abel ,
-          evo_ga12 ) children {
-            Enoch
-					marriage {
-              Marriage spouses ( Enoch,
-              WomanX ) },
-            
-          child1,
-            child3
+        Stefan nickname Prvovencani  marriage {
+          Marriage spouses ( Stefan,
+          Evdokija ) children {
+            Predislav,
+            Radoslav,
+            Vladisalv
           }
-},
-				Abel,
-				Seth marriage {
-					Marriage spouses ( Seth,
-					d2 ) children {
-						Enos
-					,
-						child0 birthDate {
-							year 23
-						}
-						deathDate {
-							year 45
-						}
-					,
-            child3
+,
+          Marriage spouses ( Stefan,
+          Ana1185 ) children {
+            Uros marriage {
+              Marriage spouses ( Uros,
+              Jelena ) children {
+                Milutin,
+                Dragutin
+              }
+            }
           }
-				},
-				d2 gender FEMALE,
-				d3 gender FEMALE
-			unknown true
-			,
-				
-			evo_ga
-			birthDate {
-          year 12
-        }
+        },
+        Vukan
       }
-		},
-		Eve type MARRIED gender FEMALE,
-    WomanX type MARRIED gender FEMALE
+    },
+		Ana type MARRIED gender FEMALE otherNames {
+      Anastasija
+    },
+    
+  Evdokija type MARRIED gender FEMALE
+  ,
+    Ana  type MARRIED gender FEMALE otherNames {
+      Dandolo
+    }
+    birthDate {
+      year 1185
+    },
+    Jelena type MARRIED gender FEMALE
   }
 }

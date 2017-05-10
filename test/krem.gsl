@@ -1,15 +1,42 @@
 GenealogyTree {
   familyName Kremenko
   persons {
-    Fred marriage {
-      Marriage spouses ( Fred,
-      Vilma ) children {
+    PersonX birthPlace "qwer"
+    birthDate {
+      year 1234
+    } deathDate {
+      year 12345
+    }
+    marriage {
+      Marriage spouses ( PersonX1234,
+      Dara ) children {
         child1,
-        child2 gender FEMALE,
+        child2 cohabitation {
+          
+        Cohabitation partners ( child2,
+          Dara
+          ,
+          Mara ) children {
+            bastard1,
+            bastard2,
+            bastard3
+          }
+        }
+        marriage {
+          Marriage spouses ( Woman4,
+          child2 )
+        },
         child3
+      ,
+        Person5
       }
-    },
-    
-  Vilma type MARRIED gender FEMALE
+}
+    ,
+      
+    Dara type MARRIED gender FEMALE
+  ,
+    Mara type MARRIED gender FEMALE
+  ,
+    Woman4 type MARRIED gender FEMALE
   }
 }

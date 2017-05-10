@@ -3,13 +3,6 @@
   <ownedViewpoints name="gsl" modelFileExtension="gsl">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="tree" domainClass="genDSL2.GenealogyTree" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="cohabitationNode" semanticCandidatesExpression="[Cohabitation.allInstances()/]" domainClass="genDSL2.Cohabitation">
-          <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelExpression="" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
-          </style>
-        </nodeMappings>
         <edgeMappings name="s2m" deletionDescription="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteSpouse']" sourceMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer']" targetMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" targetFinderExpression="[spouses/]" reconnections="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@toolSections.0/@ownedTools[name='changeSpouse']">
           <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -18,7 +11,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="m2c" sourceMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer'] //@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='cohabitationNode']" targetMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" targetFinderExpression="[children/]">
+        <edgeMappings name="m2c" sourceMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer'] //@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='cohabitationNode']" targetMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" targetFinderExpression="[children/]">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -26,8 +19,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="p2c" sourceMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='cohabitationNode']" targetMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" targetFinderExpression="feature:partners">
-          <style sizeComputationExpression="2">
+        <edgeMappings name="p2c" sourceMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='cohabitationNode']" targetMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" targetFinderExpression="feature:partners">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -62,15 +55,15 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
           <conditionnalStyles predicateExpression="[gender = Gender::FEMALE/]">
-            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:givenName" sizeComputationExpression="1" workspacePath="test/wicon.png">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:givenName" tooltipExpression="feature:givenName" sizeComputationExpression="1" workspacePath="genDSL2.project.design/images/wicon.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[gender = Gender::MALE/]">
-            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:givenName" workspacePath="test/micon.png">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:givenName" tooltipExpression="feature:givenName" workspacePath="genDSL2.project.design/images/micon.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </conditionnalStyles>
         </containerMappings>
@@ -96,11 +89,17 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
           </style>
           <conditionnalStyles predicateExpression="[type = TypeOfIntimateRelationship::MONOGAMY/]">
-            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="test/mricon.png">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" workspacePath="genDSL2.project.design/images/mricon.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </conditionnalStyles>
+        </containerMappings>
+        <containerMappings name="cohabitationNode" semanticCandidatesExpression="[Cohabitation.allInstances()/]" domainClass="Cohabitation">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" workspacePath="genDSL2.project.design/images/coh.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
         </containerMappings>
         <toolSections name="palette">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="addPerson" containerMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" extraMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']">
@@ -109,7 +108,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Person" referenceName="person">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="PersonX"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="['Person' + Person.allInstances()->size()/]"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -176,7 +175,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="addChild" precondition="[container.oclIsTypeOf(genDSL2::Marriage)/]" containerMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" extraMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer'] //@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='cohabitationNode']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="addChild" precondition="[not container.oclIsTypeOf(genDSL2::GenealogyTree)/]" containerMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" extraMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer'] //@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='cohabitationNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -188,7 +187,7 @@
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(genDSL2::Cohabitation)/]">
                   <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Person" referenceName="children">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="['bastard0'/]"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="['bastard' + container.children->size()/]"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -202,7 +201,8 @@
             <element name="element"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="[element.spouses->excluding(source.oclAsType(Person))->including(target)/]"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:Unset" featureName="spouses" elementExpression="var:source"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
@@ -213,7 +213,7 @@
             <containerView name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="aql: element.spouses->excluding(elementView.target)"/>
+                <subModelOperations xsi:type="tool_1:Unset" featureName="spouses" elementExpression="[elementView.oclAsType(DEdge).targetNode.oclAsType(DSemanticDecorator).target/]"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -245,7 +245,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Person" referenceName="person">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="WomanX"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="['Woman'+ Person.allInstances()->size()/]"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="gender" valueExpression="FEMALE"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="MARRIED"/>
                 </subModelOperations>
@@ -260,19 +260,6 @@
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(genDSL2::Person)/]">
                   <subModelOperations xsi:type="tool_1:CreateInstance" typeName="genDSL2.Cohabitation" referenceName="cohabitation">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="partners" valueExpression="[Set{container}/]"/>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="addChildC" precondition="[not container.oclIsTypeOf(GenealogyTree)/]" containerMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" extraMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@nodeMappings[name='cohabitationNode']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(genDSL2::Cohabitation)/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Person" referenceName="children">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="givenName" valueExpression="['bastard0'/]"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -294,6 +281,17 @@
             <mask mask="{0}"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:SetValue" featureName="year" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="addChildLink" edgeMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='m2c'] //@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@edgeMappings[name='p2c']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="var:target"/>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
