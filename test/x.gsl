@@ -1,30 +1,75 @@
 GenealogyTree {
-	familyName Topalovic
+	familyName Nemanjici 
 persons {
-		Pantelija marriage {
-      Marriage spouses ( Pantelija,
-      Mara ) children {
-        Maskimilijan marriage {
-          Marriage spouses ( Maskimilijan,
-          Dara ) children {
-            Aksentije marriage {
-              Marriage spouses ( Aksentije,
-              Sara ) children {
-                Milutin marriage {
-                  Marriage spouses ( Milutin,
-                  Gara ) children {
-                    Laki
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-		Mara type MARRIED gender FEMALE,
-		Dara type MARRIED gender FEMALE,
-		Sara type MARRIED gender FEMALE,
-		Gara type MARRIED gender FEMALE
-  }
+		Ana {
+			type MARRIED gender FEMALE
+		},
+		Ana_Dandolo {
+			type MARRIED gender FEMALE
+		},
+		Evdokija {
+			type MARRIED gender FEMALE
+		},
+		Jelena {
+			type MARRIED gender FEMALE
+		},
+		Woman15 {
+			unknown true type MARRIED gender FEMALE
+		},
+		Zavida {
+			marriage {
+				Marriage {
+					spouses ( Zavida,
+					Woman15 ) children {
+						Stefan_Nemanja {
+							marriage {
+								Marriage {
+									spouses ( Stefan_Nemanja,
+									Ana ) children {
+										Vukan {
+										},
+										Stefan {
+											marriage {
+												Marriage {
+													spouses ( Stefan,
+													Ana_Dandolo ) children {
+														Uros {
+															marriage {
+																Marriage {
+																	spouses ( Uros,
+																	Jelena ) children {
+																		Dragutin {
+																		},
+																		Milutin {
+																		}
+																	}
+																}
+															}
+														}
+													}
+												},
+												Marriage {
+													spouses ( Stefan,
+													Evdokija ) children {
+														Radoslav {
+														},
+														Vladislav {
+														},
+														Prvoslav {
+														}
+													}
+												}
+											}
+										},
+										Rastko {
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

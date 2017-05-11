@@ -2,6 +2,7 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="11.1.1.201610211630">
   <ownedViewpoints name="gsl" modelFileExtension="gsl">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="tree" domainClass="genDSL2.GenealogyTree" enablePopupBars="true">
+      <metamodel href="http://www.example.org/genDSL2#/"/>
       <defaultLayer name="Default">
         <edgeMappings name="s2m" deletionDescription="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteSpouse']" sourceMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer']" targetMapping="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']" targetFinderExpression="[spouses/]" reconnections="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@toolSections.0/@ownedTools[name='changeSpouse']">
           <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
@@ -57,7 +58,7 @@
           <conditionnalStyles predicateExpression="[gender = Gender::FEMALE/]">
             <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:givenName" tooltipExpression="feature:givenName" sizeComputationExpression="1" workspacePath="genDSL2.project.design/images/wicon.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="[gender = Gender::MALE/]">
@@ -146,15 +147,13 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="addMarriage" precondition="[container.oclIsTypeOf(genDSL2::Person)/]" containerMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer']" extraMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="addMarriage" precondition="[container.oclIsTypeOf(genDSL2::Person)/]" forceRefresh="true" containerMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='marriageContainer']" extraMappings="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(genDSL2::Person)/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Marriage" referenceName="marriage">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="[Set{container}/]"/>
-                  </subModelOperations>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Marriage" referenceName="marriage">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="spouses" valueExpression="[Set{container}/]"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

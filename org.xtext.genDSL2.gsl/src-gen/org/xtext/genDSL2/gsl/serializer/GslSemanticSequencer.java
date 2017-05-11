@@ -135,22 +135,22 @@ public class GslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *
 	 * Constraint:
 	 *     (
-	 *         givenName=EString | 
-	 *         unknown=EBoolean | 
-	 *         birthPlace=EString | 
-	 *         deathPlace=EString | 
-	 *         restingPlace=EString | 
-	 *         type=TypeOfPerson | 
-	 *         gender=Gender | 
-	 *         (otherNames+=EString otherNames+=EString*) | 
-	 *         nickname=EString | 
-	 *         deathCause=EString | 
-	 *         birthDate=DateX | 
-	 *         deathDate=DateX | 
-	 *         (personhistory+=PersonHistory personhistory+=PersonHistory*) | 
-	 *         (cohabitation+=Cohabitation cohabitation+=Cohabitation*) | 
-	 *         (marriage+=Marriage marriage+=Marriage*)
-	 *     )+
+	 *         givenName=EString 
+	 *         unknown=EBoolean? 
+	 *         birthPlace=EString? 
+	 *         deathPlace=EString? 
+	 *         restingPlace=EString? 
+	 *         type=TypeOfPerson? 
+	 *         gender=Gender? 
+	 *         (otherNames+=EString otherNames+=EString*)? 
+	 *         nickname=EString? 
+	 *         deathCause=EString? 
+	 *         birthDate=DateX? 
+	 *         deathDate=DateX? 
+	 *         (personhistory+=PersonHistory personhistory+=PersonHistory*)? 
+	 *         (cohabitation+=Cohabitation cohabitation+=Cohabitation*)? 
+	 *         (marriage+=Marriage marriage+=Marriage*)?
+	 *     )
 	 */
 	protected void sequence_Person(ISerializationContext context, Person semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

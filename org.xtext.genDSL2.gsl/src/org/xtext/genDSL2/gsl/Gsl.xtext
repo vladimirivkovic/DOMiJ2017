@@ -30,23 +30,26 @@ DateX returns DateX:
   '}';
 
 Person returns Person:
+	{Person}
+//  'Person'
+//  '{'
   givenName=EString
-  //'{'
-    &('unknown' unknown=EBoolean)?
-    &('birthPlace' birthPlace=EString)?
-    &('deathPlace' deathPlace=EString)?
-    &('restingPlace' restingPlace=EString)?
-    &('type' type=TypeOfPerson)?
-    &('gender' gender=Gender)?
-    &('otherNames' '{' otherNames+=EString ( "," otherNames+=EString)* '}' )?
-    &('nickname' nickname=EString)?
-    &('deathCause' deathCause=EString)?
-    &('birthDate' birthDate=DateX)?
-    &('deathDate' deathDate=DateX)?
-    &('personhistory' '{' personhistory+=PersonHistory ( "," personhistory+=PersonHistory)* '}' )?
-    &('cohabitation' '{' cohabitation+=Cohabitation ( "," cohabitation+=Cohabitation)* '}' )?
-    &('marriage' '{' marriage+=Marriage ( "," marriage+=Marriage)* '}' )?
-  //'}'
+  '{'
+    ('unknown' unknown=EBoolean)?
+    ('birthPlace' birthPlace=EString)?
+    ('deathPlace' deathPlace=EString)?
+    ('restingPlace' restingPlace=EString)?
+    ('type' type=TypeOfPerson)?
+    ('gender' gender=Gender)?
+    ('otherNames' '{' otherNames+=EString ( "," otherNames+=EString)* '}' )?
+    ('nickname' nickname=EString)?
+    ('deathCause' deathCause=EString)?
+    ('birthDate' birthDate=DateX)?
+    ('deathDate' deathDate=DateX)?
+    ('personhistory' '{' personhistory+=PersonHistory ( "," personhistory+=PersonHistory)* '}' )?
+    ('cohabitation' '{' cohabitation+=Cohabitation ( "," cohabitation+=Cohabitation)* '}' )?
+    ('marriage' '{' marriage+=Marriage ( "," marriage+=Marriage)* '}' )?
+  '}'
   ;
 
 EInt returns ecore::EInt:
@@ -72,23 +75,23 @@ Cohabitation returns Cohabitation:
   {Cohabitation}
   (legitimate?='legitimate')?
   'Cohabitation'
-  //'{'
+  '{'
     ('type' type=TypeOfIntimateRelationship)?
     ('partners' '(' partners+=[Person|EString] ( "," partners+=[Person|EString])* ')' )?
     ('children' '{' children+=Person ( "," children+=Person)* '}' )?
-  //'}'
+  '}'
   ;
 
 Marriage returns Marriage:
   {Marriage}
   'Marriage'
-  //'{'
+  '{'
     ('type' type=TypeOfIntimateRelationship)?
     ('spouses' '(' spouses+=[Person|EString] ( "," spouses+=[Person|EString])* ')' )?
     ('fromDate' fromDate=DateX)?
     ('toDate' toDate=DateX)?
     ('children' '{' children+=Person ( "," children+=Person)* '}' )?
-  //'}'
+  '}'
   ;
 
 EBoolean returns ecore::EBoolean:
