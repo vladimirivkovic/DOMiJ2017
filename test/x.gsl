@@ -12,7 +12,8 @@ persons {
 		},
 		Jelena {
 			type MARRIED gender FEMALE
-		},
+		nickname Anzuj
+    },
 		Woman15 {
 			unknown true type MARRIED gender FEMALE
 		},
@@ -29,19 +30,86 @@ persons {
 										Vukan {
 										},
 										Stefan {
-											marriage {
+											nickname Prvovencani marriage {
 												Marriage {
 													spouses ( Stefan,
 													Ana_Dandolo ) children {
 														Uros {
-															marriage {
+															nickname Prvi marriage {
 																Marriage {
 																	spouses ( Uros,
 																	Jelena ) children {
 																		Dragutin {
 																		},
 																		Milutin {
-																		}
+																		marriage {
+                                        Marriage {
+                                          spouses ( Milutin,
+                                          Jelena_Terter ) children {
+                                            Stefan {
+                                              nickname Decanski birthDate {
+                                                year 1276
+                                              }
+                                              marriage {
+                                                Marriage {
+                                                  spouses ( Stefan1276,
+                                                  Teodora ) children {
+                                                    Dusic {
+                                                    },
+                                                    Dusan {
+              marriage {
+                Marriage {
+                  spouses ( Dusan,
+                  Jelena_Bugarska ) children {
+                    Uros {
+                      birthDate {
+                        year 1336
+                      }
+                    }
+                  }
+                }
+              }
+                                                    },
+                                                    Jelena_Subic {
+              gender FEMALE
+                                                    }
+                                                  }
+                                                },
+                                                Marriage {
+                                                  spouses ( Stefan1276,
+                                                  Marija ) children {
+                                                    Simeon {
+                                                    },
+                                                    Teodora {
+              gender FEMALE birthDate {
+                year 1330
+              }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            Konstantin {
+                                            },
+                                            Neda {
+                                              gender FEMALE
+                                            }
+                                          }
+                                        },
+                                        Marriage {
+                                          spouses ( Milutin,
+                                          Jelisaveta ) children {
+                                            Zorica {
+                                              gender FEMALE
+                                            }
+                                          }
+                                        },
+                                        Marriage {
+                                          spouses ( Milutin,
+                                          Simonida )
+                                        }
+                                      }
+                                    }
 																	}
 																}
 															}
@@ -67,9 +135,35 @@ persons {
 								}
 							}
 						}
-					}
-				}
+					,
+            Tihomir {
+            },
+            Stracimir {
+            },
+            Miroslav {
+            }
+          }
+        }
 			}
 		}
-	}
+	,
+    Jelena_Terter {
+      type MARRIED gender FEMALE
+    },
+    Jelisaveta {
+      type MARRIED gender FEMALE nickname Arpad
+    },
+    Simonida {
+      type MARRIED gender FEMALE
+    },
+    Marija {
+      type MARRIED gender FEMALE nickname Paleolog
+    },
+    Teodora {
+      type MARRIED gender FEMALE nickname Smilec
+    },
+    Jelena_Bugarska {
+      type MARRIED gender FEMALE
+    }
+  }
 }

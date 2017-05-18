@@ -136,17 +136,21 @@ public class GslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         givenName=EString 
-	 *         unknown=EBoolean? 
-	 *         birthPlace=EString? 
-	 *         deathPlace=EString? 
-	 *         restingPlace=EString? 
-	 *         type=TypeOfPerson? 
-	 *         gender=Gender? 
-	 *         (otherNames+=EString otherNames+=EString*)? 
-	 *         nickname=EString? 
-	 *         deathCause=EString? 
-	 *         birthDate=DateX? 
-	 *         deathDate=DateX? 
+	 *         (
+	 *             (
+	 *                 unknown=EBoolean | 
+	 *                 birthPlace=EString | 
+	 *                 deathPlace=EString | 
+	 *                 restingPlace=EString | 
+	 *                 type=TypeOfPerson | 
+	 *                 gender=Gender | 
+	 *                 nickname=EString | 
+	 *                 deathCause=EString | 
+	 *                 birthDate=DateX | 
+	 *                 deathDate=DateX
+	 *             )? 
+	 *             (otherNames+=EString otherNames+=EString*)?
+	 *         )+ 
 	 *         (personhistory+=PersonHistory personhistory+=PersonHistory*)? 
 	 *         (cohabitation+=Cohabitation cohabitation+=Cohabitation*)? 
 	 *         (marriage+=Marriage marriage+=Marriage*)?

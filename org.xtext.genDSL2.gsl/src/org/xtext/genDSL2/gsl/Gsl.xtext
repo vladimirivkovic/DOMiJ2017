@@ -35,17 +35,17 @@ Person returns Person:
 //  '{'
   givenName=EString
   '{'
-    ('unknown' unknown=EBoolean)?
-    ('birthPlace' birthPlace=EString)?
-    ('deathPlace' deathPlace=EString)?
-    ('restingPlace' restingPlace=EString)?
-    ('type' type=TypeOfPerson)?
-    ('gender' gender=Gender)?
-    ('otherNames' '{' otherNames+=EString ( "," otherNames+=EString)* '}' )?
-    ('nickname' nickname=EString)?
-    ('deathCause' deathCause=EString)?
-    ('birthDate' birthDate=DateX)?
-    ('deathDate' deathDate=DateX)?
+    (('unknown' unknown=EBoolean)?
+    &('birthPlace' birthPlace=EString)?
+    &('deathPlace' deathPlace=EString)?
+    &('restingPlace' restingPlace=EString)?
+    &('type' type=TypeOfPerson)?
+    &('gender' gender=Gender)?
+    &('otherNames' '{' otherNames+=EString ( "," otherNames+=EString)* '}' )?
+    &('nickname' nickname=EString)?
+    &('deathCause' deathCause=EString)?
+    &('birthDate' birthDate=DateX)?
+    &('deathDate' deathDate=DateX)?)
     ('personhistory' '{' personhistory+=PersonHistory ( "," personhistory+=PersonHistory)* '}' )?
     ('cohabitation' '{' cohabitation+=Cohabitation ( "," cohabitation+=Cohabitation)* '}' )?
     ('marriage' '{' marriage+=Marriage ( "," marriage+=Marriage)* '}' )?

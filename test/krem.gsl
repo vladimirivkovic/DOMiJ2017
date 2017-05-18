@@ -1,42 +1,59 @@
 GenealogyTree {
   familyName Kremenko
   persons {
-    PersonX birthPlace "qwer"
-    birthDate {
-      year 1234
-    } deathDate {
-      year 12345
-    }
-    marriage {
-      Marriage spouses ( PersonX1234,
-      Dara ) children {
-        child1,
-        child2 cohabitation {
-          
-        Cohabitation partners ( child2,
-          Dara
-          ,
-          Mara ) children {
-            bastard1,
-            bastard2,
-            bastard3
+    Person1 {
+      marriage {
+        Marriage {
+          spouses ( Person1,
+          Person2,
+          Woman4 ) children {
+            Person3 {
+              cohabitation {
+                Cohabitation {
+                  partners ( Person3,
+                  Woman6,
+                  Woman7 )
+                },
+                Cohabitation {
+                  partners ( Person3,
+                  Woman8 )
+                }
+              }
+            }
           }
-        }
-        marriage {
-          Marriage spouses ( Woman4,
-          child2 )
         },
-        child3
-      ,
-        Person5
+        Marriage {
+          spouses ( Person1,
+          Woman5 )
+        },
+        Marriage {
+          spouses ( Person1,
+          Woman4 )
+        }
       }
-}
-    ,
-      
-    Dara type MARRIED gender FEMALE
-  ,
-    Mara type MARRIED gender FEMALE
-  ,
-    Woman4 type MARRIED gender FEMALE
+    },
+        
+      Person2 {
+      type MARRIED
+    },
+        
+Woman4 {
+      type MARRIED gender FEMALE
+    },
+    Woman5 {
+      type MARRIED gender FEMALE
+      nickname X
+    },
+    Woman6 {
+      nickname y type MARRIED gender FEMALE
+    },
+    Woman7 {
+      type MARRIED gender FEMALE
+    restingPlace nesto
+    },
+    Woman8 {
+      type MARRIED gender FEMALE
+    birthPlace qwerty
+    }
   }
 }
