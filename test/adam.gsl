@@ -1,3 +1,7 @@
 GenealogyTree {
   familyName Adamovi
+persons {
+    Adam {
+    }
+  }
 }

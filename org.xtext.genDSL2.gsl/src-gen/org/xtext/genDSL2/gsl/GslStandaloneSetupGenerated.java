@@ -5,6 +5,9 @@ package org.xtext.genDSL2.gsl;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+
+import genDSL2.impl.GenDSL2PackageImpl;
+
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.ISetup;
@@ -17,6 +20,7 @@ public class GslStandaloneSetupGenerated implements ISetup {
 
 	@Override
 	public Injector createInjectorAndDoEMFRegistration() {
+		GenDSL2PackageImpl.init();
 		TerminalsStandaloneSetup.doSetup();
 
 		Injector injector = createInjector();

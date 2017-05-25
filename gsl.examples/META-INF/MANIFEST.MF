@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GSL examples
+Bundle-SymbolicName: gls.examples
+Bundle-Version: 0.1.0
+Require-Bundle: org.eclipse.xtext;bundle-version="2.7.2",
+ gsl.generator;bundle-version="0.1.0",
+ genDSL2;bundle-version="0.1.0",
+ org.xtext.genDSL2.gsl;bundle-version="1.0.0"
