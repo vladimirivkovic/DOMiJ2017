@@ -1,7 +1,7 @@
 package gsl.examples;
 
 import gsl.examples.utilities.GSLToXMIConverter;
-import mist.relgen.generate.generator.RelationalMMGenerator;
+import gsl.generate.generator.GenealogyTreeMMGenerator;
 
 public class NemanjiciTest {
 	//this part should be changed on each computer
@@ -22,6 +22,6 @@ public class NemanjiciTest {
 		GSLToXMIConverter.convertERDSLtoXMI(GSL_M, XMI_DIR + "nem.xmi");
 
 		//generate code
-		RelationalMMGenerator.generateAll(GSL_M, XMI_DIR);
+		GenealogyTreeMMGenerator.generateAll(GSL_M, XMI_DIR);
 	}
 }

@@ -17,4 +17,4 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: ACS
-Export-Package: mist.relgen.generate.generator
+Export-Package: gsl.generate.generator

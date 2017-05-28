@@ -848,12 +848,6 @@ public class GenDSL2PackageImpl extends EPackageImpl implements GenDSL2Package {
 			 "parentsOlder", "spouses->forAll(s | children->forAll(c |\n\t\t\t\t\t\t(c.birthDate.isNotNull() and s.birthDate.isNotNull()) implies (c.birthDate.after(s.birthDate))))"
 		   });	
 		addAnnotation
-		  (getMarriage_Type(), 
-		   source, 
-		   new String[] {
-			 "derivation", "if self.spouses->size() > 2 then (if (self.spouses->iterate(p : Person; m : Integer = 0 | if\n\t\t\t\t\t\t\t\tp.gender = Gender::MALE then m + 1\n\t\t\t\t\t\t\telse m\n\t\t\t\t\t\t\tendif) > 1 and self.spouses->iterate(p : Person; m : Integer = 0 | if p.gender = Gender::FEMALE then m + 1\n\t\t\t\t\t\t\telse m\n\t\t\t\t\t\t\tendif) > 1) then TypeOfIntimateRelationship::POLYFIDELITY\n\t\t\t\t\telse TypeOfIntimateRelationship::POLYGAMY\n\t\t\t\t\tendif) else TypeOfIntimateRelationship::MONOGAMY\n\t\t\t\t\tendif"
-		   });	
-		addAnnotation
 		  (cohabitationEClass, 
 		   source, 
 		   new String[] {

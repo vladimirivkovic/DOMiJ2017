@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genDSL2:GenealogyTree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genDSL2="http://www.example.org/genDSL2" familyName="Nemanjici">
+  <person givenName="Ana" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Ana_Dandolo" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Evdokija" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Jelena" type="MARRIED" gender="FEMALE" nickname="Anzuj"/>
+  <person givenName="Woman15" type="MARRIED" gender="FEMALE" unknown="true"/>
+  <person givenName="Zavida">
+    <marriage spouses="//@person.5 //@person.4">
+      <children givenName="Stefan_Nemanja">
+        <marriage spouses="//@person.5/@marriage.0/@children.0 //@person.0">
+          <children givenName="Vukan"/>
+          <children givenName="Stefan" nickname="Prvovencani">
+            <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1 //@person.1">
+              <children givenName="Uros" nickname="Prvi">
+                <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0 //@person.3">
+                  <children givenName="Dragutin"/>
+                  <children givenName="Milutin">
+                    <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1 //@person.6">
+                      <children givenName="Stefan" nickname="Decanski">
+                        <birthDate year="1276"/>
+                        <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0 //@person.10">
+                          <children givenName="Dusic"/>
+                          <children givenName="Dusan">
+                            <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1 //@person.11">
+                              <children givenName="Uros">
+                                <birthDate year="1336"/>
+                              </children>
+                            </marriage>
+                          </children>
+                          <children givenName="Jelena_Subic" gender="FEMALE"/>
+                        </marriage>
+                        <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0 //@person.9">
+                          <children givenName="Simeon"/>
+                          <children givenName="Teodora" gender="FEMALE">
+                            <birthDate year="1330"/>
+                          </children>
+                        </marriage>
+                      </children>
+                      <children givenName="Konstantin"/>
+                      <children givenName="Neda" gender="FEMALE"/>
+                    </marriage>
+                    <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1 //@person.7">
+                      <children givenName="Zorica" gender="FEMALE"/>
+                    </marriage>
+                    <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1 //@person.8"/>
+                  </children>
+                </marriage>
+              </children>
+            </marriage>
+            <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1 //@person.2">
+              <children givenName="Radoslav"/>
+              <children givenName="Vladislav"/>
+              <children givenName="Prvoslav"/>
+            </marriage>
+          </children>
+          <children givenName="Rastko"/>
+        </marriage>
+      </children>
+      <children givenName="Tihomir"/>
+      <children givenName="Stracimir"/>
+      <children givenName="Miroslav"/>
+    </marriage>
+  </person>
+  <person givenName="Jelena_Terter" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Jelisaveta" type="MARRIED" gender="FEMALE" nickname="Arpad"/>
+  <person givenName="Simonida" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Marija" type="MARRIED" gender="FEMALE" nickname="Paleolog"/>
+  <person givenName="Teodora" type="MARRIED" gender="FEMALE" nickname="Smilec"/>
+  <person givenName="Jelena_Bugarska" type="MARRIED" gender="FEMALE"/>
+</genDSL2:GenealogyTree>

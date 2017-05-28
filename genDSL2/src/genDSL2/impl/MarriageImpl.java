@@ -16,7 +16,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -75,14 +74,24 @@ public class MarriageImpl extends MinimalEObjectImpl.Container implements Marria
 	protected EList<Person> children;
 
 	/**
-	 * The cached setting delegate for the '{@link #getType() <em>Type</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)GenDSL2Package.Literals.MARRIAGE__TYPE).getSettingDelegate();
+	protected static final TypeOfIntimateRelationship TYPE_EDEFAULT = TypeOfIntimateRelationship.MONOGAMY;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected TypeOfIntimateRelationship type = TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSpouses() <em>Spouses</em>}' reference list.
@@ -217,7 +226,7 @@ public class MarriageImpl extends MinimalEObjectImpl.Container implements Marria
 	 * @generated
 	 */
 	public TypeOfIntimateRelationship getType() {
-		return (TypeOfIntimateRelationship)TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+		return type;
 	}
 
 	/**
@@ -226,7 +235,10 @@ public class MarriageImpl extends MinimalEObjectImpl.Container implements Marria
 	 * @generated
 	 */
 	public void setType(TypeOfIntimateRelationship newType) {
-		TYPE__ESETTING_DELEGATE.dynamicSet(this, null, 0, newType);
+		TypeOfIntimateRelationship oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GenDSL2Package.MARRIAGE__TYPE, oldType, type));
 	}
 
 	/**
@@ -329,7 +341,7 @@ public class MarriageImpl extends MinimalEObjectImpl.Container implements Marria
 				getChildren().clear();
 				return;
 			case GenDSL2Package.MARRIAGE__TYPE:
-				TYPE__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
+				setType(TYPE_EDEFAULT);
 				return;
 			case GenDSL2Package.MARRIAGE__SPOUSES:
 				getSpouses().clear();
@@ -353,11 +365,27 @@ public class MarriageImpl extends MinimalEObjectImpl.Container implements Marria
 			case GenDSL2Package.MARRIAGE__CHILDREN:
 				return children != null && !children.isEmpty();
 			case GenDSL2Package.MARRIAGE__TYPE:
-				return TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+				return type != TYPE_EDEFAULT;
 			case GenDSL2Package.MARRIAGE__SPOUSES:
 				return spouses != null && !spouses.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (type: ");
+		result.append(type);
+		result.append(')');
+		return result.toString();
 	}
 
 } //MarriageImpl

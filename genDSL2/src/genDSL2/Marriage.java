@@ -110,7 +110,7 @@ public interface Marriage extends EObject {
 	 * @see genDSL2.TypeOfIntimateRelationship
 	 * @see #setType(TypeOfIntimateRelationship)
 	 * @see genDSL2.GenDSL2Package#getMarriage_Type()
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='if self.spouses->size() > 2 then (if (self.spouses->iterate(p : Person; m : Integer = 0 | if\n\t\t\t\t\t\t\t\tp.gender = Gender::MALE then m + 1\n\t\t\t\t\t\t\telse m\n\t\t\t\t\t\t\tendif) > 1 and self.spouses->iterate(p : Person; m : Integer = 0 | if p.gender = Gender::FEMALE then m + 1\n\t\t\t\t\t\t\telse m\n\t\t\t\t\t\t\tendif) > 1) then TypeOfIntimateRelationship::POLYFIDELITY\n\t\t\t\t\telse TypeOfIntimateRelationship::POLYGAMY\n\t\t\t\t\tendif) else TypeOfIntimateRelationship::MONOGAMY\n\t\t\t\t\tendif'"
+	 * @model
 	 * @generated
 	 */
 	TypeOfIntimateRelationship getType();
@@ -135,6 +135,19 @@ public interface Marriage extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * {
+	 * initial: if self.spouses->size() > 2 then (if (self.spouses->iterate(p : Person; m : Integer = 0 | if
+	 * p.gender = Gender::MALE then m + 1
+	 * else m
+	 * endif) > 1 and self.spouses->iterate(p : Person; m : Integer = 0 | if p.gender = Gender::FEMALE then m + 1
+	 * else m
+	 * endif) > 1) then TypeOfIntimateRelationship::POLYFIDELITY
+	 * else TypeOfIntimateRelationship::POLYGAMY
+	 * endif) else TypeOfIntimateRelationship::MONOGAMY
+	 * endif;
+	 * }
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Spouses</em>' reference list.
 	 * @see genDSL2.GenDSL2Package#getMarriage_Spouses()
 	 * @model

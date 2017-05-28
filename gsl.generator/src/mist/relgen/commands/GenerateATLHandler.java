@@ -1,7 +1,5 @@
 package mist.relgen.commands;
 
-import mist.relgen.generate.generator.RelationalMMGenerator;
-
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -13,6 +11,8 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
+
+import gsl.generate.generator.GenealogyTreeMMGenerator;
 
 public class GenerateATLHandler extends AbstractHandler {
 
@@ -29,7 +29,7 @@ public class GenerateATLHandler extends AbstractHandler {
             
             try {
             	//TODO fix
-				RelationalMMGenerator.generateAll(path.toOSString(), path.toOSString());
+				GenealogyTreeMMGenerator.generateAll(path.toOSString(), path.toOSString());
 				MessageDialog.openInformation(shell, "Success", "Code was generated successfully");
 			} catch (Exception e) {
 				//MessageDialog.openError(shell, "Error", e.getMessage());

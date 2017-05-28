@@ -1,4 +1,4 @@
-package mist.relgen.generate.generator;
+package gsl.generate.generator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,8 +16,9 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import genDSL2.GenDSL2Package;
 import genDSL2.GenealogyTree;
+import gsl.generate.generator.HTMLGenerator;
 
-public class RelationalMMGenerator {
+public class GenealogyTreeMMGenerator {
 
 	public static void generateAll(String inputPath, String outputDir) {
 		
@@ -28,17 +29,17 @@ public class RelationalMMGenerator {
 //		dirDialog.setMessage("Please select directory where you want to put generated files.");
 //		String selectedDir = dirDialog.open();
 		if (outputDir != null) {
-			GenealogyTree ft = loadRDBMSModel(inputPath);
-			SQLGenerator sql = new SQLGenerator();
+			GenealogyTree ft = loadGTreeModel(inputPath);
+			HTMLGenerator html = new HTMLGenerator();
 			
 			System.out.println(ft.getFamilyName());
-			//CharSequence cs = sql.generate(db);
-			//saveFile(outputDir + "/crebas_" + db.getFamilyName().toLowerCase() +".sql", cs);
+			CharSequence cs = html.generate(ft);
+			saveFile(outputDir + "Family_Tree_of_" + ft.getFamilyName().toLowerCase() +".html", cs);
 		}
 		
 	}
 
-	private static GenealogyTree loadRDBMSModel(String modulePath) {
+	private static GenealogyTree loadGTreeModel(String modulePath) {
 		// Initialize the model
 		GenDSL2Package.eINSTANCE.eClass();
 
