@@ -33,7 +33,7 @@ public class GSLToXMIConverter {
 		try {
 			xmiResource.save(null);
 			System.out.println("Saved " + outputM);
-	    	System.out.println("ERDSL file converted successfully to XMI");
+	    	System.out.println("GSLSL file converted successfully to XMI");
 	    	System.out.println("-------------------------------------");
 		} catch (IOException e) {
 			e.printStackTrace();

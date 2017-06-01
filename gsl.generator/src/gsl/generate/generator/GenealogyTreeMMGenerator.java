@@ -34,7 +34,7 @@ public class GenealogyTreeMMGenerator {
 			
 			System.out.println(ft.getFamilyName());
 			CharSequence cs = html.generate(ft);
-			saveFile(outputDir + "Family_Tree_of_" + ft.getFamilyName().toLowerCase() +".html", cs);
+			saveFile(outputDir + ft.getFamilyName().toLowerCase() +".js", cs);
 		}
 		
 	}

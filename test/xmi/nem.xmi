@@ -7,23 +7,34 @@
   <person givenName="Woman15" type="MARRIED" gender="FEMALE" unknown="true"/>
   <person givenName="Zavida">
     <marriage spouses="//@person.5 //@person.4">
-      <children givenName="Stefan_Nemanja">
+      <children givenName="Stefan_Nemanja" restingPlace="&quot;Manastir Studenica&quot;">
         <marriage spouses="//@person.5/@marriage.0/@children.0 //@person.0">
-          <children givenName="Vukan"/>
-          <children givenName="Stefan" nickname="Prvovencani">
+          <children givenName="Vukan">
+            <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.0 //@person.12">
+              <children givenName="Stefan" nickname="Vukanovic"/>
+              <children givenName="Dmitar"/>
+              <children givenName="Djordje"/>
+            </marriage>
+          </children>
+          <children givenName="Stefan" restingPlace="&quot;Manastir Studenica&quot;" nickname="Prvovencani">
             <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1 //@person.1">
-              <children givenName="Uros" nickname="Prvi">
+              <children givenName="Uros" restingPlace="Sopocani" nickname="Prvi">
                 <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0 //@person.3">
-                  <children givenName="Dragutin"/>
-                  <children givenName="Milutin">
+                  <children givenName="Dragutin">
+                    <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.0 //@person.13">
+                      <children givenName="Urosic"/>
+                      <children givenName="Vladislav" nickname="Drugi"/>
+                    </marriage>
+                  </children>
+                  <children givenName="Milutin" restingPlace="&quot;Crkva Sveta Nedelja u Sofiji&quot;">
                     <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1 //@person.6">
-                      <children givenName="Stefan" nickname="Decanski">
+                      <children givenName="Stefan" restingPlace="&quot;Visoki Decani&quot;" nickname="Decanski">
                         <birthDate year="1276"/>
                         <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0 //@person.10">
                           <children givenName="Dusic"/>
-                          <children givenName="Dusan">
+                          <children givenName="Dusan" restingPlace="&quot;Crkva Svetog Marka u Beogradu&quot;" nickname="Silni">
                             <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1 //@person.11">
-                              <children givenName="Uros">
+                              <children givenName="Uros" restingPlace="&quot;Manastir Jazak&quot;" nickname="Nejaki">
                                 <birthDate year="1336"/>
                               </children>
                             </marriage>
@@ -31,7 +42,19 @@
                           <children givenName="Jelena_Subic" gender="FEMALE"/>
                         </marriage>
                         <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0 //@person.9">
-                          <children givenName="Simeon"/>
+                          <children givenName="Simeon" nickname="Sinisa">
+                            <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.1/@children.0 //@person.16">
+                              <children givenName="Jovan" nickname="Uros">
+                                <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.1/@children.0/@marriage.0/@children.0 //@person.17">
+                                  <children givenName="Mihailo"/>
+                                  <children givenName="Dimitrije"/>
+                                  <children givenName="Konstantin"/>
+                                  <children givenName="Asasina" gender="FEMALE"/>
+                                </marriage>
+                              </children>
+                              <children givenName="Marija" gender="FEMALE" nickname="Angelina"/>
+                            </marriage>
+                          </children>
                           <children givenName="Teodora" gender="FEMALE">
                             <birthDate year="1330"/>
                           </children>
@@ -49,8 +72,14 @@
               </children>
             </marriage>
             <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1 //@person.2">
-              <children givenName="Radoslav"/>
-              <children givenName="Vladislav"/>
+              <children givenName="Radoslav" restingPlace="&quot;Manastir Studenica&quot;"/>
+              <children givenName="Vladislav" restingPlace="Milesava">
+                <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.1/@children.1 //@person.14">
+                  <children givenName="Desa"/>
+                  <children givenName="Stefan" nickname="Vladislavic"/>
+                  <children givenName="NN" gender="FEMALE" unknown="true"/>
+                </marriage>
+              </children>
               <children givenName="Prvoslav"/>
             </marriage>
           </children>
@@ -59,7 +88,13 @@
       </children>
       <children givenName="Tihomir"/>
       <children givenName="Stracimir"/>
-      <children givenName="Miroslav"/>
+      <children givenName="Miroslav">
+        <marriage spouses="//@person.5/@marriage.0/@children.3 //@person.15">
+          <children givenName="Toljen"/>
+          <children givenName="Andrija"/>
+          <children givenName="Petar"/>
+        </marriage>
+      </children>
     </marriage>
   </person>
   <person givenName="Jelena_Terter" type="MARRIED" gender="FEMALE"/>
@@ -68,4 +103,10 @@
   <person givenName="Marija" type="MARRIED" gender="FEMALE" nickname="Paleolog"/>
   <person givenName="Teodora" type="MARRIED" gender="FEMALE" nickname="Smilec"/>
   <person givenName="Jelena_Bugarska" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Woman36" type="MARRIED" gender="FEMALE" unknown="true"/>
+  <person givenName="Katalina" type="MARRIED" gender="FEMALE" nickname="Arpad"/>
+  <person givenName="Beloslava" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Woman47" type="MARRIED" gender="FEMALE" unknown="true"/>
+  <person givenName="Tomaisa" type="MARRIED" gender="FEMALE" nickname="Orsini"/>
+  <person givenName="Woman54" type="MARRIED" gender="FEMALE"/>
 </genDSL2:GenealogyTree>

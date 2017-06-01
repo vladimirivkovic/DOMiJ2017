@@ -23,46 +23,74 @@ persons {
 					spouses ( Zavida,
 					Woman15 ) children {
 						Stefan_Nemanja {
-							marriage {
+							restingPlace "Manastir Studenica" marriage {
 								Marriage {
 									spouses ( Stefan_Nemanja,
 									Ana ) children {
 										Vukan {
-										},
+										marriage {
+                        Marriage {
+                          spouses ( Vukan,
+                          Woman36 ) children {
+                            Stefan {
+                              nickname Vukanovic
+                            },
+                            Dmitar {
+                            },
+                            Djordje {
+                            }
+                          }
+                        }
+                      }
+                    },
 										Stefan {
-											nickname Prvovencani marriage {
+											nickname Prvovencani restingPlace "Manastir Studenica" marriage {
 												Marriage {
-													spouses ( Stefan,
+													spouses ( StefanPrvovencani,
 													Ana_Dandolo ) children {
 														Uros {
-															nickname Prvi marriage {
+															nickname Prvi restingPlace Sopocani marriage {
 																Marriage {
-																	spouses ( Uros,
-																	Jelena ) children {
+																	spouses ( UrosPrvi,
+																	JelenaAnzuj ) children {
 																		Dragutin {
-																		},
-																		Milutin {
 																		marriage {
+                                        Marriage {
+                                          spouses ( Dragutin,
+                                          KatalinaArpad ) children {
+                                            Urosic {
+                                            },
+                                            Vladislav {
+                                              nickname Drugi
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+																		Milutin {
+																		restingPlace "Crkva Sveta Nedelja u Sofiji" marriage {
                                         Marriage {
                                           spouses ( Milutin,
                                           Jelena_Terter ) children {
                                             Stefan {
-                                              nickname Decanski birthDate {
+                                              nickname Decanski restingPlace
+                                              "Visoki Decani" birthDate {
                                                 year 1276
                                               }
                                               marriage {
                                                 Marriage {
-                                                  spouses ( Stefan1276,
-                                                  Teodora ) children {
+                                                  spouses ( StefanDecanski1276,
+                                                  TeodoraSmilec ) children {
                                                     Dusic {
                                                     },
                                                     Dusan {
+              restingPlace "Crkva Svetog Marka u Beogradu" nickname Silni
               marriage {
                 Marriage {
-                  spouses ( Dusan,
+                  spouses ( DusanSilni,
                   Jelena_Bugarska ) children {
                     Uros {
-                      birthDate {
+                      restingPlace "Manastir Jazak" nickname Nejaki birthDate {
                         year 1336
                       }
                     }
@@ -76,9 +104,37 @@ persons {
                                                   }
                                                 },
                                                 Marriage {
-                                                  spouses ( Stefan1276,
-                                                  Marija ) children {
+                                                  spouses ( StefanDecanski1276,
+                                                  MarijaPaleolog ) children {
                                                     Simeon {
+                                                    nickname Sinisa marriage {
+                Marriage {
+                  spouses ( SimeonSinisa,
+                  TomaisaOrsini ) children {
+                    Jovan {
+                      nickname Uros marriage {
+                        Marriage {
+                          spouses ( JovanUros,
+                          Woman54 ) children {
+                            Mihailo {
+                            },
+                            Dimitrije {
+                            },
+                            Konstantin {
+                            },
+                            Asasina {
+                              gender FEMALE
+                            }
+                          }
+                        }
+                      }
+                    },
+                    Marija {
+                      gender FEMALE nickname Angelina
+                    }
+                  }
+                }
+              }
                                                     },
                                                     Teodora {
               gender FEMALE birthDate {
@@ -98,7 +154,7 @@ persons {
                                         },
                                         Marriage {
                                           spouses ( Milutin,
-                                          Jelisaveta ) children {
+                                          JelisavetaArpad ) children {
                                             Zorica {
                                               gender FEMALE
                                             }
@@ -117,12 +173,28 @@ persons {
 													}
 												},
 												Marriage {
-													spouses ( Stefan,
+													spouses ( StefanPrvovencani,
 													Evdokija ) children {
 														Radoslav {
-														},
+														restingPlace "Manastir Studenica"
+                            },
 														Vladislav {
-														},
+														restingPlace Milesava marriage {
+                                Marriage {
+                                  spouses ( Vladislav,
+                                  Beloslava ) children {
+                                    Desa {
+                                    },
+                                    Stefan {
+                                      nickname Vladislavic
+                                    },
+                                    NN {
+                                      unknown true gender FEMALE
+                                    }
+                                  }
+                                }
+                              }
+                            },
 														Prvoslav {
 														}
 													}
@@ -141,6 +213,19 @@ persons {
             Stracimir {
             },
             Miroslav {
+            marriage {
+                Marriage {
+                  spouses ( Miroslav,
+                  Woman47 ) children {
+                    Toljen {
+                    },
+                    Andrija {
+                    },
+                    Petar {
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -163,6 +248,26 @@ persons {
       type MARRIED gender FEMALE nickname Smilec
     },
     Jelena_Bugarska {
+      type MARRIED gender FEMALE
+    }
+  ,
+    Woman36 {
+      unknown true type MARRIED gender FEMALE
+    },
+    Katalina {
+      type MARRIED gender FEMALE nickname Arpad
+    }
+  ,
+    Beloslava {
+      type MARRIED gender FEMALE
+    },
+    Woman47 {
+      unknown true type MARRIED gender FEMALE
+    },
+    Tomaisa {
+      type MARRIED gender FEMALE nickname Orsini
+    },
+    Woman54 {
       type MARRIED gender FEMALE
     }
   }
