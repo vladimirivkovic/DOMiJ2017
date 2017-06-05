@@ -23,7 +23,7 @@ persons {
 					spouses ( Zavida,
 					Woman15 ) children {
 						Stefan_Nemanja {
-							restingPlace "Manastir Studenica" marriage {
+							restingPlace "Manastir Studenica"  marriage {
 								Marriage {
 									spouses ( Stefan_Nemanja,
 									Ana ) children {
@@ -44,9 +44,12 @@ persons {
                       }
                     },
 										Stefan {
-											nickname Prvovencani restingPlace "Manastir Studenica" marriage {
+											nickname Prvovencani restingPlace "Manastir Studenica" birthDate {
+                        year 1166
+                      }
+                      marriage {
 												Marriage {
-													spouses ( StefanPrvovencani,
+													spouses ( StefanPrvovencani1166,
 													Ana_Dandolo ) children {
 														Uros {
 															nickname Prvi restingPlace Sopocani marriage {
@@ -146,6 +149,9 @@ persons {
                                               }
                                             },
                                             Konstantin {
+                                            birthDate {
+                                                year 1282
+                                              }
                                             },
                                             Neda {
                                               gender FEMALE
@@ -173,7 +179,7 @@ persons {
 													}
 												},
 												Marriage {
-													spouses ( StefanPrvovencani,
+													spouses ( StefanPrvovencani1166,
 													Evdokija ) children {
 														Radoslav {
 														restingPlace "Manastir Studenica"

@@ -65,7 +65,7 @@ getNodes = function() {
           color: 'lightblue',
           parent: 1,
           name : 'Stefan (Prvovencani)',
-          birthYear : 'n/a',
+          birthYear : 1166,
           deathYear : 'n/a',
           restingPlace : '"Manastir Studenica"'
         },
@@ -255,7 +255,7 @@ getNodes = function() {
                 color: 'lightblue',
                 parent: 11,
                 name : 'Konstantin ',
-                birthYear : 'n/a',
+                birthYear : 1282,
                 deathYear : 'n/a',
                 restingPlace : 'n/a'
               },

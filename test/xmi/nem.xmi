@@ -17,6 +17,7 @@
             </marriage>
           </children>
           <children givenName="Stefan" restingPlace="&quot;Manastir Studenica&quot;" nickname="Prvovencani">
+            <birthDate year="1166"/>
             <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1 //@person.1">
               <children givenName="Uros" restingPlace="Sopocani" nickname="Prvi">
                 <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0 //@person.3">
@@ -60,7 +61,9 @@
                           </children>
                         </marriage>
                       </children>
-                      <children givenName="Konstantin"/>
+                      <children givenName="Konstantin">
+                        <birthDate year="1282"/>
+                      </children>
                       <children givenName="Neda" gender="FEMALE"/>
                     </marriage>
                     <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1 //@person.7">

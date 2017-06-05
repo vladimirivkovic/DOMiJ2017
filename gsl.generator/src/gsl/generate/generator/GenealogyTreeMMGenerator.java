@@ -35,6 +35,12 @@ public class GenealogyTreeMMGenerator {
 			System.out.println(ft.getFamilyName());
 			CharSequence cs = html.generate(ft);
 			saveFile(outputDir + ft.getFamilyName().toLowerCase() +".js", cs);
+			
+			GedcomGenerator gedcom = new GedcomGenerator();
+			
+			System.out.println(ft.getFamilyName());
+			cs = gedcom.generate(ft);
+			saveFile(outputDir + ft.getFamilyName().toLowerCase() +".ged", cs);
 		}
 		
 	}

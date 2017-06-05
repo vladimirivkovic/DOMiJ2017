@@ -1,0 +1,581 @@
+0 HEAD
+1 CHAR ASCII
+0 @Ana@ INDI
+1 NAME /Ana/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Ana_Dandolo@ INDI
+1 NAME /Ana_Dandolo/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Evdokija@ INDI
+1 NAME /Evdokija/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @JelenaAnzuj@ INDI
+1 NAME /Jelena/
+1 SEX F
+1 NICK /Anzuj/
+1 BIRT
+1 DEAT
+1 BURI
+0 @Woman15@ INDI
+1 NAME /Woman15/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Zavida@ INDI
+1 NAME /Zavida/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMS @Zavida0@
+0 @Stefan_Nemanja@ INDI
+1 NAME /Stefan_Nemanja/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+2 PLACE "Manastir Studenica"
+1 FAMC @Zavida0@
+1 FAMS @Stefan_Nemanja0@
+0 @Vukan@ INDI
+1 NAME /Vukan/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Stefan_Nemanja0@
+1 FAMS @Vukan0@
+0 @StefanVukanovic@ INDI
+1 NAME /Stefan/
+1 SEX M
+1 NICK /Vukanovic/
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Vukan0@
+0 @Dmitar@ INDI
+1 NAME /Dmitar/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Vukan0@
+0 @Djordje@ INDI
+1 NAME /Djordje/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Vukan0@
+0 @StefanPrvovencani1166@ INDI
+1 NAME /Stefan/
+1 SEX M
+1 NICK /Prvovencani/
+1 BIRT
+2 DATE  1166
+1 DEAT
+1 BURI
+2 PLACE "Manastir Studenica"
+1 FAMC @Stefan_Nemanja0@
+1 FAMS @StefanPrvovencani11660@
+1 FAMS @StefanPrvovencani11661@
+0 @UrosPrvi@ INDI
+1 NAME /Uros/
+1 SEX M
+1 NICK /Prvi/
+1 BIRT
+1 DEAT
+1 BURI
+2 PLACE Sopocani
+1 FAMC @StefanPrvovencani11660@
+1 FAMS @UrosPrvi0@
+0 @Dragutin@ INDI
+1 NAME /Dragutin/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @UrosPrvi0@
+1 FAMS @Dragutin0@
+0 @Urosic@ INDI
+1 NAME /Urosic/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Dragutin0@
+0 @VladislavDrugi@ INDI
+1 NAME /Vladislav/
+1 SEX M
+1 NICK /Drugi/
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Dragutin0@
+0 @Milutin@ INDI
+1 NAME /Milutin/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+2 PLACE "Crkva Sveta Nedelja u Sofiji"
+1 FAMC @UrosPrvi0@
+1 FAMS @Milutin0@
+1 FAMS @Milutin1@
+1 FAMS @Milutin2@
+0 @StefanDecanski1276@ INDI
+1 NAME /Stefan/
+1 SEX M
+1 NICK /Decanski/
+1 BIRT
+2 DATE  1276
+1 DEAT
+1 BURI
+2 PLACE "Visoki Decani"
+1 FAMC @Milutin0@
+1 FAMS @StefanDecanski12760@
+1 FAMS @StefanDecanski12761@
+0 @Dusic@ INDI
+1 NAME /Dusic/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @StefanDecanski12760@
+0 @DusanSilni@ INDI
+1 NAME /Dusan/
+1 SEX M
+1 NICK /Silni/
+1 BIRT
+1 DEAT
+1 BURI
+2 PLACE "Crkva Svetog Marka u Beogradu"
+1 FAMC @StefanDecanski12760@
+1 FAMS @DusanSilni0@
+0 @UrosNejaki1336@ INDI
+1 NAME /Uros/
+1 SEX M
+1 NICK /Nejaki/
+1 BIRT
+2 DATE  1336
+1 DEAT
+1 BURI
+2 PLACE "Manastir Jazak"
+1 FAMC @DusanSilni0@
+0 @Jelena_Subic@ INDI
+1 NAME /Jelena_Subic/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @StefanDecanski12760@
+0 @SimeonSinisa@ INDI
+1 NAME /Simeon/
+1 SEX M
+1 NICK /Sinisa/
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @StefanDecanski12761@
+1 FAMS @SimeonSinisa0@
+0 @JovanUros@ INDI
+1 NAME /Jovan/
+1 SEX M
+1 NICK /Uros/
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @SimeonSinisa0@
+1 FAMS @JovanUros0@
+0 @Mihailo@ INDI
+1 NAME /Mihailo/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @JovanUros0@
+0 @Dimitrije@ INDI
+1 NAME /Dimitrije/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @JovanUros0@
+0 @Konstantin@ INDI
+1 NAME /Konstantin/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @JovanUros0@
+0 @Asasina@ INDI
+1 NAME /Asasina/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @JovanUros0@
+0 @MarijaAngelina@ INDI
+1 NAME /Marija/
+1 SEX F
+1 NICK /Angelina/
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @SimeonSinisa0@
+0 @Teodora1330@ INDI
+1 NAME /Teodora/
+1 SEX F
+1 BIRT
+2 DATE  1330
+1 DEAT
+1 BURI
+1 FAMC @StefanDecanski12761@
+0 @Konstantin1282@ INDI
+1 NAME /Konstantin/
+1 SEX M
+1 BIRT
+2 DATE  1282
+1 DEAT
+1 BURI
+1 FAMC @Milutin0@
+0 @Neda@ INDI
+1 NAME /Neda/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Milutin0@
+0 @Zorica@ INDI
+1 NAME /Zorica/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Milutin1@
+0 @Radoslav@ INDI
+1 NAME /Radoslav/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+2 PLACE "Manastir Studenica"
+1 FAMC @StefanPrvovencani11661@
+0 @Vladislav@ INDI
+1 NAME /Vladislav/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+2 PLACE Milesava
+1 FAMC @StefanPrvovencani11661@
+1 FAMS @Vladislav0@
+0 @Desa@ INDI
+1 NAME /Desa/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Vladislav0@
+0 @StefanVladislavic@ INDI
+1 NAME /Stefan/
+1 SEX M
+1 NICK /Vladislavic/
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Vladislav0@
+0 @NN@ INDI
+1 NAME /NN/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Vladislav0@
+0 @Prvoslav@ INDI
+1 NAME /Prvoslav/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @StefanPrvovencani11661@
+0 @Rastko@ INDI
+1 NAME /Rastko/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Stefan_Nemanja0@
+0 @Tihomir@ INDI
+1 NAME /Tihomir/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Zavida0@
+0 @Stracimir@ INDI
+1 NAME /Stracimir/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Zavida0@
+0 @Miroslav@ INDI
+1 NAME /Miroslav/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Zavida0@
+1 FAMS @Miroslav0@
+0 @Toljen@ INDI
+1 NAME /Toljen/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Miroslav0@
+0 @Andrija@ INDI
+1 NAME /Andrija/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Miroslav0@
+0 @Petar@ INDI
+1 NAME /Petar/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Miroslav0@
+0 @Jelena_Terter@ INDI
+1 NAME /Jelena_Terter/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @JelisavetaArpad@ INDI
+1 NAME /Jelisaveta/
+1 SEX F
+1 NICK /Arpad/
+1 BIRT
+1 DEAT
+1 BURI
+0 @Simonida@ INDI
+1 NAME /Simonida/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @MarijaPaleolog@ INDI
+1 NAME /Marija/
+1 SEX F
+1 NICK /Paleolog/
+1 BIRT
+1 DEAT
+1 BURI
+0 @TeodoraSmilec@ INDI
+1 NAME /Teodora/
+1 SEX F
+1 NICK /Smilec/
+1 BIRT
+1 DEAT
+1 BURI
+0 @Jelena_Bugarska@ INDI
+1 NAME /Jelena_Bugarska/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Woman36@ INDI
+1 NAME /Woman36/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @KatalinaArpad@ INDI
+1 NAME /Katalina/
+1 SEX F
+1 NICK /Arpad/
+1 BIRT
+1 DEAT
+1 BURI
+0 @Beloslava@ INDI
+1 NAME /Beloslava/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Woman47@ INDI
+1 NAME /Woman47/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @TomaisaOrsini@ INDI
+1 NAME /Tomaisa/
+1 SEX F
+1 NICK /Orsini/
+1 BIRT
+1 DEAT
+1 BURI
+0 @Woman54@ INDI
+1 NAME /Woman54/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Zavida0@ FAM
+1 HUSB @Zavida@
+1 WIFE @Woman15@
+1 CHIL @Stefan_Nemanja@
+1 CHIL @Tihomir@
+1 CHIL @Stracimir@
+1 CHIL @Miroslav@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Stefan_Nemanja0@ FAM
+1 HUSB @Stefan_Nemanja@
+1 WIFE @Ana@
+1 CHIL @Vukan@
+1 CHIL @StefanPrvovencani1166@
+1 CHIL @Rastko@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Vukan0@ FAM
+1 HUSB @Vukan@
+1 WIFE @Woman36@
+1 CHIL @StefanVukanovic@
+1 CHIL @Dmitar@
+1 CHIL @Djordje@
+1 MARR
+2 HUSB
+2 WIFE
+0 @StefanPrvovencani11660@ FAM
+1 HUSB @StefanPrvovencani1166@
+1 WIFE @Ana_Dandolo@
+1 CHIL @UrosPrvi@
+1 MARR
+2 HUSB
+2 WIFE
+0 @UrosPrvi0@ FAM
+1 HUSB @UrosPrvi@
+1 WIFE @JelenaAnzuj@
+1 CHIL @Dragutin@
+1 CHIL @Milutin@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Dragutin0@ FAM
+1 HUSB @Dragutin@
+1 WIFE @KatalinaArpad@
+1 CHIL @Urosic@
+1 CHIL @VladislavDrugi@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Milutin0@ FAM
+1 HUSB @Milutin@
+1 WIFE @Jelena_Terter@
+1 CHIL @StefanDecanski1276@
+1 CHIL @Konstantin1282@
+1 CHIL @Neda@
+1 MARR
+2 HUSB
+2 WIFE
+0 @StefanDecanski12760@ FAM
+1 HUSB @StefanDecanski1276@
+1 WIFE @TeodoraSmilec@
+1 CHIL @Dusic@
+1 CHIL @DusanSilni@
+1 CHIL @Jelena_Subic@
+1 MARR
+2 HUSB
+2 WIFE
+0 @DusanSilni0@ FAM
+1 HUSB @DusanSilni@
+1 WIFE @Jelena_Bugarska@
+1 CHIL @UrosNejaki1336@
+1 MARR
+2 HUSB
+2 WIFE
+0 @StefanDecanski12761@ FAM
+1 HUSB @StefanDecanski1276@
+1 WIFE @MarijaPaleolog@
+1 CHIL @SimeonSinisa@
+1 CHIL @Teodora1330@
+1 MARR
+2 HUSB
+2 WIFE
+0 @SimeonSinisa0@ FAM
+1 HUSB @SimeonSinisa@
+1 WIFE @TomaisaOrsini@
+1 CHIL @JovanUros@
+1 CHIL @MarijaAngelina@
+1 MARR
+2 HUSB
+2 WIFE
+0 @JovanUros0@ FAM
+1 HUSB @JovanUros@
+1 WIFE @Woman54@
+1 CHIL @Mihailo@
+1 CHIL @Dimitrije@
+1 CHIL @Konstantin@
+1 CHIL @Asasina@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Milutin1@ FAM
+1 HUSB @Milutin@
+1 WIFE @JelisavetaArpad@
+1 CHIL @Zorica@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Milutin2@ FAM
+1 HUSB @Milutin@
+1 WIFE @Simonida@
+1 MARR
+2 HUSB
+2 WIFE
+0 @StefanPrvovencani11661@ FAM
+1 HUSB @StefanPrvovencani1166@
+1 WIFE @Evdokija@
+1 CHIL @Radoslav@
+1 CHIL @Vladislav@
+1 CHIL @Prvoslav@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Vladislav0@ FAM
+1 HUSB @Vladislav@
+1 WIFE @Beloslava@
+1 CHIL @Desa@
+1 CHIL @StefanVladislavic@
+1 CHIL @NN@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Miroslav0@ FAM
+1 HUSB @Miroslav@
+1 WIFE @Woman47@
+1 CHIL @Toljen@
+1 CHIL @Andrija@
+1 CHIL @Petar@
+1 MARR
+2 HUSB
+2 WIFE
+0 TRLR

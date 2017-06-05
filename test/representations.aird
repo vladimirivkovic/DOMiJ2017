@@ -633,6 +633,17 @@
         <children xmi:type="notation:Node" xmi:id="_cHkCQDZ9EeeIyfNlORSKbg" type="2002" element="_cHfJwDZ9EeeIyfNlORSKbg">
           <children xmi:type="notation:Node" xmi:id="_cHkCQzZ9EeeIyfNlORSKbg" type="5006"/>
           <children xmi:type="notation:Node" xmi:id="_cHkCRDZ9EeeIyfNlORSKbg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_TlZCgEopEee9Mpd6SIKRGA" type="3007" element="_Tkr34EopEee9Mpd6SIKRGA">
+              <children xmi:type="notation:Node" xmi:id="_TlZpkEopEee9Mpd6SIKRGA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_TlZpkUopEee9Mpd6SIKRGA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_TlaQoEopEee9Mpd6SIKRGA" type="3003" element="_Tkr34UopEee9Mpd6SIKRGA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_TlaQoUopEee9Mpd6SIKRGA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TlaQokopEee9Mpd6SIKRGA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_TlZCgUopEee9Mpd6SIKRGA" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TlZCgkopEee9Mpd6SIKRGA" x="32" y="55" width="30" height="18"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_cHkCRTZ9EeeIyfNlORSKbg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_cHkCRjZ9EeeIyfNlORSKbg"/>
           </children>
@@ -860,6 +871,17 @@
         <children xmi:type="notation:Node" xmi:id="_lbA24DucEeeRlOUQyiKUog" type="2002" element="_la5iIDucEeeRlOUQyiKUog">
           <children xmi:type="notation:Node" xmi:id="_lbA24zucEeeRlOUQyiKUog" type="5006"/>
           <children xmi:type="notation:Node" xmi:id="_lbA25DucEeeRlOUQyiKUog" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_iec98EooEee9Mpd6SIKRGA" type="3007" element="_ib288EooEee9Mpd6SIKRGA">
+              <children xmi:type="notation:Node" xmi:id="_ielg0EooEee9Mpd6SIKRGA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ielg0UooEee9Mpd6SIKRGA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ienWAEooEee9Mpd6SIKRGA" type="3003" element="_ib3kAEooEee9Mpd6SIKRGA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ienWAUooEee9Mpd6SIKRGA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ienWAkooEee9Mpd6SIKRGA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_iec98UooEee9Mpd6SIKRGA" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iec98kooEee9Mpd6SIKRGA" x="36" y="43" width="30" height="15"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_lbA25TucEeeRlOUQyiKUog"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_lbA25jucEeeRlOUQyiKUog"/>
           </children>
@@ -2563,6 +2585,14 @@
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Tkr34EopEee9Mpd6SIKRGA" name="1166" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="genDSL2:DateX" href="x.gsl#//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@birthDate"/>
+        <semanticElements xmi:type="genDSL2:DateX" href="x.gsl#//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@birthDate"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_Tkr34UopEee9Mpd6SIKRGA" showIcon="false" labelPosition="node" color="204,242,166">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']/@subNodeMappings[name='dateBNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']/@subNodeMappings[name='dateBNode']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_cHiNEDZ9EeeIyfNlORSKbg" sourceNode="_ZV7oIDZ9EeeIyfNlORSKbg" targetNode="_cHfJwDZ9EeeIyfNlORSKbg">
       <target xmi:type="genDSL2:Marriage" href="x.gsl#//@person.5/@marriage.0/@children.0/@marriage.0"/>
@@ -3024,6 +3054,14 @@
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ib288EooEee9Mpd6SIKRGA" name="1282" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="genDSL2:DateX" href="x.gsl#//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.1/@birthDate"/>
+        <semanticElements xmi:type="genDSL2:DateX" href="x.gsl#//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.1/@birthDate"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_ib3kAEooEee9Mpd6SIKRGA" showIcon="false" labelPosition="node" color="204,242,166">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']/@subNodeMappings[name='dateBNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/genDSL2.project.design/description/project.odesign#//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@containerMappings[name='personContainer']/@subNodeMappings[name='dateBNode']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_la-aoDucEeeRlOUQyiKUog" sourceNode="_CyQTIDucEeeRlOUQyiKUog" targetNode="_la5iIDucEeeRlOUQyiKUog">
       <target xmi:type="genDSL2:Marriage" href="x.gsl#//@person.5/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0/@children.0/@marriage.0/@children.1/@marriage.0"/>
