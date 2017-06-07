@@ -58,7 +58,7 @@ public class GenealogyTreeMMGenerator {
 		ResourceSet resSet = new ResourceSetImpl();
 
 		// Get the resource
-		Resource resource = resSet.getResource(URI.createFileURI(modulePath), true);
+		Resource resource = resSet.getResource(URI.createURI(modulePath), true);
 		//Resource resource = resSet.getResource(URI.createURI("rdbms/RDBMSModel.xmi"), true);
 
 		// Get the first model element and cast it to the right type, in my

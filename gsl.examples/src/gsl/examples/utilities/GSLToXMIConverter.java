@@ -11,18 +11,24 @@ import org.xtext.genDSL2.gsl.GslStandaloneSetup;
 import com.google.inject.Injector;
 
 public class GSLToXMIConverter {
-	
-	//IMPORTANT!!!!!
-	//dodati ErPackageImpl.init(); u public Injector createInjectorAndDoEMFRegistration() {	
+
+	// IMPORTANT!!!!!
+	// dodati ErPackageImpl.init(); u public Injector
+	// createInjectorAndDoEMFRegistration() {
 
 	public static void convertERDSLtoXMI(String inputM, String outputM) {
 		Injector injector = new GslStandaloneSetup().createInjectorAndDoEMFRegistration();
 
 		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
 
-
 		URI uri = URI.createURI(inputM);
-		
+
+//		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("*", new XMIResourceFactoryImpl() {
+//			public Resource createResource(URI uri) {
+//				XMIResource xmiResource = new XMIResourceImpl(uri);
+//				return xmiResource;
+//			}
+//		});
 
 		Resource xtextResource = resourceSet.getResource(uri, true);
 
@@ -33,8 +39,8 @@ public class GSLToXMIConverter {
 		try {
 			xmiResource.save(null);
 			System.out.println("Saved " + outputM);
-	    	System.out.println("GSLSL file converted successfully to XMI");
-	    	System.out.println("-------------------------------------");
+			System.out.println("GSLSL file converted successfully to XMI");
+			System.out.println("-------------------------------------");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

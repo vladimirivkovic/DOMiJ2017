@@ -6,7 +6,10 @@ import genDSL2.Gender;
 import genDSL2.GenealogyTree;
 import genDSL2.Marriage;
 import genDSL2.Person;
+import genDSL2.PersonHistory;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 
@@ -15,6 +18,8 @@ public class GedcomGenerator {
   private ArrayList<Person> persons = new ArrayList<Person>();
   
   private ArrayList<String> mths = new ArrayList<String>();
+  
+  private SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy");
   
   public boolean initialize(final GenealogyTree gt) {
     boolean _xblockexpression = false;
@@ -173,6 +178,37 @@ public class GedcomGenerator {
           String _plus = (_genQN_1 + Integer.valueOf(mar));
           _builder.append(_plus, "");
           _builder.append("@");
+          _builder.newLineIfNotEmpty();
+        }
+      }
+      {
+        EList<PersonHistory> _personhistory = p.getPersonhistory();
+        for(final PersonHistory h : _personhistory) {
+          _builder.append("1 EVEN");
+          _builder.newLine();
+          {
+            String _givenName_1 = p.getGivenName();
+            boolean _notEquals_7 = (!Objects.equal(_givenName_1, null));
+            if (_notEquals_7) {
+              _builder.append("2 NOTE name changed to ");
+              String _givenName_2 = h.getGivenName();
+              _builder.append(_givenName_2, "");
+              _builder.newLineIfNotEmpty();
+            } else {
+              Gender _gender_1 = h.getGender();
+              boolean _notEquals_8 = (!Objects.equal(_gender_1, null));
+              if (_notEquals_8) {
+                _builder.append("2 NOTE gender changed to ");
+                Gender _gender_2 = h.getGender();
+                _builder.append(_gender_2, "");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+          }
+          _builder.append("2 DATE ");
+          Date _changed = h.getChanged();
+          String _format = this.df.format(_changed);
+          _builder.append(_format, "");
           _builder.newLineIfNotEmpty();
         }
       }

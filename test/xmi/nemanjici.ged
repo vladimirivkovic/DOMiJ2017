@@ -38,22 +38,24 @@
 1 DEAT
 1 BURI
 1 FAMS @Zavida0@
-0 @Stefan_Nemanja@ INDI
+0 @Stefan_Nemanja1113@ INDI
 1 NAME /Stefan_Nemanja/
 1 SEX M
 1 BIRT
+2 DATE  1113
 1 DEAT
+2 DATE  1199
 1 BURI
 2 PLACE "Manastir Studenica"
 1 FAMC @Zavida0@
-1 FAMS @Stefan_Nemanja0@
+1 FAMS @Stefan_Nemanja11130@
 0 @Vukan@ INDI
 1 NAME /Vukan/
 1 SEX M
 1 BIRT
 1 DEAT
 1 BURI
-1 FAMC @Stefan_Nemanja0@
+1 FAMC @Stefan_Nemanja11130@
 1 FAMS @Vukan0@
 0 @StefanVukanovic@ INDI
 1 NAME /Stefan/
@@ -86,7 +88,7 @@
 1 DEAT
 1 BURI
 2 PLACE "Manastir Studenica"
-1 FAMC @Stefan_Nemanja0@
+1 FAMC @Stefan_Nemanja11130@
 1 FAMS @StefanPrvovencani11660@
 1 FAMS @StefanPrvovencani11661@
 0 @UrosPrvi@ INDI
@@ -309,13 +311,17 @@
 1 DEAT
 1 BURI
 1 FAMC @StefanPrvovencani11661@
-0 @Rastko@ INDI
+0 @Rastko1168@ INDI
 1 NAME /Rastko/
 1 SEX M
 1 BIRT
+2 DATE  1168
 1 DEAT
 1 BURI
-1 FAMC @Stefan_Nemanja0@
+1 FAMC @Stefan_Nemanja11130@
+1 EVEN
+2 NOTE name changed to Sava
+2 DATE 10 Oct 1193
 0 @Tihomir@ INDI
 1 NAME /Tihomir/
 1 SEX M
@@ -439,19 +445,19 @@
 0 @Zavida0@ FAM
 1 HUSB @Zavida@
 1 WIFE @Woman15@
-1 CHIL @Stefan_Nemanja@
+1 CHIL @Stefan_Nemanja1113@
 1 CHIL @Tihomir@
 1 CHIL @Stracimir@
 1 CHIL @Miroslav@
 1 MARR
 2 HUSB
 2 WIFE
-0 @Stefan_Nemanja0@ FAM
-1 HUSB @Stefan_Nemanja@
+0 @Stefan_Nemanja11130@ FAM
+1 HUSB @Stefan_Nemanja1113@
 1 WIFE @Ana@
 1 CHIL @Vukan@
 1 CHIL @StefanPrvovencani1166@
-1 CHIL @Rastko@
+1 CHIL @Rastko1168@
 1 MARR
 2 HUSB
 2 WIFE

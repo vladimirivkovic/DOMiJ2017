@@ -30,14 +30,14 @@
         </edgeMappings>
         <containerMappings name="personContainer" labelDirectEdit="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@toolSections.0/@ownedTools[name='editGivenName']" semanticCandidatesExpression="[Person.allInstances()/]" domainClass="Person">
           <subNodeMappings name="dateBNode" labelDirectEdit="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@toolSections.0/@ownedTools[name='editBDate']" semanticCandidatesExpression="feature:birthDate" domainClass="DateX">
-            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="feature:year" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="feature:year" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" width="3" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             </style>
           </subNodeMappings>
           <subNodeMappings name="dateDNode" labelDirectEdit="//@ownedViewpoints[name='gsl']/@ownedRepresentations[name='tree']/@defaultLayer/@toolSections.0/@ownedTools[name='editDDate']" semanticCandidatesExpression="feature:deathDate" domainClass="DateX">
-            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="feature:year" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="feature:year" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" width="3" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>

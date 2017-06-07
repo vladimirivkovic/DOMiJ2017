@@ -8,6 +8,8 @@
   <person givenName="Zavida">
     <marriage spouses="//@person.5 //@person.4">
       <children givenName="Stefan_Nemanja" restingPlace="&quot;Manastir Studenica&quot;">
+        <birthDate year="1113"/>
+        <deathDate year="1199"/>
         <marriage spouses="//@person.5/@marriage.0/@children.0 //@person.0">
           <children givenName="Vukan">
             <marriage spouses="//@person.5/@marriage.0/@children.0/@marriage.0/@children.0 //@person.12">
@@ -86,7 +88,10 @@
               <children givenName="Prvoslav"/>
             </marriage>
           </children>
-          <children givenName="Rastko"/>
+          <children givenName="Rastko">
+            <birthDate year="1168"/>
+            <personhistory givenName="Sava" changed="1193-10-10T00:00:00.000+0100"/>
+          </children>
         </marriage>
       </children>
       <children givenName="Tihomir"/>

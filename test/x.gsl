@@ -23,9 +23,15 @@ persons {
 					spouses ( Zavida,
 					Woman15 ) children {
 						Stefan_Nemanja {
-							restingPlace "Manastir Studenica"  marriage {
+							restingPlace "Manastir Studenica"  birthDate {
+								year 1113
+							}
+							deathDate {
+								year 1199
+							}
+							marriage {
 								Marriage {
-									spouses ( Stefan_Nemanja,
+									spouses ( Stefan_Nemanja1113,
 									Ana ) children {
 										Vukan {
 										marriage {
@@ -208,6 +214,11 @@ persons {
 											}
 										},
 										Rastko {
+										birthDate {
+												year 1168
+											} personhistory {
+												PersonHistory givenName Sava changed 1193-10-10
+											}
 										}
 									}
 								}

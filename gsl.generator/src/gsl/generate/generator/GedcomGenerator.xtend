@@ -5,11 +5,13 @@ import genDSL2.Gender
 import genDSL2.GenealogyTree
 import genDSL2.Person
 import java.util.ArrayList
+import java.text.SimpleDateFormat
 
 class GedcomGenerator {
 
-  var persons = new ArrayList<Person>();
+  var persons = new ArrayList<Person>()
   var mths = new ArrayList<String>()
+  var df = new SimpleDateFormat("dd MMM yyyy")
 
   def initialize(GenealogyTree gt) {
     for (Person p : gt.person) {
@@ -66,7 +68,15 @@ class GedcomGenerator {
     «IF father != null»
     1 FAMC @«genQN(father) + mar»@
     «ENDIF»
-«««    TODO : even tags for person history
+    «FOR h : p.personhistory»
+    1 EVEN
+    «IF p.givenName != null»
+    2 NOTE name changed to «h.givenName»
+    «ELSEIF h.gender != null»
+    2 NOTE gender changed to «h.gender»
+    «ENDIF»
+    2 DATE «df.format(h.changed)»
+    «ENDFOR»
     «FOR m : p.marriage»
     1 FAMS @«genQN(p) + i++»@
     «ENDFOR»
