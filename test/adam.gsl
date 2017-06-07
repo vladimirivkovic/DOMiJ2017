@@ -2,6 +2,62 @@ GenealogyTree {
   familyName Adamovi
 persons {
     Adam {
+    marriage {
+        Marriage {
+          spouses ( Adam,
+          Eve ) children {
+            Abel {
+            },
+            Cain {
+              cohabitation {
+                Cohabitation {
+                  partners ( Cain,
+                  d2 ) children {
+                    Enoch {
+                      marriage {
+                        Marriage {
+                          spouses ( Enoch,
+                          Abel,
+                          Enos,
+                          d3 ) children {
+                            child1 {
+                            },
+                            child2 {
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            Seth {
+              cohabitation {
+                Cohabitation {
+                  partners ( Seth,
+                  d1 ) children {
+                    Enos {
+                    }
+                  }
+                }
+              }
+            },
+            d2 {
+              gender FEMALE
+            },
+            d1 {
+              gender FEMALE
+            },
+            d3 {
+              type ADOPTED gender FEMALE
+            }
+          }
+        }
+      }
+    },
+    Eve {
+      type MARRIED gender FEMALE
     }
   }
 }

@@ -51,6 +51,11 @@ class HTMLGenerator {
             «eatPerson(c, k)»
         «ENDFOR»
       «ENDFOR»
+      «FOR h : p.cohabitation»
+        «FOR c : h.children»
+            «eatPerson(c, k)»
+        «ENDFOR»
+      «ENDFOR»
     '''
   }
 

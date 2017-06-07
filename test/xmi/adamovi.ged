@@ -1,0 +1,117 @@
+0 HEAD
+1 CHAR ASCII
+0 @Adam@ INDI
+1 NAME /Adam/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMS @Adam0@
+0 @Abel@ INDI
+1 NAME /Abel/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Adam0@
+0 @Cain@ INDI
+1 NAME /Cain/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Adam0@
+0 @Enoch@ INDI
+1 NAME /Enoch/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @CainCoh0@
+1 FAMS @Enoch0@
+0 @child1@ INDI
+1 NAME /child1/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Enoch0@
+0 @child2@ INDI
+1 NAME /child2/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Enoch0@
+0 @Seth@ INDI
+1 NAME /Seth/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Adam0@
+0 @Enos@ INDI
+1 NAME /Enos/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @SethCoh0@
+0 @d2@ INDI
+1 NAME /d2/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Adam0@
+0 @d1@ INDI
+1 NAME /d1/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Adam0@
+0 @d3@ INDI
+1 NAME /d3/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Adam0@
+0 @Eve@ INDI
+1 NAME /Eve/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Adam0@ FAM
+1 WIFE @Adam@
+1 WIFE @Eve@
+1 CHIL @Abel@
+1 CHIL @Cain@
+1 CHIL @Seth@
+1 CHIL @d2@
+1 CHIL @d1@
+1 CHIL @d3@
+1 MARR
+2 HUSB
+2 WIFE
+0 @CainCoh0@ FAM
+1 HUSB @Cain@
+1 WIFE @d2@
+1 CHIL @Enoch@
+0 @Enoch0@ FAM
+1 HUSB @Enoch@
+1 HUSB @Abel@
+1 HUSB @Enos@
+1 HUSB @d3@
+1 CHIL @child1@
+1 CHIL @child2@
+1 MARR
+2 HUSB
+2 WIFE
+0 @SethCoh0@ FAM
+1 HUSB @Seth@
+1 WIFE @d1@
+1 CHIL @Enos@
+0 TRLR

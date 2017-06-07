@@ -1,0 +1,67 @@
+GenealogyTree {
+  familyName Ludaci
+  persons { 
+    Deda {
+      marriage{
+        Marriage {
+          spouses (Baba, Deda)
+          children {
+            Tata {
+              marriage {
+                Marriage {
+                  spouses (Tata, Mama)
+                  children {
+                    Bata {
+                      
+                    cohabitation {
+                        Cohabitation {
+                          partners ( Bata,
+                          Teta,
+                          Mama ) children {
+                            DeteY {
+                            }
+                          }
+                        }
+                      }
+                    },
+                    Seka {
+                      gender FEMALE
+                    }
+                  }
+                }
+              }
+            },
+            Teta {
+              gender FEMALE
+            },
+            Striko {
+              cohabitation {
+                Cohabitation {
+                  partners (Striko, Seka)
+                  children {
+                    Kopilan {},
+                    Kopilica {gender FEMALE}
+                  }
+                }
+              }
+            }
+          }
+        }
+        ,
+        Marriage {
+          spouses (Deda, Kopilica)
+          children {
+            DeteX {}
+          }
+        }
+      }
+      
+    },
+    Baba {
+      type MARRIED gender FEMALE
+    },
+    Mama {
+      type MARRIED gender FEMALE
+    }
+  }
+}

@@ -40,6 +40,9 @@ persons {
                           Woman36 ) children {
                             Stefan {
                               nickname Vukanovic
+                            birthDate {
+                                year 1202
+                              }
                             },
                             Dmitar {
                             },

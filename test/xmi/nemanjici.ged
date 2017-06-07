@@ -57,11 +57,12 @@
 1 BURI
 1 FAMC @Stefan_Nemanja11130@
 1 FAMS @Vukan0@
-0 @StefanVukanovic@ INDI
+0 @StefanVukanovic1202@ INDI
 1 NAME /Stefan/
 1 SEX M
 1 NICK /Vukanovic/
 1 BIRT
+2 DATE  1202
 1 DEAT
 1 BURI
 1 FAMC @Vukan0@
@@ -444,7 +445,7 @@
 1 BURI
 0 @Zavida0@ FAM
 1 HUSB @Zavida@
-1 WIFE @Woman15@
+1 HUSB @Woman15@
 1 CHIL @Stefan_Nemanja1113@
 1 CHIL @Tihomir@
 1 CHIL @Stracimir@
@@ -454,7 +455,7 @@
 2 WIFE
 0 @Stefan_Nemanja11130@ FAM
 1 HUSB @Stefan_Nemanja1113@
-1 WIFE @Ana@
+1 HUSB @Ana@
 1 CHIL @Vukan@
 1 CHIL @StefanPrvovencani1166@
 1 CHIL @Rastko1168@
@@ -463,8 +464,8 @@
 2 WIFE
 0 @Vukan0@ FAM
 1 HUSB @Vukan@
-1 WIFE @Woman36@
-1 CHIL @StefanVukanovic@
+1 HUSB @Woman36@
+1 CHIL @StefanVukanovic1202@
 1 CHIL @Dmitar@
 1 CHIL @Djordje@
 1 MARR
@@ -472,14 +473,14 @@
 2 WIFE
 0 @StefanPrvovencani11660@ FAM
 1 HUSB @StefanPrvovencani1166@
-1 WIFE @Ana_Dandolo@
+1 HUSB @Ana_Dandolo@
 1 CHIL @UrosPrvi@
 1 MARR
 2 HUSB
 2 WIFE
 0 @UrosPrvi0@ FAM
 1 HUSB @UrosPrvi@
-1 WIFE @JelenaAnzuj@
+1 HUSB @JelenaAnzuj@
 1 CHIL @Dragutin@
 1 CHIL @Milutin@
 1 MARR
@@ -487,7 +488,7 @@
 2 WIFE
 0 @Dragutin0@ FAM
 1 HUSB @Dragutin@
-1 WIFE @KatalinaArpad@
+1 HUSB @KatalinaArpad@
 1 CHIL @Urosic@
 1 CHIL @VladislavDrugi@
 1 MARR
@@ -495,7 +496,7 @@
 2 WIFE
 0 @Milutin0@ FAM
 1 HUSB @Milutin@
-1 WIFE @Jelena_Terter@
+1 HUSB @Jelena_Terter@
 1 CHIL @StefanDecanski1276@
 1 CHIL @Konstantin1282@
 1 CHIL @Neda@
@@ -504,7 +505,7 @@
 2 WIFE
 0 @StefanDecanski12760@ FAM
 1 HUSB @StefanDecanski1276@
-1 WIFE @TeodoraSmilec@
+1 HUSB @TeodoraSmilec@
 1 CHIL @Dusic@
 1 CHIL @DusanSilni@
 1 CHIL @Jelena_Subic@
@@ -513,14 +514,14 @@
 2 WIFE
 0 @DusanSilni0@ FAM
 1 HUSB @DusanSilni@
-1 WIFE @Jelena_Bugarska@
+1 HUSB @Jelena_Bugarska@
 1 CHIL @UrosNejaki1336@
 1 MARR
 2 HUSB
 2 WIFE
 0 @StefanDecanski12761@ FAM
 1 HUSB @StefanDecanski1276@
-1 WIFE @MarijaPaleolog@
+1 HUSB @MarijaPaleolog@
 1 CHIL @SimeonSinisa@
 1 CHIL @Teodora1330@
 1 MARR
@@ -528,7 +529,7 @@
 2 WIFE
 0 @SimeonSinisa0@ FAM
 1 HUSB @SimeonSinisa@
-1 WIFE @TomaisaOrsini@
+1 HUSB @TomaisaOrsini@
 1 CHIL @JovanUros@
 1 CHIL @MarijaAngelina@
 1 MARR
@@ -536,7 +537,7 @@
 2 WIFE
 0 @JovanUros0@ FAM
 1 HUSB @JovanUros@
-1 WIFE @Woman54@
+1 HUSB @Woman54@
 1 CHIL @Mihailo@
 1 CHIL @Dimitrije@
 1 CHIL @Konstantin@
@@ -546,20 +547,20 @@
 2 WIFE
 0 @Milutin1@ FAM
 1 HUSB @Milutin@
-1 WIFE @JelisavetaArpad@
+1 HUSB @JelisavetaArpad@
 1 CHIL @Zorica@
 1 MARR
 2 HUSB
 2 WIFE
 0 @Milutin2@ FAM
 1 HUSB @Milutin@
-1 WIFE @Simonida@
+1 HUSB @Simonida@
 1 MARR
 2 HUSB
 2 WIFE
 0 @StefanPrvovencani11661@ FAM
 1 HUSB @StefanPrvovencani1166@
-1 WIFE @Evdokija@
+1 HUSB @Evdokija@
 1 CHIL @Radoslav@
 1 CHIL @Vladislav@
 1 CHIL @Prvoslav@
@@ -568,7 +569,7 @@
 2 WIFE
 0 @Vladislav0@ FAM
 1 HUSB @Vladislav@
-1 WIFE @Beloslava@
+1 HUSB @Beloslava@
 1 CHIL @Desa@
 1 CHIL @StefanVladislavic@
 1 CHIL @NN@
@@ -577,7 +578,7 @@
 2 WIFE
 0 @Miroslav0@ FAM
 1 HUSB @Miroslav@
-1 WIFE @Woman47@
+1 HUSB @Woman47@
 1 CHIL @Toljen@
 1 CHIL @Andrija@
 1 CHIL @Petar@

@@ -29,17 +29,19 @@ class GedcomGenerator {
       0 HEAD
       1 CHAR ASCII
       «FOR p : persons»
-        «genPerson(p, null, 0)»
+        «genPerson(p, null)»
       «ENDFOR»
       «FOR p : persons»
         «genMarriages(p)»
+        «genCohabitations(p)»
       «ENDFOR»
       0 TRLR
       '''
   }
   
-  def genPerson(Person p, Person father, int mar) {
+  def genPerson(Person p, String famId) {
     var i = 0
+    var j = 0
     '''
     0 @«genQN(p)»@ INDI
     1 NAME /«p.givenName»/
@@ -65,8 +67,8 @@ class GedcomGenerator {
     «IF p.restingPlace != null»
     2 PLACE «p.restingPlace»
     «ENDIF»
-    «IF father != null»
-    1 FAMC @«genQN(father) + mar»@
+    «IF famId != null»
+    1 FAMC @«famId»@
     «ENDIF»
     «FOR h : p.personhistory»
     1 EVEN
@@ -80,7 +82,11 @@ class GedcomGenerator {
     «FOR m : p.marriage»
     1 FAMS @«genQN(p) + i++»@
     «ENDFOR»
+    «FOR m : p.cohabitation»
+    1 FAMS @«genQN(p) + "Coh" + j++»@
+    «ENDFOR»
     «eatMarriages(p)»
+    «eatCohabitations(p)»
     '''
   }
   
@@ -89,7 +95,18 @@ class GedcomGenerator {
     '''
       «FOR m : p.marriage»
         «FOR c : m.children»
-      «genPerson(c, p, p.marriage.indexOf(m))»
+      «genPerson(c, genQN(p) + p.marriage.indexOf(m))»
+        «ENDFOR»
+      «ENDFOR»
+    '''
+  }
+  
+  def eatCohabitations(Person p) {
+    var i = 0
+    '''
+      «FOR m : p.cohabitation»
+        «FOR c : m.children»
+      «genPerson(c, genQN(p) + "Coh" + p.cohabitation.indexOf(m))»
         «ENDFOR»
       «ENDFOR»
     '''
@@ -99,10 +116,16 @@ class GedcomGenerator {
     var i = 0
     '''
       «FOR m : p.marriage»
-      «IF m.spouses.size == 2»
+«««      0 @«genQN(m.spouses.get(1))»@ INDI
+«««      1 FAMS @«genQN(p) + i++»@
       0 @«genQN(p) + i++»@ FAM
-      1 HUSB @«genQN(m.spouses.get(0))»@
-      1 WIFE @«genQN(m.spouses.get(1))»@
+      «FOR s : m.spouses»
+      «IF s ==  Gender.FEMALE»
+      1 WIFE @«genQN(s)»@
+      «ELSE»
+      1 HUSB @«genQN(s)»@
+      «ENDIF»
+      «ENDFOR»
       «FOR c : m.children»
       1 CHIL @«genQN(c)»@
       «ENDFOR»
@@ -120,8 +143,31 @@ class GedcomGenerator {
       «ENDIF»
       «FOR c : m.children»
       «genMarriages(c)»
+      «genCohabitations(c)»
       «ENDFOR»
+      «ENDFOR»
+    '''
+  }
+  
+  def genCohabitations(Person p) {
+    var i = 0
+    '''
+      «FOR m : p.cohabitation»
+      0 @«genQN(p) + "Coh" + i++»@ FAM
+      «FOR s : m.partners»
+      «IF s ==  Gender.FEMALE»
+      1 WIFE @«genQN(s)»@
+      «ELSE»
+      1 HUSB @«genQN(s)»@
       «ENDIF»
+      «ENDFOR»
+      «FOR c : m.children»
+      1 CHIL @«genQN(c)»@
+      «ENDFOR»
+      «FOR c : m.children»
+      «genMarriages(c)»
+      «genCohabitations(c)»
+      «ENDFOR»
       «ENDFOR»
     '''
   }

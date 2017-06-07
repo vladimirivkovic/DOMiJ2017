@@ -66,7 +66,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="noName leastOneMarriageOrCohabitation oneRoot inMyMarriages inMyCohabitations marrigesInLifetime"/>
+      <details key="constraints" value="noName leastOneMarriageOrCohabitation oneRoot inMyMarriages inMyCohabitations marrigesInLifetime iAmNotMyOwnParent"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="noName" value="not unknown implies givenName &lt;> ''"/>
@@ -75,6 +75,7 @@
       <details key="inMyMarriages" value="marriage->forAll(spouses->count(self) = 1)"/>
       <details key="inMyCohabitations" value="cohabitation->forAll(partners->count(self) = 1)"/>
       <details key="marrigesInLifetime" value=" (self.birthDate.isNotNull() &#xA;                                     implies (Marriage.allInstances()->forAll(m |&#xA;                                        (m.spouses->includes(self) and m.fromDate.isNotNull()) &#xA;                                        implies self.birthDate.before(m.fromDate))))&#xA;                                     and (self.deathDate.isNotNull() &#xA;                                     implies (Marriage.allInstances()->forAll(m |&#xA;                                        (m.spouses->includes(self) and m.toDate.isNotNull())&#xA;                                         implies self.deathDate.after(m.toDate))))"/>
+      <details key="iAmNotMyOwnParent" value="Marriage.allInstances()->select(m : Marriage | m.children->includes(self))->&#xA;                                  forAll(m : Marriage | m.spouses->excludes(self))"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="givenName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="birthDate" eType="#//DateX"

@@ -35,7 +35,7 @@ getNodes = function() {
             color: 'lightblue',
             parent: 2,
             name : 'Stefan (Vukanovic)',
-            birthYear : 'n/a',
+            birthYear : 1202,
             deathYear : 'n/a',
             restingPlace : 'n/a'
           },

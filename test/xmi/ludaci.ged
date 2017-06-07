@@ -1,0 +1,124 @@
+0 HEAD
+1 CHAR ASCII
+0 @Deda@ INDI
+1 NAME /Deda/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMS @Deda0@
+1 FAMS @Deda1@
+1 FAMS @DedaCoh0@
+1 FAMS @DedaCoh1@
+0 @Tata@ INDI
+1 NAME /Tata/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Deda0@
+1 FAMS @Tata0@
+1 FAMS @TataCoh0@
+0 @Bata@ INDI
+1 NAME /Bata/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Tata0@
+0 @DeteY@ INDI
+1 NAME /DeteY/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @BataCoh0@
+0 @Seka@ INDI
+1 NAME /Seka/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Tata0@
+0 @Teta@ INDI
+1 NAME /Teta/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Deda0@
+0 @Striko@ INDI
+1 NAME /Striko/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Deda0@
+0 @Kopilan@ INDI
+1 NAME /Kopilan/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @StrikoCoh0@
+0 @Kopilica@ INDI
+1 NAME /Kopilica/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @StrikoCoh0@
+0 @DeteX@ INDI
+1 NAME /DeteX/
+1 SEX M
+1 BIRT
+1 DEAT
+1 BURI
+1 FAMC @Deda1@
+0 @Baba@ INDI
+1 NAME /Baba/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Mama@ INDI
+1 NAME /Mama/
+1 SEX F
+1 BIRT
+1 DEAT
+1 BURI
+0 @Deda0@ FAM
+1 HUSB @Baba@
+1 HUSB @Deda@
+1 CHIL @Tata@
+1 CHIL @Teta@
+1 CHIL @Striko@
+1 MARR
+2 HUSB
+2 WIFE
+0 @Tata0@ FAM
+1 WIFE @Tata@
+1 WIFE @Mama@
+1 CHIL @Bata@
+1 CHIL @Seka@
+1 MARR
+2 HUSB
+2 WIFE
+0 @BataCoh0@ FAM
+1 HUSB @Bata@
+1 HUSB @Teta@
+1 HUSB @Mama@
+1 CHIL @DeteY@
+0 @StrikoCoh0@ FAM
+1 HUSB @Striko@
+1 HUSB @Seka@
+1 CHIL @Kopilan@
+1 CHIL @Kopilica@
+0 @Deda1@ FAM
+1 WIFE @Deda@
+1 WIFE @Kopilica@
+1 CHIL @DeteX@
+1 MARR
+2 HUSB
+2 WIFE
+0 TRLR

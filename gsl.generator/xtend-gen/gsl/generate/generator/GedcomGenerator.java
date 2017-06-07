@@ -1,6 +1,7 @@
 package gsl.generate.generator;
 
 import com.google.common.base.Objects;
+import genDSL2.Cohabitation;
 import genDSL2.DateX;
 import genDSL2.Gender;
 import genDSL2.GenealogyTree;
@@ -56,7 +57,7 @@ public class GedcomGenerator {
       _builder.newLine();
       {
         for(final Person p : this.persons) {
-          CharSequence _genPerson = this.genPerson(p, null, 0);
+          CharSequence _genPerson = this.genPerson(p, null);
           _builder.append(_genPerson, "");
           _builder.newLineIfNotEmpty();
         }
@@ -65,6 +66,9 @@ public class GedcomGenerator {
         for(final Person p_1 : this.persons) {
           CharSequence _genMarriages = this.genMarriages(p_1);
           _builder.append(_genMarriages, "");
+          _builder.newLineIfNotEmpty();
+          CharSequence _genCohabitations = this.genCohabitations(p_1);
+          _builder.append(_genCohabitations, "");
           _builder.newLineIfNotEmpty();
         }
       }
@@ -75,10 +79,11 @@ public class GedcomGenerator {
     return _xblockexpression;
   }
   
-  public CharSequence genPerson(final Person p, final Person father, final int mar) {
+  public CharSequence genPerson(final Person p, final String famId) {
     CharSequence _xblockexpression = null;
     {
       int i = 0;
+      int j = 0;
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("0 @");
       String _genQN = this.genQN(p);
@@ -171,12 +176,10 @@ public class GedcomGenerator {
         }
       }
       {
-        boolean _notEquals_6 = (!Objects.equal(father, null));
+        boolean _notEquals_6 = (!Objects.equal(famId, null));
         if (_notEquals_6) {
           _builder.append("1 FAMC @");
-          String _genQN_1 = this.genQN(father);
-          String _plus = (_genQN_1 + Integer.valueOf(mar));
-          _builder.append(_plus, "");
+          _builder.append(famId, "");
           _builder.append("@");
           _builder.newLineIfNotEmpty();
         }
@@ -216,16 +219,32 @@ public class GedcomGenerator {
         EList<Marriage> _marriage = p.getMarriage();
         for(final Marriage m : _marriage) {
           _builder.append("1 FAMS @");
-          String _genQN_2 = this.genQN(p);
+          String _genQN_1 = this.genQN(p);
           int _plusPlus = i++;
-          String _plus_1 = (_genQN_2 + Integer.valueOf(_plusPlus));
-          _builder.append(_plus_1, "");
+          String _plus = (_genQN_1 + Integer.valueOf(_plusPlus));
+          _builder.append(_plus, "");
+          _builder.append("@");
+          _builder.newLineIfNotEmpty();
+        }
+      }
+      {
+        EList<Cohabitation> _cohabitation = p.getCohabitation();
+        for(final Cohabitation m_1 : _cohabitation) {
+          _builder.append("1 FAMS @");
+          String _genQN_2 = this.genQN(p);
+          String _plus_1 = (_genQN_2 + "Coh");
+          int _plusPlus_1 = j++;
+          String _plus_2 = (_plus_1 + Integer.valueOf(_plusPlus_1));
+          _builder.append(_plus_2, "");
           _builder.append("@");
           _builder.newLineIfNotEmpty();
         }
       }
       CharSequence _eatMarriages = this.eatMarriages(p);
       _builder.append(_eatMarriages, "");
+      _builder.newLineIfNotEmpty();
+      CharSequence _eatCohabitations = this.eatCohabitations(p);
+      _builder.append(_eatCohabitations, "");
       _builder.newLineIfNotEmpty();
       _xblockexpression = _builder;
     }
@@ -243,9 +262,39 @@ public class GedcomGenerator {
           {
             EList<Person> _children = m.getChildren();
             for(final Person c : _children) {
+              String _genQN = this.genQN(p);
               EList<Marriage> _marriage_1 = p.getMarriage();
               int _indexOf = _marriage_1.indexOf(m);
-              Object _genPerson = this.genPerson(c, p, _indexOf);
+              String _plus = (_genQN + Integer.valueOf(_indexOf));
+              Object _genPerson = this.genPerson(c, _plus);
+              _builder.append(_genPerson, "");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+        }
+      }
+      _xblockexpression = _builder;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence eatCohabitations(final Person p) {
+    CharSequence _xblockexpression = null;
+    {
+      int i = 0;
+      StringConcatenation _builder = new StringConcatenation();
+      {
+        EList<Cohabitation> _cohabitation = p.getCohabitation();
+        for(final Cohabitation m : _cohabitation) {
+          {
+            EList<Person> _children = m.getChildren();
+            for(final Person c : _children) {
+              String _genQN = this.genQN(p);
+              String _plus = (_genQN + "Coh");
+              EList<Cohabitation> _cohabitation_1 = p.getCohabitation();
+              int _indexOf = _cohabitation_1.indexOf(m);
+              String _plus_1 = (_plus + Integer.valueOf(_indexOf));
+              Object _genPerson = this.genPerson(c, _plus_1);
               _builder.append(_genPerson, "");
               _builder.newLineIfNotEmpty();
             }
@@ -265,84 +314,152 @@ public class GedcomGenerator {
       {
         EList<Marriage> _marriage = p.getMarriage();
         for(final Marriage m : _marriage) {
+          _builder.append("0 @");
+          String _genQN = this.genQN(p);
+          int _plusPlus = i++;
+          String _plus = (_genQN + Integer.valueOf(_plusPlus));
+          _builder.append(_plus, "");
+          _builder.append("@ FAM");
+          _builder.newLineIfNotEmpty();
           {
             EList<Person> _spouses = m.getSpouses();
-            int _size = _spouses.size();
-            boolean _equals = (_size == 2);
-            if (_equals) {
-              _builder.append("0 @");
-              String _genQN = this.genQN(p);
-              int _plusPlus = i++;
-              String _plus = (_genQN + Integer.valueOf(_plusPlus));
-              _builder.append(_plus, "");
-              _builder.append("@ FAM");
-              _builder.newLineIfNotEmpty();
-              _builder.append("1 HUSB @");
-              EList<Person> _spouses_1 = m.getSpouses();
-              Person _get = _spouses_1.get(0);
-              String _genQN_1 = this.genQN(_get);
-              _builder.append(_genQN_1, "");
-              _builder.append("@");
-              _builder.newLineIfNotEmpty();
-              _builder.append("1 WIFE @");
-              EList<Person> _spouses_2 = m.getSpouses();
-              Person _get_1 = _spouses_2.get(1);
-              String _genQN_2 = this.genQN(_get_1);
-              _builder.append(_genQN_2, "");
-              _builder.append("@");
-              _builder.newLineIfNotEmpty();
+            for(final Person s : _spouses) {
               {
-                EList<Person> _children = m.getChildren();
-                for(final Person c : _children) {
-                  _builder.append("1 CHIL @");
-                  String _genQN_3 = this.genQN(c);
-                  _builder.append(_genQN_3, "");
+                boolean _equals = Objects.equal(s, Gender.FEMALE);
+                if (_equals) {
+                  _builder.append("1 WIFE @");
+                  String _genQN_1 = this.genQN(s);
+                  _builder.append(_genQN_1, "");
+                  _builder.append("@");
+                  _builder.newLineIfNotEmpty();
+                } else {
+                  _builder.append("1 HUSB @");
+                  String _genQN_2 = this.genQN(s);
+                  _builder.append(_genQN_2, "");
                   _builder.append("@");
                   _builder.newLineIfNotEmpty();
                 }
               }
-              _builder.append("1 MARR");
+            }
+          }
+          {
+            EList<Person> _children = m.getChildren();
+            for(final Person c : _children) {
+              _builder.append("1 CHIL @");
+              String _genQN_3 = this.genQN(c);
+              _builder.append(_genQN_3, "");
+              _builder.append("@");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+          _builder.append("1 MARR");
+          _builder.newLine();
+          _builder.append("2 HUSB");
+          _builder.newLine();
+          _builder.append("2 WIFE");
+          _builder.newLine();
+          {
+            DateX _fromDate = m.getFromDate();
+            boolean _notEquals = (!Objects.equal(_fromDate, null));
+            if (_notEquals) {
+              _builder.append("2 DATE ");
+              DateX _fromDate_1 = m.getFromDate();
+              String _genDate = this.genDate(_fromDate_1);
+              _builder.append(_genDate, "");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+          {
+            DateX _toDate = m.getToDate();
+            boolean _notEquals_1 = (!Objects.equal(_toDate, null));
+            if (_notEquals_1) {
+              _builder.append("1 DIV");
               _builder.newLine();
               _builder.append("2 HUSB");
               _builder.newLine();
               _builder.append("2 WIFE");
               _builder.newLine();
+              _builder.append("2 DATE ");
+              DateX _toDate_1 = m.getToDate();
+              String _genDate_1 = this.genDate(_toDate_1);
+              _builder.append(_genDate_1, "");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+          {
+            EList<Person> _children_1 = m.getChildren();
+            for(final Person c_1 : _children_1) {
+              Object _genMarriages = this.genMarriages(c_1);
+              _builder.append(_genMarriages, "");
+              _builder.newLineIfNotEmpty();
+              CharSequence _genCohabitations = this.genCohabitations(c_1);
+              _builder.append(_genCohabitations, "");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+        }
+      }
+      _xblockexpression = _builder;
+    }
+    return _xblockexpression;
+  }
+  
+  public CharSequence genCohabitations(final Person p) {
+    CharSequence _xblockexpression = null;
+    {
+      int i = 0;
+      StringConcatenation _builder = new StringConcatenation();
+      {
+        EList<Cohabitation> _cohabitation = p.getCohabitation();
+        for(final Cohabitation m : _cohabitation) {
+          _builder.append("0 @");
+          String _genQN = this.genQN(p);
+          String _plus = (_genQN + "Coh");
+          int _plusPlus = i++;
+          String _plus_1 = (_plus + Integer.valueOf(_plusPlus));
+          _builder.append(_plus_1, "");
+          _builder.append("@ FAM");
+          _builder.newLineIfNotEmpty();
+          {
+            EList<Person> _partners = m.getPartners();
+            for(final Person s : _partners) {
               {
-                DateX _fromDate = m.getFromDate();
-                boolean _notEquals = (!Objects.equal(_fromDate, null));
-                if (_notEquals) {
-                  _builder.append("2 DATE ");
-                  DateX _fromDate_1 = m.getFromDate();
-                  String _genDate = this.genDate(_fromDate_1);
-                  _builder.append(_genDate, "");
+                boolean _equals = Objects.equal(s, Gender.FEMALE);
+                if (_equals) {
+                  _builder.append("1 WIFE @");
+                  String _genQN_1 = this.genQN(s);
+                  _builder.append(_genQN_1, "");
+                  _builder.append("@");
+                  _builder.newLineIfNotEmpty();
+                } else {
+                  _builder.append("1 HUSB @");
+                  String _genQN_2 = this.genQN(s);
+                  _builder.append(_genQN_2, "");
+                  _builder.append("@");
                   _builder.newLineIfNotEmpty();
                 }
               }
-              {
-                DateX _toDate = m.getToDate();
-                boolean _notEquals_1 = (!Objects.equal(_toDate, null));
-                if (_notEquals_1) {
-                  _builder.append("1 DIV");
-                  _builder.newLine();
-                  _builder.append("2 HUSB");
-                  _builder.newLine();
-                  _builder.append("2 WIFE");
-                  _builder.newLine();
-                  _builder.append("2 DATE ");
-                  DateX _toDate_1 = m.getToDate();
-                  String _genDate_1 = this.genDate(_toDate_1);
-                  _builder.append(_genDate_1, "");
-                  _builder.newLineIfNotEmpty();
-                }
-              }
-              {
-                EList<Person> _children_1 = m.getChildren();
-                for(final Person c_1 : _children_1) {
-                  Object _genMarriages = this.genMarriages(c_1);
-                  _builder.append(_genMarriages, "");
-                  _builder.newLineIfNotEmpty();
-                }
-              }
+            }
+          }
+          {
+            EList<Person> _children = m.getChildren();
+            for(final Person c : _children) {
+              _builder.append("1 CHIL @");
+              String _genQN_3 = this.genQN(c);
+              _builder.append(_genQN_3, "");
+              _builder.append("@");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+          {
+            EList<Person> _children_1 = m.getChildren();
+            for(final Person c_1 : _children_1) {
+              Object _genMarriages = this.genMarriages(c_1);
+              _builder.append(_genMarriages, "");
+              _builder.newLineIfNotEmpty();
+              Object _genCohabitations = this.genCohabitations(c_1);
+              _builder.append(_genCohabitations, "");
+              _builder.newLineIfNotEmpty();
             }
           }
         }

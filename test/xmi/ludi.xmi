@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genDSL2:GenealogyTree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genDSL2="http://www.example.org/genDSL2" familyName="Ludaci">
+  <person givenName="Deda">
+    <marriage spouses="//@person.1 //@person.0">
+      <children givenName="Tata">
+        <marriage spouses="//@person.0/@marriage.0/@children.0 //@person.2">
+          <children givenName="Bata">
+            <cohabitation partners="//@person.0/@marriage.0/@children.0/@marriage.0/@children.0 //@person.0/@marriage.0/@children.1 //@person.2">
+              <children givenName="DeteY"/>
+            </cohabitation>
+          </children>
+          <children givenName="Seka" gender="FEMALE"/>
+        </marriage>
+      </children>
+      <children givenName="Teta" gender="FEMALE"/>
+      <children givenName="Striko">
+        <cohabitation partners="//@person.0/@marriage.0/@children.2 //@person.0/@marriage.0/@children.0/@marriage.0/@children.1">
+          <children givenName="Kopilan"/>
+          <children givenName="Kopilica" gender="FEMALE"/>
+        </cohabitation>
+      </children>
+    </marriage>
+    <marriage spouses="//@person.0 //@person.0/@marriage.0/@children.2/@cohabitation.0/@children.1">
+      <children givenName="DeteX"/>
+    </marriage>
+  </person>
+  <person givenName="Baba" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Mama" type="MARRIED" gender="FEMALE"/>
+</genDSL2:GenealogyTree>

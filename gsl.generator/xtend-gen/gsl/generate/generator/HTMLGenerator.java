@@ -1,6 +1,7 @@
 package gsl.generate.generator;
 
 import com.google.common.base.Objects;
+import genDSL2.Cohabitation;
 import genDSL2.DateX;
 import genDSL2.Gender;
 import genDSL2.GenealogyTree;
@@ -167,6 +168,20 @@ public class HTMLGenerator {
               _builder.append("  ");
               Object _eatPerson = this.eatPerson(c, k);
               _builder.append(_eatPerson, "  ");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+        }
+      }
+      {
+        EList<Cohabitation> _cohabitation = p.getCohabitation();
+        for(final Cohabitation h : _cohabitation) {
+          {
+            EList<Person> _children_1 = h.getChildren();
+            for(final Person c_1 : _children_1) {
+              _builder.append("  ");
+              Object _eatPerson_1 = this.eatPerson(c_1, k);
+              _builder.append(_eatPerson_1, "  ");
               _builder.newLineIfNotEmpty();
             }
           }
