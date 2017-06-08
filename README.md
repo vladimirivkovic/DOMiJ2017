@@ -12,7 +12,7 @@ This project uses a number of open source projects to work properly:
 * [GEDCOM] - Genealogical Data Communication
 
 ### Running the project
-Import the following projects into Eclipse workspace
+##### Import the following projects into Eclipse workspace
 - 	genDSL2
 - 	org.xtext.genDSL2.gsl.ide
 - 	org.xtext.genDSL2.gsl.tests
@@ -22,14 +22,14 @@ Import the following projects into Eclipse workspace
 -	gsl.examples
 -	gsl.generator
 
-Run **org.xtext.genDSL2.gsl.ide** as *Eclipse Application*
-Import the following projects into Eclipse runtime workspace
+##### Run **org.xtext.genDSL2.gsl.ide** as *Eclipse Application*
+##### Import the following projects into Eclipse runtime workspace
 - genDSL2.project.design
 - test
 
-Add new file to **test** project with extenstion *.gsl
-Create family tree using textual or graphical syntax
-Generate GEDCOM file by running **gsl.examples** project *TestClass* with **path to folder** and **gsl file name** (in previously specified folder) as command line arguments
+##### Add new file to **test** project with extenstion *.gsl
+##### Create family tree using textual or graphical syntax
+##### Generate GEDCOM file by running **gsl.examples** project *TestClass* with **path to folder** and **gsl file name** (in previously specified folder) as command line arguments
 
 
 ## Nemanić Dinasty Family Tree
