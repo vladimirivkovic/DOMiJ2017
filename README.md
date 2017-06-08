@@ -32,7 +32,7 @@ This project uses a number of open source projects to work properly:
 ##### Generate GEDCOM file by running **gsl.examples** project *TestClass* with **path to folder** and **gsl file name** (in previously specified folder) as command line arguments
 
 
-## Nemanić Dinasty Family Tree
+## Nemanić Dynasty Family Tree
 ![](https://s-media-cache-ak0.pinimg.com/originals/bb/8f/e0/bb8fe07736718f56c23465bc5e75b9c4.jpg?raw=true)
 
    [Eclipse Modeling Framework (EMF)]: <https://eclipse.org/modeling/emf>
