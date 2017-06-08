@@ -118,5 +118,5 @@
   <person givenName="Beloslava" type="MARRIED" gender="FEMALE"/>
   <person givenName="Woman47" type="MARRIED" gender="FEMALE" unknown="true"/>
   <person givenName="Tomaisa" type="MARRIED" gender="FEMALE" nickname="Orsini"/>
-  <person givenName="Woman54" type="MARRIED" gender="FEMALE"/>
+  <person givenName="Woman54" type="MARRIED" gender="FEMALE" unknown="true"/>
 </genDSL2:GenealogyTree>

@@ -44,7 +44,7 @@ class GedcomGenerator {
     var j = 0
     '''
     0 @«genQN(p)»@ INDI
-    1 NAME /«p.givenName»/
+    1 NAME /«IF p.unknown»NN«ELSE»«p.givenName»«ENDIF»/
     1 SEX «if(p.gender == Gender.MALE) "M" else "F"»
     «IF p.nickname != null»
     1 NICK /«p.nickname»/

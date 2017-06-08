@@ -40,10 +40,14 @@ class HTMLGenerator {
       key: «k»,
       color: «IF p.gender == Gender.MALE»'lightblue'«ELSE»'salmon'«ENDIF»,
       parent: «parentKey»,
+      «IF p.unknown»
+      name : 'NN',
+      «ELSE»
       name : '«p.givenName» «IF p.nickname != null»(«p.nickname»)«ENDIF»',
-      birthYear : «IF p.birthDate != null»«p.birthDate.year»«ELSE»'n/a'«ENDIF»,
-      deathYear : «IF p.deathDate != null»«p.deathDate.year»«ELSE»'n/a'«ENDIF»,
-      restingPlace : «IF p.restingPlace != null»'«p.restingPlace»'«ELSE»'n/a'«ENDIF»
+      «ENDIF»
+      «IF p.birthDate != null»birthYear : «p.birthDate.year»,«ENDIF»
+      «IF p.deathDate != null»deathYear : «p.deathDate.year»,«ENDIF»
+      «IF p.restingPlace != null»restingPlace : '«p.restingPlace»'«ENDIF»
     },
       
       «FOR m : p.marriage»

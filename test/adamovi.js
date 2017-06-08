@@ -5,9 +5,6 @@ getNodes = function() {
       color: 'lightblue',
       parent: 0,
       name : 'Adam ',
-      birthYear : 'n/a',
-      deathYear : 'n/a',
-      restingPlace : 'n/a'
     },
       
       {
@@ -15,9 +12,6 @@ getNodes = function() {
         color: 'lightblue',
         parent: 0,
         name : 'Abel ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
       {
@@ -25,9 +19,6 @@ getNodes = function() {
         color: 'lightblue',
         parent: 0,
         name : 'Cain ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
         {
@@ -35,9 +26,6 @@ getNodes = function() {
           color: 'lightblue',
           parent: 2,
           name : 'Enoch ',
-          birthYear : 'n/a',
-          deathYear : 'n/a',
-          restingPlace : 'n/a'
         },
           
           {
@@ -45,9 +33,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 3,
             name : 'child1 ',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
-            restingPlace : 'n/a'
           },
             
           {
@@ -55,9 +40,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 3,
             name : 'child2 ',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
-            restingPlace : 'n/a'
           },
             
       {
@@ -65,9 +47,6 @@ getNodes = function() {
         color: 'lightblue',
         parent: 0,
         name : 'Seth ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
         {
@@ -75,9 +54,6 @@ getNodes = function() {
           color: 'lightblue',
           parent: 6,
           name : 'Enos ',
-          birthYear : 'n/a',
-          deathYear : 'n/a',
-          restingPlace : 'n/a'
         },
           
       {
@@ -85,9 +61,6 @@ getNodes = function() {
         color: 'salmon',
         parent: 0,
         name : 'd2 ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
       {
@@ -95,9 +68,6 @@ getNodes = function() {
         color: 'salmon',
         parent: 0,
         name : 'd1 ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
       {
@@ -105,9 +75,6 @@ getNodes = function() {
         color: 'salmon',
         parent: 0,
         name : 'd3 ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
   ];

@@ -93,65 +93,67 @@ public class HTMLGenerator {
       _builder.append(parentKey, "  ");
       _builder.append(",");
       _builder.newLineIfNotEmpty();
-      _builder.append("  ");
-      _builder.append("name : \'");
-      String _givenName = p.getGivenName();
-      _builder.append(_givenName, "  ");
-      _builder.append(" ");
       {
-        String _nickname = p.getNickname();
-        boolean _notEquals = (!Objects.equal(_nickname, null));
-        if (_notEquals) {
-          _builder.append("(");
-          String _nickname_1 = p.getNickname();
-          _builder.append(_nickname_1, "  ");
-          _builder.append(")");
+        boolean _isUnknown = p.isUnknown();
+        if (_isUnknown) {
+          _builder.append("  ");
+          _builder.append("name : \'NN\',");
+          _builder.newLine();
+        } else {
+          _builder.append("  ");
+          _builder.append("name : \'");
+          String _givenName = p.getGivenName();
+          _builder.append(_givenName, "  ");
+          _builder.append(" ");
+          {
+            String _nickname = p.getNickname();
+            boolean _notEquals = (!Objects.equal(_nickname, null));
+            if (_notEquals) {
+              _builder.append("(");
+              String _nickname_1 = p.getNickname();
+              _builder.append(_nickname_1, "  ");
+              _builder.append(")");
+            }
+          }
+          _builder.append("\',");
+          _builder.newLineIfNotEmpty();
         }
       }
-      _builder.append("\',");
-      _builder.newLineIfNotEmpty();
       _builder.append("  ");
-      _builder.append("birthYear : ");
       {
         DateX _birthDate = p.getBirthDate();
         boolean _notEquals_1 = (!Objects.equal(_birthDate, null));
         if (_notEquals_1) {
+          _builder.append("birthYear : ");
           DateX _birthDate_1 = p.getBirthDate();
           int _year = _birthDate_1.getYear();
           _builder.append(_year, "  ");
-        } else {
-          _builder.append("\'n/a\'");
+          _builder.append(",");
         }
       }
-      _builder.append(",");
       _builder.newLineIfNotEmpty();
       _builder.append("  ");
-      _builder.append("deathYear : ");
       {
         DateX _deathDate = p.getDeathDate();
         boolean _notEquals_2 = (!Objects.equal(_deathDate, null));
         if (_notEquals_2) {
+          _builder.append("deathYear : ");
           DateX _deathDate_1 = p.getDeathDate();
           int _year_1 = _deathDate_1.getYear();
           _builder.append(_year_1, "  ");
-        } else {
-          _builder.append("\'n/a\'");
+          _builder.append(",");
         }
       }
-      _builder.append(",");
       _builder.newLineIfNotEmpty();
       _builder.append("  ");
-      _builder.append("restingPlace : ");
       {
         String _restingPlace = p.getRestingPlace();
         boolean _notEquals_3 = (!Objects.equal(_restingPlace, null));
         if (_notEquals_3) {
-          _builder.append("\'");
+          _builder.append("restingPlace : \'");
           String _restingPlace_1 = p.getRestingPlace();
           _builder.append(_restingPlace_1, "  ");
           _builder.append("\'");
-        } else {
-          _builder.append("\'n/a\'");
         }
       }
       _builder.newLineIfNotEmpty();

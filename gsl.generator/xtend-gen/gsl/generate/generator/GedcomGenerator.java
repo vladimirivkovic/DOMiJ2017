@@ -91,8 +91,15 @@ public class GedcomGenerator {
       _builder.append("@ INDI");
       _builder.newLineIfNotEmpty();
       _builder.append("1 NAME /");
-      String _givenName = p.getGivenName();
-      _builder.append(_givenName, "");
+      {
+        boolean _isUnknown = p.isUnknown();
+        if (_isUnknown) {
+          _builder.append("NN");
+        } else {
+          String _givenName = p.getGivenName();
+          _builder.append(_givenName, "");
+        }
+      }
       _builder.append("/");
       _builder.newLineIfNotEmpty();
       _builder.append("1 SEX ");

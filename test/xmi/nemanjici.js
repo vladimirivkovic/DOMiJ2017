@@ -5,9 +5,6 @@ getNodes = function() {
       color: 'lightblue',
       parent: 0,
       name : 'Zavida ',
-      birthYear : 'n/a',
-      deathYear : 'n/a',
-      restingPlace : 'n/a'
     },
       
       {
@@ -25,9 +22,6 @@ getNodes = function() {
           color: 'lightblue',
           parent: 1,
           name : 'Vukan ',
-          birthYear : 'n/a',
-          deathYear : 'n/a',
-          restingPlace : 'n/a'
         },
           
           {
@@ -36,8 +30,6 @@ getNodes = function() {
             parent: 2,
             name : 'Stefan (Vukanovic)',
             birthYear : 1202,
-            deathYear : 'n/a',
-            restingPlace : 'n/a'
           },
             
           {
@@ -45,9 +37,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 2,
             name : 'Dmitar ',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
-            restingPlace : 'n/a'
           },
             
           {
@@ -55,9 +44,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 2,
             name : 'Djordje ',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
-            restingPlace : 'n/a'
           },
             
         {
@@ -66,7 +52,6 @@ getNodes = function() {
           parent: 1,
           name : 'Stefan (Prvovencani)',
           birthYear : 1166,
-          deathYear : 'n/a',
           restingPlace : '"Manastir Studenica"'
         },
           
@@ -75,8 +60,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 6,
             name : 'Uros (Prvi)',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
             restingPlace : 'Sopocani'
           },
             
@@ -85,9 +68,6 @@ getNodes = function() {
               color: 'lightblue',
               parent: 7,
               name : 'Dragutin ',
-              birthYear : 'n/a',
-              deathYear : 'n/a',
-              restingPlace : 'n/a'
             },
               
               {
@@ -95,9 +75,6 @@ getNodes = function() {
                 color: 'lightblue',
                 parent: 8,
                 name : 'Urosic ',
-                birthYear : 'n/a',
-                deathYear : 'n/a',
-                restingPlace : 'n/a'
               },
                 
               {
@@ -105,9 +82,6 @@ getNodes = function() {
                 color: 'lightblue',
                 parent: 8,
                 name : 'Vladislav (Drugi)',
-                birthYear : 'n/a',
-                deathYear : 'n/a',
-                restingPlace : 'n/a'
               },
                 
             {
@@ -115,8 +89,6 @@ getNodes = function() {
               color: 'lightblue',
               parent: 7,
               name : 'Milutin ',
-              birthYear : 'n/a',
-              deathYear : 'n/a',
               restingPlace : '"Crkva Sveta Nedelja u Sofiji"'
             },
               
@@ -126,7 +98,6 @@ getNodes = function() {
                 parent: 11,
                 name : 'Stefan (Decanski)',
                 birthYear : 1276,
-                deathYear : 'n/a',
                 restingPlace : '"Visoki Decani"'
               },
                 
@@ -135,9 +106,6 @@ getNodes = function() {
                   color: 'lightblue',
                   parent: 12,
                   name : 'Dusic ',
-                  birthYear : 'n/a',
-                  deathYear : 'n/a',
-                  restingPlace : 'n/a'
                 },
                   
                 {
@@ -145,8 +113,6 @@ getNodes = function() {
                   color: 'lightblue',
                   parent: 12,
                   name : 'Dusan (Silni)',
-                  birthYear : 'n/a',
-                  deathYear : 'n/a',
                   restingPlace : '"Crkva Svetog Marka u Beogradu"'
                 },
                   
@@ -156,7 +122,6 @@ getNodes = function() {
                     parent: 14,
                     name : 'Uros (Nejaki)',
                     birthYear : 1336,
-                    deathYear : 'n/a',
                     restingPlace : '"Manastir Jazak"'
                   },
                     
@@ -165,9 +130,6 @@ getNodes = function() {
                   color: 'salmon',
                   parent: 12,
                   name : 'Jelena_Subic ',
-                  birthYear : 'n/a',
-                  deathYear : 'n/a',
-                  restingPlace : 'n/a'
                 },
                   
                 {
@@ -175,9 +137,6 @@ getNodes = function() {
                   color: 'lightblue',
                   parent: 12,
                   name : 'Simeon (Sinisa)',
-                  birthYear : 'n/a',
-                  deathYear : 'n/a',
-                  restingPlace : 'n/a'
                 },
                   
                   {
@@ -185,9 +144,6 @@ getNodes = function() {
                     color: 'lightblue',
                     parent: 17,
                     name : 'Jovan (Uros)',
-                    birthYear : 'n/a',
-                    deathYear : 'n/a',
-                    restingPlace : 'n/a'
                   },
                     
                     {
@@ -195,9 +151,6 @@ getNodes = function() {
                       color: 'lightblue',
                       parent: 18,
                       name : 'Mihailo ',
-                      birthYear : 'n/a',
-                      deathYear : 'n/a',
-                      restingPlace : 'n/a'
                     },
                       
                     {
@@ -205,9 +158,6 @@ getNodes = function() {
                       color: 'lightblue',
                       parent: 18,
                       name : 'Dimitrije ',
-                      birthYear : 'n/a',
-                      deathYear : 'n/a',
-                      restingPlace : 'n/a'
                     },
                       
                     {
@@ -215,9 +165,6 @@ getNodes = function() {
                       color: 'lightblue',
                       parent: 18,
                       name : 'Konstantin ',
-                      birthYear : 'n/a',
-                      deathYear : 'n/a',
-                      restingPlace : 'n/a'
                     },
                       
                     {
@@ -225,9 +172,6 @@ getNodes = function() {
                       color: 'salmon',
                       parent: 18,
                       name : 'Asasina ',
-                      birthYear : 'n/a',
-                      deathYear : 'n/a',
-                      restingPlace : 'n/a'
                     },
                       
                   {
@@ -235,9 +179,6 @@ getNodes = function() {
                     color: 'salmon',
                     parent: 17,
                     name : 'Marija (Angelina)',
-                    birthYear : 'n/a',
-                    deathYear : 'n/a',
-                    restingPlace : 'n/a'
                   },
                     
                 {
@@ -246,8 +187,6 @@ getNodes = function() {
                   parent: 12,
                   name : 'Teodora ',
                   birthYear : 1330,
-                  deathYear : 'n/a',
-                  restingPlace : 'n/a'
                 },
                   
               {
@@ -256,8 +195,6 @@ getNodes = function() {
                 parent: 11,
                 name : 'Konstantin ',
                 birthYear : 1282,
-                deathYear : 'n/a',
-                restingPlace : 'n/a'
               },
                 
               {
@@ -265,9 +202,6 @@ getNodes = function() {
                 color: 'salmon',
                 parent: 11,
                 name : 'Neda ',
-                birthYear : 'n/a',
-                deathYear : 'n/a',
-                restingPlace : 'n/a'
               },
                 
               {
@@ -275,9 +209,6 @@ getNodes = function() {
                 color: 'salmon',
                 parent: 11,
                 name : 'Zorica ',
-                birthYear : 'n/a',
-                deathYear : 'n/a',
-                restingPlace : 'n/a'
               },
                 
           {
@@ -285,8 +216,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 6,
             name : 'Radoslav ',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
             restingPlace : '"Manastir Studenica"'
           },
             
@@ -295,8 +224,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 6,
             name : 'Vladislav ',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
             restingPlace : 'Milesava'
           },
             
@@ -305,9 +232,6 @@ getNodes = function() {
               color: 'lightblue',
               parent: 29,
               name : 'Desa ',
-              birthYear : 'n/a',
-              deathYear : 'n/a',
-              restingPlace : 'n/a'
             },
               
             {
@@ -315,19 +239,13 @@ getNodes = function() {
               color: 'lightblue',
               parent: 29,
               name : 'Stefan (Vladislavic)',
-              birthYear : 'n/a',
-              deathYear : 'n/a',
-              restingPlace : 'n/a'
             },
               
             {
               key: 32,
               color: 'salmon',
               parent: 29,
-              name : 'NN ',
-              birthYear : 'n/a',
-              deathYear : 'n/a',
-              restingPlace : 'n/a'
+              name : 'NN',
             },
               
           {
@@ -335,9 +253,6 @@ getNodes = function() {
             color: 'lightblue',
             parent: 6,
             name : 'Prvoslav ',
-            birthYear : 'n/a',
-            deathYear : 'n/a',
-            restingPlace : 'n/a'
           },
             
         {
@@ -346,8 +261,6 @@ getNodes = function() {
           parent: 1,
           name : 'Rastko ',
           birthYear : 1168,
-          deathYear : 'n/a',
-          restingPlace : 'n/a'
         },
           
       {
@@ -355,9 +268,6 @@ getNodes = function() {
         color: 'lightblue',
         parent: 0,
         name : 'Tihomir ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
       {
@@ -365,9 +275,6 @@ getNodes = function() {
         color: 'lightblue',
         parent: 0,
         name : 'Stracimir ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
       {
@@ -375,9 +282,6 @@ getNodes = function() {
         color: 'lightblue',
         parent: 0,
         name : 'Miroslav ',
-        birthYear : 'n/a',
-        deathYear : 'n/a',
-        restingPlace : 'n/a'
       },
         
         {
@@ -385,9 +289,6 @@ getNodes = function() {
           color: 'lightblue',
           parent: 37,
           name : 'Toljen ',
-          birthYear : 'n/a',
-          deathYear : 'n/a',
-          restingPlace : 'n/a'
         },
           
         {
@@ -395,9 +296,6 @@ getNodes = function() {
           color: 'lightblue',
           parent: 37,
           name : 'Andrija ',
-          birthYear : 'n/a',
-          deathYear : 'n/a',
-          restingPlace : 'n/a'
         },
           
         {
@@ -405,9 +303,6 @@ getNodes = function() {
           color: 'lightblue',
           parent: 37,
           name : 'Petar ',
-          birthYear : 'n/a',
-          deathYear : 'n/a',
-          restingPlace : 'n/a'
         },
           
   ];

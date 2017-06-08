@@ -70,12 +70,15 @@ public class GenealogyTreeMMGenerator {
 
 	private static void saveFile(String path, CharSequence cs) {
 		File output = new File(path);
+		File outputx = new File("wer");
+		
 		PrintWriter pw = null;
 		try {
 			if (output.getParentFile() != null) {
 				output.getParentFile().mkdirs();
 			}			
 			output.createNewFile();
+			outputx.createNewFile();
 			pw = new PrintWriter(new FileOutputStream(output));
 			pw.print(cs);
 

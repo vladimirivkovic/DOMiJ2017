@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genDSL2:GenealogyTree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genDSL2="http://www.example.org/genDSL2" familyName="Adamovi">
+  <person givenName="Adam">
+    <marriage spouses="//@person.0 //@person.1">
+      <children givenName="Abel"/>
+      <children givenName="Cain">
+        <cohabitation partners="//@person.0/@marriage.0/@children.1 //@person.0/@marriage.0/@children.3">
+          <children givenName="Enoch">
+            <marriage spouses="//@person.0/@marriage.0/@children.1/@cohabitation.0/@children.0 //@person.0/@marriage.0/@children.0 //@person.0/@marriage.0/@children.2/@cohabitation.0/@children.0 //@person.0/@marriage.0/@children.5">
+              <children givenName="child1"/>
+              <children givenName="child2"/>
+            </marriage>
+          </children>
+        </cohabitation>
+      </children>
+      <children givenName="Seth">
+        <cohabitation partners="//@person.0/@marriage.0/@children.2 //@person.0/@marriage.0/@children.4">
+          <children givenName="Enos"/>
+        </cohabitation>
+      </children>
+      <children givenName="d2" gender="FEMALE"/>
+      <children givenName="d1" gender="FEMALE"/>
+      <children givenName="d3" type="ADOPTED" gender="FEMALE"/>
+    </marriage>
+  </person>
+  <person givenName="Eve" type="MARRIED" gender="FEMALE"/>
+</genDSL2:GenealogyTree>

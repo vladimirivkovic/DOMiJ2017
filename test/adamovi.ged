@@ -21,6 +21,7 @@
 1 DEAT
 1 BURI
 1 FAMC @Adam0@
+1 FAMS @CainCoh0@
 0 @Enoch@ INDI
 1 NAME /Enoch/
 1 SEX M
@@ -50,6 +51,7 @@
 1 DEAT
 1 BURI
 1 FAMC @Adam0@
+1 FAMS @SethCoh0@
 0 @Enos@ INDI
 1 NAME /Enos/
 1 SEX M
@@ -85,8 +87,8 @@
 1 DEAT
 1 BURI
 0 @Adam0@ FAM
-1 WIFE @Adam@
-1 WIFE @Eve@
+1 HUSB @Adam@
+1 HUSB @Eve@
 1 CHIL @Abel@
 1 CHIL @Cain@
 1 CHIL @Seth@
@@ -98,7 +100,7 @@
 2 WIFE
 0 @CainCoh0@ FAM
 1 HUSB @Cain@
-1 WIFE @d2@
+1 HUSB @d2@
 1 CHIL @Enoch@
 0 @Enoch0@ FAM
 1 HUSB @Enoch@
@@ -112,6 +114,6 @@
 2 WIFE
 0 @SethCoh0@ FAM
 1 HUSB @Seth@
-1 WIFE @d1@
+1 HUSB @d1@
 1 CHIL @Enos@
 0 TRLR

@@ -7,7 +7,7 @@
   <!-- Copyright 1998-2017 by Northwoods Software Corporation. -->
   <meta charset="UTF-8">
   <script src="go.js"></script>
-  <script src="nemanjici.js"></script>
+  <script src="adamovi.js"></script>
     <script src="goSamples.js"></script>  <!-- this is only for the GoJS Samples framework -->
   <script id="code">
 
@@ -50,11 +50,10 @@
           // get tooltip text from the object's data
         function tooltipTextConverter(person) {
           var str = "";
-          str += "Born: " + person.birthYear;
-          str += "\nDied: " + person.deathYear;
-          str += "\nResting place: " + person.restingPlace;
-          //if (person.deathYear !== undefined) str += "\nDied: " + person.deathYear;
-          //if (person.reign !== undefined) str += "\nReign: " + person.reign;
+          if (person.birthYear !== undefined) str += (str?"\n":"") + "Born: " + person.birthYear;
+          if (person.deathYear !== undefined) str += (str?"\n":"") + "Died: " + person.deathYear;
+          if (person.restingPlace !== undefined) str += (str?"\n":"") + "Resting place: " + person.restingPlace;
+          if (!str) str = null;
           return str;
         }
 
